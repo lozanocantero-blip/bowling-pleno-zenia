@@ -1,4 +1,5 @@
 "use client"
+"use client"
 import { Navbar1 } from "@/components/irish-pub/Navbar1"
 import { Header60 } from "@/components/irish-pub/Header60"
 import { Layout16 } from "@/components/irish-pub/Layout16"

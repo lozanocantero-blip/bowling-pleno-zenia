@@ -1,4 +1,5 @@
 "use client"
+"use client"
 import { Navbar1 } from "@/components/inicio/Navbar1"
 import { Header83 } from "@/components/inicio/Header83"
 import { Layout370 } from "@/components/inicio/Layout370"
