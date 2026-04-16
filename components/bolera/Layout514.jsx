@@ -122,7 +122,6 @@ export function Layout514() {
       ref={useScroll.containerRef}
       id="relume"
       className="px-[5%] py-16 md:py-24 lg:py-28"
-      ref={useScroll.containerRef}
     >
       <div className="container">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-start md:gap-20">
