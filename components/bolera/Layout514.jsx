@@ -59,7 +59,7 @@ const useTablet = () => {
 };
 
 export function Layout514() {
-  const render = useTablet();
+  const renderTablet = useTablet();
   const render = useMobile();
   const useScroll = useRelume({
     data: [
@@ -203,7 +203,7 @@ export function Layout514() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useScroll.getStyles(0).opacity,
@@ -243,7 +243,7 @@ export function Layout514() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useScroll.getStyles(1).opacity,
@@ -280,7 +280,7 @@ export function Layout514() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useScroll.getStyles(2).opacity,
@@ -315,7 +315,7 @@ export function Layout514() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useScroll.getStyles(3).opacity,

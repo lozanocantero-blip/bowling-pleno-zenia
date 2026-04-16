@@ -59,7 +59,7 @@ const useTablet = () => {
 };
 
 export function Layout513() {
-  const render = useTablet();
+  const renderTablet = useTablet();
   const render = useMobile();
   const useSctoll = useRelume({
     data: [
@@ -169,7 +169,7 @@ export function Layout513() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useSctoll.getStyles(0).opacity,
@@ -207,7 +207,7 @@ export function Layout513() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useSctoll.getStyles(1).opacity,
@@ -245,7 +245,7 @@ export function Layout513() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useSctoll.getStyles(2).opacity,
@@ -281,7 +281,7 @@ export function Layout513() {
                       </div>
                     </div>
                   </ConditionalRender>
-                  <ConditionalRender condition={render.isTablet}>
+                  <ConditionalRender condition={renderTablet.isTablet}>
                     <motion.div
                       style={{
                         opacity: useSctoll.getStyles(3).opacity,
