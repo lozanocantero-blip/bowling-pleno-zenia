@@ -6,7 +6,7 @@ import { Header83 } from "@/components/inicio/Header83"
 import { Layout370 } from "@/components/inicio/Layout370"
 import { Timeline19 } from "@/components/inicio/Timeline19"
 import { Testimonial17 } from "@/components/inicio/Testimonial17"
-import { Contact26 } from "@/components/inicio/Contact26"
+import { Contact25 } from "@/components/inicio/Contact25"
 import { Footer5 } from "@/components/inicio/Footer5"
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Layout370 />
       <Timeline19 />
       <Testimonial17 />
-      <Contact26 />
+      <Contact25 />
       <Footer5 />
     </main>
   )
