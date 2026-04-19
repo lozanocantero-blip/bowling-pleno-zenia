@@ -1,5 +1,6 @@
 "use client"
-"use client"
+
+export const dynamic = 'force-dynamic'
 import { Navbar1 } from "@/components/bolera/Navbar1"
 import { Header60 } from "@/components/bolera/Header60"
 import { Pricing15 } from "@/components/bolera/Pricing15"

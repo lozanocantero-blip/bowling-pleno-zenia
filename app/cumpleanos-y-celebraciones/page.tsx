@@ -1,5 +1,6 @@
 "use client"
-"use client"
+
+export const dynamic = 'force-dynamic'
 import { Navbar1 } from "@/components/cumpleanos/Navbar1"
 import { Header60 } from "@/components/cumpleanos/Header60"
 import { Layout373 } from "@/components/cumpleanos/Layout373"
