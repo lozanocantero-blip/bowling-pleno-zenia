@@ -38,7 +38,7 @@ export function Footer5() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <a href="/" className="inline-block">
-              <span className="text-xl font-black uppercase tracking-tight leading-none">🎳 Pleno<br/>Zenia</span>
+              <img src="/logo-navy.png" alt="Bowling Pleno Zenia" className="h-16 w-auto object-contain" />
             </a>
             <p className="mt-3 text-white/60 text-xs leading-relaxed">
               Calle Jade 2<br/>CC Zenia Boulevard<br/>Orihuela Costa, Alicante
