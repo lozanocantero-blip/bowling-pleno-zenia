@@ -65,7 +65,7 @@ export function Header83() {
     <section
       ref={sectionRef}
       className="relative"
-      style={{ height: "600vh" }}
+      style={{ height: "360vh" }}
       aria-label="Animación de bowling scroll"
     >
       {/* Sticky viewport */}
