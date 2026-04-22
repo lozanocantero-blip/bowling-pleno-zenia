@@ -141,6 +141,12 @@ export function Header83() {
               >
                 Ver precios
               </a>
+              <a
+                href="#horarios"
+                className="inline-block border-2 border-white/50 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition-colors"
+              >
+                Horarios
+              </a>
             </div>
           </div>
 

@@ -41,7 +41,7 @@ const horarios = [
 
 export function Timeline19() {
   return (
-    <section className="bg-brand-navy px-[5%] py-16 md:py-24 lg:py-28 section-dark">
+    <section id="horarios" className="bg-brand-navy px-[5%] py-16 md:py-24 lg:py-28 section-dark">
       <div className="container">
         {/* Header */}
         <div className="mb-12 text-center md:mb-16">
