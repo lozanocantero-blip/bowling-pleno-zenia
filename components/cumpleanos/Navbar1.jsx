@@ -20,7 +20,6 @@ export function Navbar1() {
               src="/logo.png"
               alt="Bowling Pleno Zenia"
               className="h-12 w-auto object-contain"
-              style={{ mixBlendMode: "multiply" }}
             />
           </a>
           <button
