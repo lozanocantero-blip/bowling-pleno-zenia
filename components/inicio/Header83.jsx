@@ -47,7 +47,6 @@ export function Header83() {
         setCurrentFrame(idx);
       });
     };
-
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => {
@@ -57,14 +56,10 @@ export function Header83() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative"
-      style={{ height: "180vh" }}
-    >
+    <section ref={sectionRef} className="relative" style={{ height: "180vh" }}>
       <div className="sticky top-0 overflow-hidden" style={{ height: "100vh" }}>
 
-        {/* Background frames */}
+        {/* ── Background frames ── */}
         <div className="absolute inset-0 z-0" style={{ background: "#1A2744" }}>
           {SEQUENCE.map((src, i) => (
             <img
@@ -79,13 +74,11 @@ export function Header83() {
                 transform: "translateZ(0)",
                 transition: "none",
                 objectFit: "cover",
-                /* Move image content upward — 25% from top instead of center */
                 objectPosition: "center bottom",
               }}
             />
           ))}
-
-          {/* Stronger bottom gradient — more breathing room between image and text */}
+          {/* Vignette */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -95,16 +88,31 @@ export function Header83() {
           />
         </div>
 
-        {/* Foreground text */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-end pb-16 px-[5%]">
-          <div className="w-full max-w-3xl text-center">
+        {/* ── Foreground ── */}
+        <div className="relative z-10 h-full flex flex-col px-[5%]">
+
+          {/* Logo grande — izquierda, centrado verticalmente en la mitad superior */}
+          <div className="flex-1 flex items-center justify-start">
+            <img
+              src="/logo-navy.png"
+              alt="Bowling Pleno Zenia"
+              className="w-auto select-none pointer-events-none"
+              style={{
+                height: "clamp(160px, 22vw, 280px)",
+                filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.5))",
+              }}
+              draggable={false}
+            />
+          </div>
+
+          {/* Texto y CTAs — abajo */}
+          <div className="pb-16 w-full text-center">
             <p
               className="mb-4 text-xs font-bold uppercase tracking-[0.25em]"
               style={{ color: "#E82040" }}
             >
               Zenia Boulevard · Orihuela Costa · Abiertos 365 días
             </p>
-
             <h1
               className="mb-6 text-white uppercase leading-none"
               style={{
@@ -115,12 +123,10 @@ export function Header83() {
             >
               La bolera de<br />Orihuela Costa
             </h1>
-
             <p className="mx-auto mb-8 max-w-xl text-white/80 text-base md:text-lg leading-relaxed">
               10 pistas de bowling, zona arcade y el único pub irlandés
               dentro de una bolera en toda la zona.
             </p>
-
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href="/cumpleanos-y-celebraciones"
@@ -153,6 +159,7 @@ export function Header83() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
