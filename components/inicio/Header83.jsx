@@ -94,7 +94,7 @@ export function Header83() {
           {/* Logo grande — izquierda, centrado verticalmente en la mitad superior */}
           <div className="flex-1 flex items-center justify-start">
             <img
-              src="/logo-navy.png"
+              src="/logo-hero.png"
               alt="Bowling Pleno Zenia"
               className="w-auto select-none pointer-events-none"
               style={{
