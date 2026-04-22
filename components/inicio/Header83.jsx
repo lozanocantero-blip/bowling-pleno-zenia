@@ -80,7 +80,7 @@ export function Header83() {
                 transition: "none",
                 objectFit: "cover",
                 /* Move image content upward — 25% from top instead of center */
-                objectPosition: "center 25%",
+                objectPosition: "center top",
               }}
             />
           ))}
