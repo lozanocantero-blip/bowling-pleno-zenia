@@ -24,7 +24,7 @@ export function Contact25() {
             <div className="overflow-hidden mb-4 w-full" style={{ height: "384px" }}>
               <iframe
                 title="Bowling Pleno Zenia - Zenia Boulevard"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354!2d-0.7336!3d37.9012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6326b0b0b0b0b0%3A0x0!2sBowling+Pleno+Zenia%2C+Zenia+Boulevard%2C+Orihuela+Costa!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses&q=Bowling+Pleno+Zenia+Zenia+Boulevard+Orihuela+Costa"
+                src="https://maps.google.com/maps?q=Bowling+Pleno+Zenia,+Calle+Jade+2,+Zenia+Boulevard,+Orihuela+Costa,+Alicante,+Spain&output=embed&z=17"
                 width="100%"
                 height="384"
                 style={{ border: 0 }}
