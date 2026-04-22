@@ -5,12 +5,12 @@ import React, { useEffect, useRef, useState } from "react";
 // Animation sequence: image_6 (ball far) → image_1 (pins flying)
 // Files in /public/frames/ are named to match the sequence order
 const SEQUENCE = [
-  "/frames/frame6.png", // scroll 0%   — bola lejos, pinos de pie
-  "/frames/frame5.png", // scroll 20%  — bola acercándose
-  "/frames/frame4.png", // scroll 40%  — bola muy cerca
-  "/frames/frame3.png", // scroll 60%  — contacto / impacto
-  "/frames/frame2.png", // scroll 80%  — pinos explotando
-  "/frames/frame1.png", // scroll 100% — pinos volando
+  "/frames/frame1.png", // scroll 0%   — bola lejos, pinos de pie
+  "/frames/frame2.png", // scroll 20%  — bola acercándose
+  "/frames/frame3.png", // scroll 40%  — bola muy cerca
+  "/frames/frame4.png", // scroll 60%  — contacto / impacto
+  "/frames/frame5.png", // scroll 80%  — pinos explotando
+  "/frames/frame6.png", // scroll 100% — pinos volando
 ];
 
 // How wide the crossfade overlap is (fraction of one inter-frame gap)
