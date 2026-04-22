@@ -14,13 +14,13 @@ export function Navbar1() {
     <nav className="sticky top-0 z-50 flex w-full items-center border-b border-[#E2E8F0] bg-white shadow-sm lg:min-h-18 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
 
-        {/* Logo + hamburger */}
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href="/" className="flex items-center">
             <img
               src="/logo.png"
               alt="Bowling Pleno Zenia"
               className="h-12 w-auto object-contain"
+              style={{ mixBlendMode: "multiply" }}
             />
           </a>
           <button
@@ -37,7 +37,6 @@ export function Navbar1() {
           </button>
         </div>
 
-        {/* Nav links */}
         <motion.div
           variants={{ open:{height:"var(--height-open,100dvh)"}, close:{height:"var(--height-closed,0)"} }}
           initial="close" exit="close" animate={animate} transition={{duration:0.4}}

@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-// Sequence: frame1 = bola lejos (inicio) → frame6 = pinos volando (fin)
 const SEQUENCE = [
   "/frames/frame1.png",
   "/frames/frame2.png",
@@ -26,7 +25,6 @@ export function Header83() {
   const rafRef = useRef(null);
   const preloaded = useRef(false);
 
-  // Preload all frames on mount
   useEffect(() => {
     if (!preloaded.current) {
       preloadFrames(SEQUENCE);
@@ -34,8 +32,6 @@ export function Header83() {
     }
   }, []);
 
-  // Map scroll → current frame index (hard cut, no crossfade)
-  // Section is 600vh → each of the 6 frames owns exactly 100vh of scroll
   useEffect(() => {
     const onScroll = () => {
       if (rafRef.current) return;
@@ -47,7 +43,6 @@ export function Header83() {
         const totalScroll = el.offsetHeight - window.innerHeight;
         const scrolled = -rect.top;
         const p = Math.min(1, Math.max(0, scrolled / totalScroll));
-        // Hard cut: each frame owns 1/6 of the progress range
         const idx = Math.min(SEQUENCE.length - 1, Math.floor(p * SEQUENCE.length));
         setCurrentFrame(idx);
       });
@@ -66,12 +61,10 @@ export function Header83() {
       ref={sectionRef}
       className="relative"
       style={{ height: "180vh" }}
-      aria-label="Animación de bowling scroll"
     >
-      {/* Sticky viewport */}
       <div className="sticky top-0 overflow-hidden" style={{ height: "100vh" }}>
 
-        {/* Background: only current frame visible, instant swap */}
+        {/* Background frames */}
         <div className="absolute inset-0 z-0" style={{ background: "#1A2744" }}>
           {SEQUENCE.map((src, i) => (
             <img
@@ -80,27 +73,30 @@ export function Header83() {
               alt=""
               aria-hidden="true"
               draggable={false}
-              className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+              className="absolute inset-0 w-full h-full select-none pointer-events-none"
               style={{
                 opacity: i === currentFrame ? 1 : 0,
                 transform: "translateZ(0)",
                 transition: "none",
+                objectFit: "cover",
+                /* Move image content upward — 25% from top instead of center */
+                objectPosition: "center 25%",
               }}
             />
           ))}
 
-          {/* Vignette gradient */}
+          {/* Stronger bottom gradient — more breathing room between image and text */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(26,39,68,0.55) 0%, rgba(26,39,68,0.08) 30%, rgba(26,39,68,0.08) 55%, rgba(26,39,68,0.78) 100%)",
+                "linear-gradient(to bottom, rgba(26,39,68,0.3) 0%, transparent 25%, transparent 45%, rgba(26,39,68,0.7) 65%, rgba(26,39,68,0.95) 100%)",
             }}
           />
         </div>
 
-        {/* Foreground: text and CTAs */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-end pb-20 px-[5%]">
+        {/* Foreground text */}
+        <div className="relative z-10 flex h-full flex-col items-center justify-end pb-16 px-[5%]">
           <div className="w-full max-w-3xl text-center">
             <p
               className="mb-4 text-xs font-bold uppercase tracking-[0.25em]"
@@ -142,8 +138,8 @@ export function Header83() {
             </div>
           </div>
 
-          {/* Frame counter dots */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2">
+          {/* Frame dots */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
             {SEQUENCE.map((_, i) => (
               <div
                 key={i}
