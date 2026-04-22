@@ -2,19 +2,15 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-// Animation sequence: image_6 (ball far) → image_1 (pins flying)
-// Files in /public/frames/ are named to match the sequence order
+// Sequence: frame1 = bola lejos (inicio) → frame6 = pinos volando (fin)
 const SEQUENCE = [
-  "/frames/frame1.png", // scroll 0%   — bola lejos, pinos de pie
-  "/frames/frame2.png", // scroll 20%  — bola acercándose
-  "/frames/frame3.png", // scroll 40%  — bola muy cerca
-  "/frames/frame4.png", // scroll 60%  — contacto / impacto
-  "/frames/frame5.png", // scroll 80%  — pinos explotando
-  "/frames/frame6.png", // scroll 100% — pinos volando
+  "/frames/frame1.png",
+  "/frames/frame2.png",
+  "/frames/frame3.png",
+  "/frames/frame4.png",
+  "/frames/frame5.png",
+  "/frames/frame6.png",
 ];
-
-// How wide the crossfade overlap is (fraction of one inter-frame gap)
-const FADE_WINDOW = 0.35;
 
 function preloadFrames(srcs) {
   if (typeof window === "undefined") return;
@@ -26,11 +22,11 @@ function preloadFrames(srcs) {
 
 export function Header83() {
   const sectionRef = useRef(null);
-  const [progress, setProgress] = useState(0);
+  const [currentFrame, setCurrentFrame] = useState(0);
   const rafRef = useRef(null);
   const preloaded = useRef(false);
 
-  // Preload all frames on mount — zero flicker on first transition
+  // Preload all frames on mount
   useEffect(() => {
     if (!preloaded.current) {
       preloadFrames(SEQUENCE);
@@ -38,7 +34,8 @@ export function Header83() {
     }
   }, []);
 
-  // Map scroll position → progress (0–1) scoped to this section only
+  // Map scroll → current frame index (hard cut, no crossfade)
+  // Section is 600vh → each of the 6 frames owns exactly 100vh of scroll
   useEffect(() => {
     const onScroll = () => {
       if (rafRef.current) return;
@@ -50,7 +47,9 @@ export function Header83() {
         const totalScroll = el.offsetHeight - window.innerHeight;
         const scrolled = -rect.top;
         const p = Math.min(1, Math.max(0, scrolled / totalScroll));
-        setProgress(p);
+        // Hard cut: each frame owns 1/6 of the progress range
+        const idx = Math.min(SEQUENCE.length - 1, Math.floor(p * SEQUENCE.length));
+        setCurrentFrame(idx);
       });
     };
 
@@ -62,29 +61,17 @@ export function Header83() {
     };
   }, []);
 
-  // Compute per-frame opacity — smooth crossfade between consecutive frames
-  const count = SEQUENCE.length;
-  const opacities = SEQUENCE.map((_, i) => {
-    const center = i / (count - 1);
-    const dist = Math.abs(progress - center);
-    const halfFade = (1 / (count - 1)) * FADE_WINDOW;
-    const falloff = halfFade * 1.5;
-    if (dist <= halfFade) return 1;
-    if (dist <= falloff) return 1 - (dist - halfFade) / (falloff - halfFade);
-    return 0;
-  });
-
   return (
     <section
       ref={sectionRef}
       className="relative"
-      style={{ height: "380vh" }}
+      style={{ height: "600vh" }}
       aria-label="Animación de bowling scroll"
     >
-      {/* Sticky viewport — stays fixed while section scrolls past */}
+      {/* Sticky viewport */}
       <div className="sticky top-0 overflow-hidden" style={{ height: "100vh" }}>
 
-        {/* ── Background: stacked frames with crossfade ── */}
+        {/* Background: only current frame visible, instant swap */}
         <div className="absolute inset-0 z-0" style={{ background: "#1A2744" }}>
           {SEQUENCE.map((src, i) => (
             <img
@@ -95,15 +82,14 @@ export function Header83() {
               draggable={false}
               className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
               style={{
-                opacity: opacities[i],
-                willChange: opacities[i] > 0.01 ? "opacity" : "auto",
+                opacity: i === currentFrame ? 1 : 0,
                 transform: "translateZ(0)",
                 transition: "none",
               }}
             />
           ))}
 
-          {/* Vignette — keeps text readable without covering animation */}
+          {/* Vignette gradient */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -113,7 +99,7 @@ export function Header83() {
           />
         </div>
 
-        {/* ── Foreground: text and CTAs ── */}
+        {/* Foreground: text and CTAs */}
         <div className="relative z-10 flex h-full flex-col items-center justify-end pb-20 px-[5%]">
           <div className="w-full max-w-3xl text-center">
             <p
@@ -156,30 +142,22 @@ export function Header83() {
             </div>
           </div>
 
-          {/* Scroll hint — disappears once user starts scrolling */}
-          <div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-            style={{
-              opacity: Math.max(0, 1 - progress * 10),
-              transition: "opacity 0.4s ease",
-              pointerEvents: "none",
-            }}
-          >
-            <span className="text-white/40 text-xs uppercase tracking-[0.2em]">Scroll</span>
-            <div
-              className="w-px bg-white/30"
-              style={{ height: "40px", animation: "scrollPulse 1.8s ease-in-out infinite" }}
-            />
+          {/* Frame counter dots */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2">
+            {SEQUENCE.map((_, i) => (
+              <div
+                key={i}
+                className="rounded-full transition-all duration-150"
+                style={{
+                  width: i === currentFrame ? "20px" : "6px",
+                  height: "6px",
+                  background: i === currentFrame ? "#E82040" : "rgba(255,255,255,0.3)",
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes scrollPulse {
-          0%, 100% { opacity: 0.2; transform: scaleY(0.6); transform-origin: top; }
-          50%       { opacity: 0.8; transform: scaleY(1);   transform-origin: top; }
-        }
-      `}</style>
     </section>
   );
 }
