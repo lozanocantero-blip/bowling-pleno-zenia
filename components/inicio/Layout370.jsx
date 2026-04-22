@@ -15,13 +15,13 @@ const services = [
     wide: false,
   },
   {
-    tag: "Cumpleaños",
-    title: "Fiestas y Celebraciones",
-    desc: "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
-    cta: "Reservar",
-    href: "/cumpleanos-y-celebraciones",
-    color: "#0072CE",
-    img: null,
+    tag: "Arcade",
+    title: "Máquinas Arcade y Juegos",
+    desc: "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
+    cta: "Explorar",
+    href: "/arcade-y-juegos",
+    color: "#FF7043",
+    img: "/images/arcade.png",
     wide: false,
   },
   {
@@ -35,13 +35,13 @@ const services = [
     wide: true,
   },
   {
-    tag: "Arcade",
-    title: "Máquinas Arcade y Juegos",
-    desc: "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
-    cta: "Explorar",
-    href: "/arcade-y-juegos",
-    color: "#FF7043",
-    img: "/images/arcade.png",
+    tag: "Cumpleaños",
+    title: "Fiestas y Celebraciones",
+    desc: "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
+    cta: "Reservar",
+    href: "/cumpleanos-y-celebraciones",
+    color: "#0072CE",
+    img: null,
     wide: false,
   },
 ];
@@ -50,7 +50,6 @@ export function Layout370() {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
-        {/* Header */}
         <div className="mb-12 text-center md:mb-16">
           <p className="label-red mb-3">Servicios</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl uppercase">
@@ -61,7 +60,6 @@ export function Layout370() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => (
             <a
@@ -69,7 +67,6 @@ export function Layout370() {
               href={s.href}
               className={`group flex flex-col border-2 border-brand-navy/10 hover:border-brand-navy transition-all duration-300 hover:shadow-lg ${s.wide ? "sm:col-span-2" : ""}`}
             >
-              {/* Image */}
               <div className="relative overflow-hidden bg-brand-blue-light aspect-video">
                 {s.img ? (
                   <img
@@ -79,12 +76,10 @@ export function Layout370() {
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-brand-blue-light">
-                    <span className="text-brand-navy/20 text-5xl">🎳</span>
+                    <span className="text-brand-navy/20 text-5xl">🎂</span>
                   </div>
                 )}
               </div>
-
-              {/* Content */}
               <div className="flex flex-1 flex-col justify-between p-5 md:p-6">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: s.color }}>

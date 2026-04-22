@@ -18,23 +18,31 @@ export function Contact25() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-16">
-          {/* Map card */}
-          <div className="group">
-            <div className="overflow-hidden mb-4">
-              <a href="https://maps.google.com/?q=Bowling+Pleno+Zenia+Zenia+Boulevard" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://relume-assets.s3.us-east-1.amazonaws.com/placeholder-map-image.svg"
-                  alt="Mapa Bowling Pleno Zenia - Zenia Boulevard"
-                  className="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500 md:h-[384px]"
-                />
-              </a>
+
+          {/* Google Maps iframe */}
+          <div>
+            <div className="overflow-hidden mb-4 w-full" style={{ height: "384px" }}>
+              <iframe
+                title="Bowling Pleno Zenia - Zenia Boulevard"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354!2d-0.7336!3d37.9012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6326b0b0b0b0b0%3A0x0!2sBowling+Pleno+Zenia%2C+Zenia+Boulevard%2C+Orihuela+Costa!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses&q=Bowling+Pleno+Zenia+Zenia+Boulevard+Orihuela+Costa"
+                width="100%"
+                height="384"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
             <h3 className="text-2xl font-black uppercase mb-2">Cómo llegar</h3>
             <p className="text-brand-navy/60 text-sm mb-4">
               Calle Jade 2, planta baja, CC Zenia Boulevard, Orihuela Costa (Alicante)
             </p>
-            <a href="https://maps.google.com/?q=Bowling+Pleno+Zenia" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline">
+            <a
+              href="https://maps.google.com/?q=Bowling+Pleno+Zenia+Zenia+Boulevard+Orihuela+Costa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline"
+            >
               Abrir en Google Maps <RxChevronRight className="size-4" />
             </a>
           </div>
