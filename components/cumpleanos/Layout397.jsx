@@ -1,177 +1,35 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
+const items = [
+  { icon: "🎳", tag: "Actividad", title: "Partida de bolos para todos", desc: "Acceso a las pistas el tiempo que necesites durante tu fiesta." },
+  { icon: "🍕", tag: "Niños", title: "Merienda y refresco incluido", desc: "Sándwiches, patatas y bebidas para todos los asistentes." },
+  { icon: "🏷️", tag: "Privacidad", title: "Zona reservada solo para vosotros", desc: "Espacio privado sin interrupciones de otros grupos." },
+  { icon: "🕹️", tag: "Extras", title: "Máquinas arcade en packs completos", desc: "Acceso a todos los juegos y sistema de tickets canjeable." },
+  { icon: "🍺", tag: "Adultos", title: "Bebidas y ambiente del Irish Pub", desc: "Cervezas, refrescos y comida mientras juegas o celebras." },
+  { icon: "👋", tag: "Servicio", title: "Atención personalizada durante la fiesta", desc: "Nuestro equipo está presente durante toda la celebración." },
+];
+
 export function Layout397() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">Incluido</p>
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            Lo que traemos a tu fiesta
-          </h1>
-          <p className="md:text-md">Cada paquete viene completo y listo</p>
+        <div className="text-center mb-12 md:mb-16">
+          <p className="label-red mb-3">Incluido</p>
+          <h2 className="text-5xl md:text-7xl uppercase leading-none mb-4">Lo que traemos a tu fiesta</h2>
+          <p className="text-brand-navy/60 md:text-md">Cada paquete viene completo y listo — sin sorpresas</p>
         </div>
-        <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
-          <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8">
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-                <div className="rb-5 mb-5 md:mb-6">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
-                </div>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Partida de bolos para todos
-                </h2>
-                <p>Acceso a las pistas el tiempo que necesites</p>
-                <div className="mt-5 md:mt-6">
-                  <Button
-                    title="WhatsApp"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((item, i) => (
+            <div key={i} className="border-2 border-brand-navy/10 hover:border-brand-navy transition-colors p-6 md:p-8">
+              <div className="text-3xl mb-4">{item.icon}</div>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-1">{item.tag}</p>
+              <h3 className="text-xl font-black uppercase mb-2">{item.title}</h3>
+              <p className="text-brand-navy/60 text-sm leading-relaxed">{item.desc}</p>
             </div>
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-                <p className="mb-2 font-semibold">Niños</p>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Merienda y refresco incluido
-                </h2>
-                <p>Sándwiches, patatas y bebidas para todos</p>
-                <div className="mt-5 md:mt-6">
-                  <Button
-                    title="WhatsApp"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
-              <div className="flex w-full flex-col items-center justify-center self-start">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image 1"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8">
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-                <p className="mb-2 font-semibold">Niños</p>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Zona reservada solo para vosotros
-                </h2>
-                <p>Espacio privado sin interrupciones de otros</p>
-                <div className="mt-5 md:mt-6">
-                  <Button
-                    title="WhatsApp"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
-              <div className="flex w-full flex-col items-center justify-center self-start">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image 2"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-                <div className="rb-5 mb-5 md:mb-6">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 2"
-                  />
-                </div>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Atención personalizada durante la fiesta
-                </h2>
-                <p>Nuestro equipo está ahí para lo que necesites</p>
-                <div className="mt-5 md:mt-6">
-                  <Button
-                    title="WhatsApp"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8">
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-                <div className="rb-5 mb-5 md:mb-6">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 3"
-                  />
-                </div>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Máquinas arcade en packs completos
-                </h2>
-                <p>Acceso a todos los juegos y sistema de tickets</p>
-                <div className="mt-5 md:mt-6">
-                  <Button
-                    title="WhatsApp"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-                <p className="mb-2 font-semibold">Adultos</p>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Bebidas y ambiente del Irish pub
-                </h2>
-                <p>Cervezas, refrescos y comida mientras juegas</p>
-                <div className="mt-5 md:mt-6">
-                  <Button
-                    title="WhatsApp"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
-              <div className="flex w-full flex-col items-center justify-center self-start">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image 3"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

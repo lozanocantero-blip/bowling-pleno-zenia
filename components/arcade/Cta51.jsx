@@ -1,27 +1,29 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 
 export function Cta51() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="bg-[#1a1a2e] px-[5%] py-16 md:py-24 lg:py-28 section-dark">
       <div className="container">
-        <div className="flex flex-col items-center border border-border-primary p-8 md:p-12 lg:p-16">
-          <div className="max-w-lg text-center">
-            <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Juega y gana
-            </h2>
-            <p className="md:text-md">
-              El sistema de tickets te permite canjear premios mientras
-              disfrutas
-            </p>
-          </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
-            <Button title="Reservar">Reservar</Button>
-            <Button title="Contactar" variant="secondary">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="label-red mb-4">Arcade</p>
+          <h2 className="text-white text-5xl md:text-7xl uppercase leading-none mb-6">
+            Juega y gana
+          </h2>
+          <p className="text-white/70 md:text-md mb-8 max-w-md mx-auto">
+            El sistema de tickets te permite canjear premios reales mientras disfrutas
+            de todas las máquinas.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+              className="bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
+              Ir a jugar
+            </a>
+            <a href="tel:+34965355815"
+              className="border-2 border-white text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-brand-navy transition-colors">
               Contactar
-            </Button>
+            </a>
           </div>
         </div>
       </div>

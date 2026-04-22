@@ -1,119 +1,53 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
-import { RxChevronRight } from "react-icons/rx";
+import { BiSolidStar } from "react-icons/bi";
+
+const reviews = [
+  {
+    quote: "Mi hijo no paró de hablar de su cumpleaños en Pleno Zenia. La zona reservada fue perfecta y el equipo muy atento.",
+    author: "María García",
+    role: "Madre de dos niños",
+    stars: 5,
+  },
+  {
+    quote: "Celebramos una despedida de soltero aquí. El Irish pub, las pistas y el ambiente fueron exactamente lo que buscábamos.",
+    author: "Carlos Martínez",
+    role: "Organizador de eventos",
+    stars: 5,
+  },
+  {
+    quote: "Buena comida, bolos sin presión y un sitio donde los adultos también nos divertimos. Volveremos seguro.",
+    author: "Ana López",
+    role: "Visitante habitual",
+    stars: 5,
+  },
+];
 
 export function Testimonial22() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-brand-blue-light">
       <div className="container">
-        <div className="mb-12 md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            Lo que dicen
-          </h2>
-          <p className="md:text-md">Familias que celebraron aquí</p>
+        <div className="mb-12 md:mb-16">
+          <p className="label-red mb-3">Familias</p>
+          <h2 className="text-5xl md:text-7xl uppercase leading-none">Lo que dicen</h2>
+          <p className="text-brand-navy/60 mt-2 md:text-md">Familias que celebraron aquí · Reseñas verificadas</p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-8 md:mb-10 lg:mb-12">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
-                  alt="Webflow logo"
-                  className="max-h-12"
-                />
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {reviews.map((r, i) => (
+            <div key={i} className="bg-white p-8 border-t-4 border-brand-red flex flex-col">
+              <div className="flex gap-0.5 mb-4">
+                {[...Array(r.stars)].map((_, j) => <BiSolidStar key={j} className="size-4 text-yellow-400" />)}
               </div>
-              <blockquote className="md:text-md">
-                "Mi hijo no paró de hablar de su cumpleaños en Pleno Zenia. La
-                zona reservada fue perfecta y el equipo muy atento."
+              <blockquote className="text-brand-navy/80 leading-relaxed mb-6 flex-1">
+                "{r.quote}"
               </blockquote>
-              <div className="mt-5 flex w-full flex-col items-start gap-4 md:mt-6 md:w-auto md:flex-row md:items-center">
-                <div>
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    alt="Testimonial avatar"
-                    className="size-12 min-h-12 min-w-12 rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-semibold">María García</p>
-                  <p>Madre de dos niños</p>
-                </div>
+              <div>
+                <p className="font-black uppercase text-sm tracking-wider">{r.author}</p>
+                <p className="text-brand-navy/50 text-xs">{r.role}</p>
               </div>
             </div>
-            <div className="mt-6 md:mt-8">
-              <Button variant="link" size="link" iconRight={<RxChevronRight />}>
-                Ver más
-              </Button>
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-8 md:mb-10 lg:mb-12">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
-                  alt="Webflow logo"
-                  className="max-h-12"
-                />
-              </div>
-              <blockquote className="md:text-md">
-                "Celebramos una despedida de soltero aquí. El Irish pub, las
-                pistas y el ambiente fueron exactamente lo que buscábamos."
-              </blockquote>
-              <div className="mt-5 flex w-full flex-col items-start gap-4 md:mt-6 md:w-auto md:flex-row md:items-center">
-                <div>
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    alt="Testimonial avatar"
-                    className="size-12 min-h-12 min-w-12 rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-semibold">Carlos Martínez</p>
-                  <p>Organizador de eventos</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-6 md:mt-8">
-              <Button variant="link" size="link" iconRight={<RxChevronRight />}>
-                Ver más
-              </Button>
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-8 md:mb-10 lg:mb-12">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
-                  alt="Webflow logo"
-                  className="max-h-12"
-                />
-              </div>
-              <blockquote className="md:text-md">
-                "Buena comida, bolos sin presión y un sitio donde los adultos
-                también nos divertimos. Volveremos seguro."
-              </blockquote>
-              <div className="mt-5 flex w-full flex-col items-start gap-4 md:mt-6 md:w-auto md:flex-row md:items-center">
-                <div>
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    alt="Testimonial avatar"
-                    className="size-12 min-h-12 min-w-12 rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-semibold">Ana López</p>
-                  <p>Visitante habitual</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-6 md:mt-8">
-              <Button variant="link" size="link" iconRight={<RxChevronRight />}>
-                Ver más
-              </Button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

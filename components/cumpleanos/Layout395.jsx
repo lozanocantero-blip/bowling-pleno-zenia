@@ -1,102 +1,53 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
+const pasos = [
+  {
+    num: "01",
+    tag: "Uno",
+    title: "Elige el paquete que te conviene",
+    desc: "Infantil básico, completo con arcade o el pack adultos con Irish Pub.",
+  },
+  {
+    num: "02",
+    tag: "Dos",
+    title: "Confirma fecha y número de personas",
+    desc: "Nos encargamos de reservar tu zona y prepararlo todo con antelación.",
+  },
+  {
+    num: "03",
+    tag: "Tres",
+    title: "Llega y disfruta sin preocupaciones",
+    desc: "Todo está listo. Tú solo tienes que disfrutar con los tuyos.",
+  },
+];
+
 export function Layout395() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="bg-brand-navy px-[5%] py-16 md:py-24 lg:py-28 section-dark">
       <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">Proceso</p>
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            Tres pasos para tu fiesta
-          </h1>
-          <p className="md:text-md">Reservar es simple y rápido</p>
+        <div className="text-center mb-12 md:mb-16">
+          <p className="label-red mb-3">Proceso</p>
+          <h2 className="text-white text-5xl md:text-7xl uppercase leading-none mb-4">Tres pasos para tu fiesta</h2>
+          <p className="text-white/60 md:text-md">Reservar es simple y rápido</p>
         </div>
-        <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
-          <div className="flex flex-col border border-border-primary">
-            <div className="flex w-full flex-col items-center justify-center self-start">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 1"
-              />
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-3">
+          {pasos.map((p, i) => (
+            <div key={i} className="bg-white/5 hover:bg-white/10 transition-colors p-8 md:p-10 border border-white/10">
+              <span className="text-6xl font-black text-white/10 block mb-4">{p.num}</span>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">{p.tag}</p>
+              <h3 className="text-white text-xl font-black uppercase mb-3">{p.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
             </div>
-            <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-              <div>
-                <p className="mb-2 font-semibold">Uno</p>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Elige el paquete que te conviene
-                </h2>
-                <p>Infantil básico, completo o adultos en el pub</p>
-              </div>
-              <div className="mt-5 md:mt-6">
-                <Button
-                  title="WhatsApp"
-                  variant="link"
-                  size="link"
-                  iconRight={<RxChevronRight />}
-                >
-                  WhatsApp
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col border border-border-primary">
-            <div className="flex w-full flex-col items-center justify-center self-start">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 1"
-              />
-            </div>
-            <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-              <div>
-                <p className="mb-2 font-semibold">Dos</p>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Confirma fecha y número de personas
-                </h2>
-                <p>Nos encargamos de reservar tu zona</p>
-              </div>
-              <div className="mt-5 md:mt-6">
-                <Button
-                  title="WhatsApp"
-                  variant="link"
-                  size="link"
-                  iconRight={<RxChevronRight />}
-                >
-                  WhatsApp
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col border border-border-primary">
-            <div className="flex w-full flex-col items-center justify-center self-start">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 1"
-              />
-            </div>
-            <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
-              <div>
-                <p className="mb-2 font-semibold">Tres</p>
-                <h2 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Llega y disfruta sin preocupaciones
-                </h2>
-                <p>Todo está listo, solo tienes que celebrar</p>
-              </div>
-              <div className="mt-5 md:mt-6">
-                <Button
-                  title="WhatsApp"
-                  variant="link"
-                  size="link"
-                  iconRight={<RxChevronRight />}
-                >
-                  WhatsApp
-                </Button>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+            className="inline-block bg-brand-red text-white px-10 py-4 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
+            Empezar por WhatsApp
+          </a>
         </div>
       </div>
     </section>

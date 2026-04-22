@@ -1,4 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{--color-background-primary:#fff;--color-background-secondary:#F0F7FF;--color-border-primary:#E2E8F0;--color-text-primary:#1A2744;--color-text-alternative:#fff;--color-neutral-black:#1A2744;}*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body,Inter,sans-serif);color:#1A2744;background:#fff;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading,'Barlow Condensed',sans-serif);font-weight:800}a{color:inherit;text-decoration:none}
+
+:root {
+  --color-background-primary: #fff;
+  --color-background-secondary: #F0F7FF;
+  --color-border-primary: #E2E8F0;
+  --color-text-primary: #1A2744;
+  --color-text-alternative: #fff;
+  --color-neutral-black: #1A2744;
+}
+
+* { box-sizing: border-box }
+html { scroll-behavior: smooth }
+
+body {
+  font-family: var(--font-body, Inter, sans-serif);
+  color: #1A2744;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-weight: 800;
+}
+
+a { color: inherit; text-decoration: none }
+
+/* Label accent */
+.label-red {
+  color: #E82040;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Dark section text overrides */
+.section-dark p,
+.section-dark span,
+.section-dark li { color: rgba(255,255,255,0.8); }
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark h5 { color: #fff; }

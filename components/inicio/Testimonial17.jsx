@@ -3,99 +3,71 @@
 import React from "react";
 import { BiSolidStar } from "react-icons/bi";
 
+const reviews = [
+  {
+    quote: "Pasamos un día increíble en familia. Las pistas están bien cuidadas y el personal muy atento. Sin duda volveremos.",
+    author: "María García",
+    role: "Visitante de Torrevieja",
+    flag: "🇪🇸",
+  },
+  {
+    quote: "El cumpleaños de mi hijo fue perfecto. Buena comida, ambiente genial y todo organizado sin estrés.",
+    author: "Carlos López",
+    role: "Padre de familia, Orihuela",
+    flag: "🇬🇧",
+  },
+  {
+    quote: "Único lugar en la zona donde puedes jugar a boliche y tomar una buena cerveza irlandesa. Muy recomendado.",
+    author: "David Martín",
+    role: "Cliente habitual",
+    flag: "🇩🇪",
+  },
+];
+
 export function Testimonial17() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="bg-brand-blue-light px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            Lo que dicen las +1.230 familias que ya nos han visitado en Orihuela
-            Costa
+        <div className="mb-12 text-center md:mb-16">
+          <p className="label-red mb-3">Reseñas</p>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl uppercase leading-none">
+            +1.230 familias<br />ya nos visitaron
           </h2>
-          <p className="md:text-md">
-            Valoración media de 4,3 ⭐ en Google con más de 1.230 reseñas reales
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-5 flex md:mb-6">
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-              </div>
-              <blockquote className="md:text-md">
-                "Pasamos un día increíble en familia. Las pistas están bien
-                cuidadas y el personal muy atento."
-              </blockquote>
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => <BiSolidStar key={i} className="size-5 text-yellow-400" />)}
             </div>
-            <div className="mt-5 flex w-full flex-col items-start md:mt-6 md:w-fit md:flex-row md:items-center">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar"
-                className="mb-4 size-12 min-h-12 min-w-12 rounded-full object-cover md:mb-0 md:mr-4"
-              />
-              <div>
-                <p className="font-semibold">María García</p>
-                <p>Visitante de Torrevieja</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-5 flex md:mb-6">
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-              </div>
-              <blockquote className="md:text-md">
-                "El cumpleaños de mi hijo fue perfecto. Buena comida, ambiente
-                genial y todo organizado sin estrés."
-              </blockquote>
-            </div>
-            <div className="mt-5 flex w-full flex-col items-start md:mt-6 md:w-fit md:flex-row md:items-center">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar"
-                className="mb-4 size-12 min-h-12 min-w-12 rounded-full object-cover md:mb-0 md:mr-4"
-              />
-              <div>
-                <p className="font-semibold">Carlos López</p>
-                <p>Padre de familia</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-5 flex md:mb-6">
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-              </div>
-              <blockquote className="md:text-md">
-                "Único lugar en la zona donde puedes jugar a boliche y tomar una
-                buena cerveza. Recomendado."
-              </blockquote>
-            </div>
-            <div className="mt-5 flex w-full flex-col items-start md:mt-6 md:w-fit md:flex-row md:items-center">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar"
-                className="mb-4 size-12 min-h-12 min-w-12 rounded-full object-cover md:mb-0 md:mr-4"
-              />
-              <div>
-                <p className="font-semibold">David Martín</p>
-                <p>Cliente habitual</p>
-              </div>
-            </div>
+            <span className="font-bold text-brand-navy">4,3 en Google</span>
           </div>
         </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {reviews.map((r, i) => (
+            <div key={i} className="bg-white p-6 md:p-8 border-t-4 border-brand-red flex flex-col justify-between">
+              <div>
+                <div className="flex gap-0.5 mb-4">
+                  {[...Array(5)].map((_, j) => <BiSolidStar key={j} className="size-4 text-yellow-400" />)}
+                </div>
+                <blockquote className="text-brand-navy/80 leading-relaxed mb-6">
+                  "{r.quote}"
+                </blockquote>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="size-10 rounded-full bg-brand-blue-light flex items-center justify-center text-lg">
+                  {r.flag}
+                </div>
+                <div>
+                  <p className="font-bold text-brand-navy text-sm">{r.author}</p>
+                  <p className="text-brand-navy/50 text-xs">{r.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-center text-brand-navy/40 text-xs mt-8 uppercase tracking-wider">
+          Reseñas verificadas de Google Business
+        </p>
       </div>
     </section>
   );

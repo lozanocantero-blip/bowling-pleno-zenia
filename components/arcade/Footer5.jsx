@@ -1,250 +1,98 @@
 "use client";
 
-import { Button, Input } from "@relume_io/relume-ui";
 import React, { useState } from "react";
-import {
-  BiLogoFacebookCircle,
-  BiLogoInstagram,
-  BiLogoLinkedinSquare,
-  BiLogoYoutube,
-} from "react-icons/bi";
-import { FaXTwitter } from "react-icons/fa6";
-
-const useForm = () => {
-  const [email, setEmail] = useState("");
-  const handleSetEmail = (event) => {
-    setEmail(event.target.value);
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log({ email });
-  };
-  return {
-    email,
-    handleSetEmail,
-    handleSubmit,
-  };
-};
 
 export function Footer5() {
-  const formState = useForm();
+  const [email, setEmail] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ email });
+  };
+
   return (
-    <footer id="relume" className="px-[5%] py-12 md:py-18 lg:py-20">
+    <footer className="bg-brand-navy text-white px-[5%] py-12 md:py-18 lg:py-20">
       <div className="container">
-        <div className="rb-12 mb-12 block items-start justify-between md:mb-18 lg:mb-20 lg:flex">
-          <div className="rb-6 mb-6 lg:mb-0">
-            <h1 className="font-semibold md:text-md">Mantente informado</h1>
-            <p>Recibe noticias sobre eventos y promociones especiales</p>
+        {/* Newsletter */}
+        <div className="mb-12 flex flex-col gap-6 border-b border-white/20 pb-12 md:mb-16 md:flex-row md:items-center md:justify-between md:pb-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-1">Newsletter</p>
+            <h3 className="text-2xl font-black uppercase">Mantente informado</h3>
+            <p className="text-white/70 text-sm mt-1">Eventos, promociones y novedades de Bowling Pleno Zenia</p>
           </div>
-          <div className="max-w-md lg:min-w-[25rem]">
-            <form
-              className="mb-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-[1fr_max-content] sm:gap-y-4 md:gap-4"
-              onSubmit={formState.handleSubmit}
-            >
-              <Input
-                id="email"
-                type="email"
-                placeholder="Tu correo aquí"
-                value={formState.email}
-                onChange={formState.handleSetEmail}
-              />
-              <Button title="Suscribir" variant="secondary" size="sm">
-                Suscribir
-              </Button>
-            </form>
-            <p className="text-xs">
-              Al suscribirte aceptas nuestra política de privacidad
+          <form onSubmit={handleSubmit} className="flex w-full max-w-md gap-3">
+            <input
+              type="email"
+              placeholder="tu@correo.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 bg-white/10 border border-white/30 px-4 py-2.5 text-white placeholder:text-white/50 focus:outline-none focus:border-brand-red text-sm"
+            />
+            <button type="submit" className="bg-brand-red px-5 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-red-700 transition-colors whitespace-nowrap">
+              Suscribir
+            </button>
+          </form>
+        </div>
+
+        {/* Links grid */}
+        <div className="mb-12 grid grid-cols-2 gap-8 md:mb-16 md:grid-cols-4 lg:grid-cols-5">
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-1 lg:col-span-1">
+            <a href="/" className="inline-block">
+              <span className="text-xl font-black uppercase tracking-tight leading-none">🎳 Pleno<br/>Zenia</span>
+            </a>
+            <p className="mt-3 text-white/60 text-xs leading-relaxed">
+              Calle Jade 2<br/>CC Zenia Boulevard<br/>Orihuela Costa, Alicante
+            </p>
+            <p className="mt-2 text-white/60 text-xs">
+              ⭐ 4,3 Google · +1.230 reseñas
             </p>
           </div>
-        </div>
-        <div className="rb-12 mb-12 grid grid-cols-1 items-start gap-x-8 gap-y-10 sm:grid-cols-3 md:mb-18 md:gap-y-12 lg:mb-20 lg:grid-cols-6">
-          <a
-            href="#"
-            className="sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-2 lg:col-start-auto lg:col-end-auto lg:row-start-auto lg:row-end-auto"
-          >
-            <img
-              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-              alt="Logo image"
-            />
-          </a>
-          <div className="flex flex-col items-start justify-start">
-            <h2 className="mb-3 font-semibold md:mb-4">Servicios</h2>
-            <ul>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Bolera y precios
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Cumpleaños
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Irish pub
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Arcade y juegos
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Información
-                </a>
-              </li>
+
+          <div>
+            <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">Servicios</h4>
+            <ul className="space-y-2.5">
+              {[["Bolera y Precios","/bolera-y-precios"],["Cumpleaños","/cumpleanos-y-celebraciones"],["Irish Pub","/irish-pub-y-bar"],["Arcade","/arcade-y-juegos"]].map(([label,href]) => (
+                <li key={label}><a href={href} className="text-sm text-white/70 hover:text-white transition-colors">{label}</a></li>
+              ))}
             </ul>
           </div>
-          <div className="flex flex-col items-start justify-start">
-            <h2 className="mb-3 font-semibold md:mb-4">Horarios</h2>
-            <ul>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Cómo llegar
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Contacto
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Reservas
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Preguntas frecuentes
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Sobre nosotros
-                </a>
-              </li>
+
+          <div>
+            <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">Horarios</h4>
+            <ul className="space-y-2.5 text-sm text-white/70">
+              <li>L–V: 14:00 – 23:30</li>
+              <li>Sáb, Dom y Fest: 12:00 – 00:00</li>
+              <li>Verano (Jul–Ago): 11:00 – 01:00</li>
+              <li>Navidad y S.Santa: 12:00 – 00:00</li>
             </ul>
           </div>
-          <div className="flex flex-col items-start justify-start">
-            <h2 className="mb-3 font-semibold md:mb-4">Contacto</h2>
-            <ul>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  WhatsApp
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Teléfono
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Correo electrónico
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Ubicación
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Redes sociales
-                </a>
-              </li>
+
+          <div>
+            <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">Contacto</h4>
+            <ul className="space-y-2.5">
+              <li><a href="tel:+34965355815" className="text-sm text-white/70 hover:text-white transition-colors">📞 965 35 58 15</a></li>
+              <li><a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">💬 WhatsApp</a></li>
+              <li><a href="https://maps.google.com/?q=Bowling+Pleno+Zenia" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">📍 Cómo llegar</a></li>
             </ul>
-          </div>
-          <div className="flex flex-col items-start justify-start">
-            <h2 className="mb-3 font-semibold md:mb-4">Síguenos</h2>
-            <ul>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Facebook
+            <h4 className="mt-6 mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">Síguenos</h4>
+            <div className="flex gap-3">
+              {[["FB","https://facebook.com"],["IG","https://instagram.com"],["TT","https://tiktok.com"],["YT","https://youtube.com"]].map(([label,href]) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                  className="size-8 flex items-center justify-center border border-white/30 text-xs font-bold text-white/70 hover:border-brand-red hover:text-brand-red transition-colors">
+                  {label}
                 </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Instagram
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  TikTok
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  YouTube
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Legal
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-start justify-start">
-            <h2 className="mb-3 font-semibold md:mb-4">
-              Política de privacidad
-            </h2>
-            <ul>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Términos de servicio
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Política de cookies
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Aviso legal
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  Configuración de cookies
-                </a>
-              </li>
-              <li className="py-2 text-sm">
-                <a href="#" className="flex items-center gap-3">
-                  © 2025 Bowling Pleno Zenia. Todos los derechos reservados
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="h-px w-full bg-black" />
-        <div className="flex flex-col-reverse items-start pb-4 pt-6 text-sm md:justify-start md:pb-0 md:pt-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex flex-col-reverse items-start md:flex-row md:gap-6 lg:items-center">
-            <div className="grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:justify-center md:gap-x-6 md:gap-y-0 lg:text-left">
-              <p className="mt-8 md:mt-0">
-                © 2024 Relume. All rights reserved.
-              </p>
+              ))}
             </div>
           </div>
-          <div className="mb-8 flex items-center justify-center gap-3 lg:mb-0">
-            <a href="#">
-              <BiLogoFacebookCircle className="size-6" />
-            </a>
-            <a href="#">
-              <BiLogoInstagram className="size-6" />
-            </a>
-            <a href="#">
-              <FaXTwitter className="size-6 p-0.5" />
-            </a>
-            <a href="#">
-              <BiLogoLinkedinSquare className="size-6" />
-            </a>
-            <a href="#">
-              <BiLogoYoutube className="size-6" />
-            </a>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="flex flex-col gap-3 border-t border-white/20 pt-8 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
+          <p>© 2025 Bowling Pleno Zenia S.L. · Todos los derechos reservados</p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-white/70 transition-colors">Aviso legal</a>
+            <a href="#" className="hover:text-white/70 transition-colors">Privacidad</a>
+            <a href="#" className="hover:text-white/70 transition-colors">Cookies</a>
           </div>
         </div>
       </div>

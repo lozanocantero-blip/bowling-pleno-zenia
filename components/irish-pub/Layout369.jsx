@@ -1,112 +1,59 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
+const cards = [
+  {
+    tag: "Comodidad",
+    title: "Toma algo mientras esperas tu pista",
+    desc: "No necesitas estar jugando para disfrutar del pub.",
+    wide: true,
+  },
+  {
+    tag: "Grupos",
+    title: "Perfecto para reuniones",
+    desc: "Reserva tu zona y disfruta con amigos.",
+    wide: false,
+  },
+  {
+    tag: "Ambiente",
+    title: "Música en vivo los fines de semana",
+    desc: "Algunos viernes y sábados hay música en directo.",
+    wide: false,
+  },
+];
+
 export function Layout369() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="ambiente" className="px-[5%] py-16 md:py-24 lg:py-28 bg-brand-blue-light">
       <div className="container">
-        <div className="rb-12 mb-12 md:mb-18 lg:mb-20">
-          <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Ambiente</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Espacio auténtico para adultos
-            </h2>
-            <p className="md:text-md">
-              Paredes de ladrillo, música en vivo algunos fines de semana, luz
-              cálida
-            </p>
-          </div>
+        <div className="text-center mb-12 md:mb-16">
+          <p className="label-red mb-3">Ambiente</p>
+          <h2 className="text-5xl md:text-7xl uppercase leading-none mb-4">Espacio auténtico para adultos</h2>
+          <p className="text-brand-navy/60 md:text-md max-w-md mx-auto">
+            Paredes de ladrillo, música en vivo algunos fines de semana, luz cálida y la mejor selección de cervezas
+          </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:gap-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
-            <div className="grid grid-cols-1 border border-border-primary sm:col-span-2 sm:row-span-1 sm:grid-cols-2">
-              <div className="flex flex-1 flex-col justify-center p-6">
-                <div>
-                  <p className="mb-2 text-sm font-semibold">Comodidad</p>
-                  <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                    Toma algo mientras esperas
-                  </h3>
-                  <p>No necesitas estar jugando para disfrutar del pub</p>
-                </div>
-                <div className="mt-5 flex flex-wrap items-center gap-4 md:mt-6">
-                  <Button
-                    title="Explorar"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    Explorar
-                  </Button>
-                </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {cards.map((c, i) => (
+            <div key={i} className={`bg-white border-2 border-brand-navy/10 hover:border-brand-navy transition-colors overflow-hidden ${c.wide ? "sm:col-span-2 flex flex-col sm:flex-row" : ""}`}>
+              <div className={`${c.wide ? "sm:w-1/2" : "w-full"} overflow-hidden bg-brand-blue-light aspect-video`}>
+                <img src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+                  alt={c.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
-              <div className="flex items-center justify-center">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-portrait.svg"
-                  alt="Relume placeholder image 3"
-                  className="size-full object-cover"
-                />
+              <div className="p-6 flex flex-col justify-center">
+                <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-1">{c.tag}</p>
+                <h3 className="text-xl font-black uppercase mb-2">{c.title}</h3>
+                <p className="text-brand-navy/60 text-sm mb-4">{c.desc}</p>
+                <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-sm font-bold text-brand-navy hover:text-brand-red transition-colors">
+                  Reservar <RxChevronRight className="size-4" />
+                </a>
               </div>
             </div>
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-col justify-center p-6">
-                <div>
-                  <p className="mb-2 text-sm font-semibold">Grupos</p>
-                  <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                    Perfecto para reuniones
-                  </h3>
-                  <p>Reserva tu zona y disfruta con amigos</p>
-                </div>
-                <div className="mt-5 flex items-center gap-4 md:mt-6">
-                  <Button
-                    title="Reservar"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    Reservar
-                  </Button>
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image 1"
-                  className="w-full object-cover"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col border border-border-primary">
-              <div className="flex flex-col justify-center p-6">
-                <div>
-                  <p className="mb-2 text-sm font-semibold">Grupos</p>
-                  <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                    Perfecto para reuniones
-                  </h3>
-                  <p>Reserva tu zona y disfruta con amigos</p>
-                </div>
-                <div className="mt-5 flex items-center gap-4 md:mt-6">
-                  <Button
-                    title="Reservar"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    Reservar
-                  </Button>
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image 2"
-                  className="w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
