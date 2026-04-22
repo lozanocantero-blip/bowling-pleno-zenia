@@ -74,7 +74,8 @@ export function Header83() {
                 transform: "translateZ(0)",
                 transition: "none",
                 objectFit: "cover",
-                objectPosition: "center bottom",
+                objectPosition: "center center",
+                transform: "translateZ(0) translateY(18%)",
               }}
             />
           ))}
