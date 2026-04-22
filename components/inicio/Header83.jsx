@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 
 const useRelume = () => {
