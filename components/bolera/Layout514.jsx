@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { RxChevronRight } from "react-icons/rx";
 
 const features = [
@@ -55,15 +54,6 @@ export function Layout514() {
                 className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline">
                 WhatsApp <RxChevronRight className="size-4" />
               </a>
-            </div>
-            <div className="mt-8 overflow-hidden">
-              <Image
-                src="/images/bolera-pistas.jpg"
-                alt="Pistas de bowling Pleno Zenia"
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover"
-              />
             </div>
           </div>
 
