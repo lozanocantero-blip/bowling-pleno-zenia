@@ -10,7 +10,8 @@ const services = [
     desc: "Adaptadas para todas las edades. Sin reserva previa ni calzado especial.",
     cta: "Ver precios",
     href: "/bolera-y-precios",
-    accent: "brand-red",
+    color: "#E82040",
+    img: "/images/bolera.jpeg",
     wide: false,
   },
   {
@@ -19,7 +20,8 @@ const services = [
     desc: "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
     cta: "Reservar",
     href: "/cumpleanos-y-celebraciones",
-    accent: "brand-blue",
+    color: "#0072CE",
+    img: null,
     wide: false,
   },
   {
@@ -28,7 +30,8 @@ const services = [
     desc: "Cervezas importadas, cócteles y ambiente auténtico irlandés mientras juegas o descansas.",
     cta: "Descubrir",
     href: "/irish-pub-y-bar",
-    accent: "brand-green",
+    color: "#2A6E4E",
+    img: "/images/irishpub.jpeg",
     wide: true,
   },
   {
@@ -37,17 +40,11 @@ const services = [
     desc: "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
     cta: "Explorar",
     href: "/arcade-y-juegos",
-    accent: "brand-coral",
+    color: "#FF7043",
+    img: "/images/arcade.png",
     wide: false,
   },
 ];
-
-const accentMap = {
-  "brand-red": "text-brand-red border-brand-red",
-  "brand-blue": "text-brand-blue border-brand-blue",
-  "brand-green": "text-brand-green border-brand-green",
-  "brand-coral": "text-brand-coral border-brand-coral",
-};
 
 export function Layout370() {
   return (
@@ -72,18 +69,25 @@ export function Layout370() {
               href={s.href}
               className={`group flex flex-col border-2 border-brand-navy/10 hover:border-brand-navy transition-all duration-300 hover:shadow-lg ${s.wide ? "sm:col-span-2" : ""}`}
             >
-              {/* Image placeholder */}
+              {/* Image */}
               <div className="relative overflow-hidden bg-brand-blue-light aspect-video">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt={s.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                {s.img ? (
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-brand-blue-light">
+                    <span className="text-brand-navy/20 text-5xl">🎳</span>
+                  </div>
+                )}
               </div>
+
               {/* Content */}
               <div className="flex flex-1 flex-col justify-between p-5 md:p-6">
                 <div>
-                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${accentMap[s.accent].split(" ")[0]}`}>
+                  <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: s.color }}>
                     {s.tag}
                   </p>
                   <h3 className="text-xl font-black uppercase leading-tight mb-2 md:text-2xl">
