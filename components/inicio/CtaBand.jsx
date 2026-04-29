@@ -40,7 +40,7 @@ export function CtaBand() {
             href="https://wa.me/34965355815"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-black uppercase tracking-wider text-white transition-all hover:scale-105"
+            className="rounded-full inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-black uppercase tracking-wider text-white transition-all hover:scale-105"
             style={{ background: "#E82040", letterSpacing: "0.12em" }}
           >
             <svg className="size-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -50,7 +50,7 @@ export function CtaBand() {
           </a>
           <a
             href="tel:+34965355815"
-            className="inline-flex items-center justify-center gap-2 border-2 border-white/30 px-8 py-3 text-sm font-bold uppercase tracking-wider text-white/80 transition-colors hover:border-white hover:text-white"
+            className="rounded-full inline-flex items-center justify-center gap-2 border-2 border-white/30 px-8 py-3 text-sm font-bold uppercase tracking-wider text-white/80 transition-colors hover:border-white hover:text-white"
           >
             📞 965 35 58 15
           </a>

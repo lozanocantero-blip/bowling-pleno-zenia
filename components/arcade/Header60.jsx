@@ -46,12 +46,12 @@ export function Header60() {
         </p>
         <div className="flex flex-wrap gap-4">
           <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-            className="text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors"
+            className="rounded-full text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors"
             style={{ background: "#FF7043" }}>
             Ir a jugar
           </a>
           <a href="#maquinas"
-            className="border-2 border-white/40 text-white/80 px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:border-white hover:text-white transition-colors">
+            className="rounded-full border-2 border-white/40 text-white/80 px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:border-white hover:text-white transition-colors">
             Ver máquinas
           </a>
         </div>

@@ -2,33 +2,39 @@
 
 import React from "react";
 
-const serviceStrip = [
-  { label: "🎳 Bolera",     color: "#E82040", bg: "rgba(232,32,64,0.12)",  href: "/bolera-y-precios"           },
-  { label: "🕹️ Arcade",    color: "#FF7043", bg: "rgba(255,112,67,0.12)", href: "/arcade-y-juegos"            },
-  { label: "🍺 Dublin House", color: "#2A6E4E", bg: "rgba(42,110,78,0.12)", href: "/irish-pub-y-bar"           },
-  { label: "🎂 Cumpleaños", color: "#0072CE", bg: "rgba(0,114,206,0.12)",  href: "/cumpleanos-y-celebraciones" },
-];
-
 export function Header83() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ height: "100vh", background: "#1A2744" }}
+      style={{ height: "100vh" }}
     >
-      {/* Vignette */}
+      {/* Video background — loop infinito, sin sonido */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 0 }}
+        src="/hero-bowling.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Gradient overlay para legibilidad del texto */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          zIndex: 9,
+          zIndex: 2,
           background:
-            "linear-gradient(to bottom, transparent 0%, transparent 35%, rgba(26,39,68,0.6) 62%, rgba(26,39,68,0.97) 100%)",
+            "linear-gradient(to bottom, rgba(26,39,68,0.25) 0%, transparent 35%, rgba(26,39,68,0.55) 62%, rgba(26,39,68,0.96) 100%)",
         }}
       />
 
-      {/* Content */}
-      <div className="relative h-full flex flex-col px-[5%]" style={{ zIndex: 10 }}>
-
-        {/* Logo */}
+      {/* Contenido — z-10 */}
+      <div
+        className="relative h-full flex flex-col px-[5%]"
+        style={{ zIndex: 10 }}
+      >
+        {/* Logo centrado verticalmente en la mitad superior */}
         <div className="flex-1 flex items-center justify-start">
           <img
             src="/logo-hero.png"
@@ -42,28 +48,8 @@ export function Header83() {
           />
         </div>
 
-        {/* Text + CTAs */}
+        {/* Texto y CTAs — pegados al fondo */}
         <div className="pb-16 w-full">
-
-          {/* Service strip — the Maxima "world per program" signal */}
-          <div className="flex flex-wrap gap-2 mb-7">
-            {serviceStrip.map((s) => (
-              <a
-                key={s.href}
-                href={s.href}
-                className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider transition-all duration-200 hover:scale-105"
-                style={{
-                  background: s.bg,
-                  color: s.color,
-                  border: `1px solid ${s.color}55`,
-                  backdropFilter: "blur(6px)",
-                }}
-              >
-                {s.label}
-              </a>
-            ))}
-          </div>
-
           <p
             className="mb-5"
             style={{
@@ -77,7 +63,6 @@ export function Header83() {
           >
             Zenia Boulevard · Orihuela Costa · Abiertos 365 días
           </p>
-
           <h1
             className="mb-6 text-white uppercase"
             style={{
@@ -91,7 +76,6 @@ export function Header83() {
             La bolera de<br />
             <span style={{ color: "#E82040" }}>Orihuela Costa</span>
           </h1>
-
           <p
             className="mb-8 max-w-xl text-white/50"
             style={{
@@ -103,24 +87,23 @@ export function Header83() {
           >
             10 pistas · Irish Pub · Arcade · Cumpleaños
           </p>
-
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="/cumpleanos-y-celebraciones"
-              className="inline-block px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white"
+              className="inline-block rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-colors"
               style={{ background: "#E82040" }}
             >
               Reservar cumpleaños
             </a>
             <a
               href="/bolera-y-precios"
-              className="inline-block border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors"
+              className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors"
             >
               Ver precios
             </a>
             <a
               href="#horarios"
-              className="inline-block border-2 border-white/50 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition-colors"
+              className="inline-block rounded-full border-2 border-white/50 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition-colors"
             >
               Horarios
             </a>

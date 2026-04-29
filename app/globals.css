@@ -76,3 +76,13 @@ a { color: inherit; text-decoration: none }
 .section-dark h3,
 .section-dark h4,
 .section-dark h5 { color: #fff; }
+
+/* ── Pill buttons (Maxima-style rounded) ── */
+.btn-pill {
+  border-radius: 9999px !important;
+}
+
+/* Ensure all top-level nav-fixed pages don't overlap first section content */
+.page-with-fixed-nav > *:not(:first-child):not(:nth-child(2)) {
+  scroll-margin-top: 80px;
+}

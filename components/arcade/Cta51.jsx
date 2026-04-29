@@ -17,11 +17,11 @@ export function Cta51() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-              className="bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
+              className="rounded-full bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
               Ir a jugar
             </a>
             <a href="tel:+34965355815"
-              className="border-2 border-white text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-brand-navy transition-colors">
+              className="rounded-full border-2 border-white text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-brand-navy transition-colors">
               Contactar
             </a>
           </div>
