@@ -5,12 +5,12 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Contact25() {
   return (
-    <section id="ubicacion" className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
+    <section id="ubicacion" aria-label="Cómo llegar a Bowling Pleno Zenia en Orihuela Costa" className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
         <div className="mb-12 text-center md:mb-16">
           <p className="label-red mb-3">Ubicación</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl uppercase leading-none">
-            Estamos en<br />Zenia Boulevard
+            Visítanos en<br />Zenia Boulevard,{" "}<span className="text-brand-red">Orihuela Costa</span>
           </h2>
           <p className="mt-4 text-brand-navy/60 max-w-md mx-auto md:text-md">
             Planta baja del centro comercial. Parking gratuito para todos los visitantes.

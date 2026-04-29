@@ -61,7 +61,11 @@ function StatsHeader() {
 
   return (
     <div ref={ref} className="mb-12 md:mb-16">
-      <p className="label-red mb-3 text-center">Reseñas</p>
+      {/* H2 sr-only: invisible visualmente, semántico para Google */}
+      <h2 className="sr-only">
+        Reseñas de Bowling Pleno Zenia en Google — bolera en Orihuela Costa
+      </h2>
+      <p className="label-red mb-3 text-center" aria-hidden="true">Reseñas</p>
 
       {/* Big stats row */}
       <div className="flex flex-col items-center gap-6 md:flex-row md:justify-center md:gap-16 mb-8">

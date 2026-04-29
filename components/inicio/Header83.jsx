@@ -154,6 +154,7 @@ export function Header83() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="/cumpleanos-y-celebraciones"
+              aria-label="Reservar cumpleaños infantiles en Orihuela Costa"
               className="inline-block rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:opacity-90 transition-opacity"
               style={{ background: "#E82040" }}
             >
@@ -161,9 +162,10 @@ export function Header83() {
             </a>
             <a
               href="/bolera-y-precios"
+              aria-label="Ver precios de la bolera en Orihuela Costa"
               className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors"
             >
-              Ver precios
+              Ver precios bolera
             </a>
             <a
               href="#horarios"

@@ -82,12 +82,6 @@ export default function Home() {
       />
 
       <main>
-        {/* ── H1 semántico para SEO ────────────────────────────────────────── */}
-        {/* sr-only: invisible para el usuario, perfectamente legible por Google */}
-        <h1 className="sr-only">
-          La bolera en Orihuela Costa con bowling, arcade y pub irlandés
-        </h1>
-
         <Navbar1 />
         <Header83 />
         <StatsTicker />

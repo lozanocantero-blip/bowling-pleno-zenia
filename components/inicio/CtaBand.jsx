@@ -5,6 +5,7 @@ import React from "react";
 export function CtaBand() {
   return (
     <section
+      aria-label="Reservar en Bowling Pleno Zenia — sin reserva previa en Orihuela Costa"
       className="relative overflow-hidden px-[5%] py-14 md:py-16"
       style={{ background: "#1A2744" }}
     >
@@ -27,8 +28,15 @@ export function CtaBand() {
             ¿Listo para jugar?
           </p>
           <h2
-            style={{ fontWeight: 900, fontSize: "clamp(2.5rem, 6vw, 5.5rem)", lineHeight: 0.88, letterSpacing: "-0.03em", textTransform: "uppercase", color: "white" }}
-            style={{ fontFamily: "var(--font-heading, 'Barlow Condensed', sans-serif)" }}
+            style={{
+              fontFamily: "var(--font-heading, 'Barlow Condensed', sans-serif)",
+              fontWeight: 900,
+              fontSize: "clamp(2.5rem, 6vw, 5.5rem)",
+              lineHeight: 0.88,
+              letterSpacing: "-0.03em",
+              textTransform: "uppercase",
+              color: "white",
+            }}
           >
             Sin reserva · Sin calzado especial<br className="hidden md:block" />
             <span style={{ color: "#E82040" }}> Solo aparece y juega</span>

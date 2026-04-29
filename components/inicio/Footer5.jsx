@@ -96,7 +96,12 @@ export function Footer5() {
           <div>
             <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">Servicios</h4>
             <ul className="space-y-2.5">
-              {[["Bolera y Precios","/bolera-y-precios"],["Cumpleaños","/cumpleanos-y-celebraciones"],["Irish Pub","/irish-pub-y-bar"],["Arcade","/arcade-y-juegos"]].map(([label,href]) => (
+              {[
+                ["Bolera y Precios en Orihuela Costa", "/bolera-y-precios"],
+                ["Cumpleaños Infantiles", "/cumpleanos-y-celebraciones"],
+                ["Irish Pub Dublin House", "/irish-pub-y-bar"],
+                ["Arcade y Juegos", "/arcade-y-juegos"],
+              ].map(([label,href]) => (
                 <li key={label}><a href={href} className="text-sm text-white/70 hover:text-white transition-colors">{label}</a></li>
               ))}
             </ul>

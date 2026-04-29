@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   // ── Title ───────────────────────────────────────────────────────────────────
   // default para la home · template para páginas internas (añade la marca)
   title: {
-    default: 'Bowling Pleno Zenia · Bolera, Arcade y Pub Orihuela Costa',
+    default: 'Bolera en Orihuela Costa · Arcade, Pub y Cumpleaños',
     template: '%s · Bowling Pleno Zenia',
   },
 

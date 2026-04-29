@@ -11,7 +11,7 @@ const services = [
     tag: "Bolera",
     title: "Bowling — 10 Pistas",
     desc: "Adaptadas para todas las edades. Sin reserva previa ni calzado especial.",
-    cta: "Ver precios",
+    cta: "Ver precios de la bolera",
     href: "/bolera-y-precios",
     bg: "#E82040",
     rotate: -3,
@@ -25,7 +25,7 @@ const services = [
     tag: "Arcade",
     title: "Máquinas Arcade y Juegos",
     desc: "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
-    cta: "Explorar",
+    cta: "Explorar sala arcade",
     href: "/arcade-y-juegos",
     bg: "#FF7043",
     rotate: 2.5,
@@ -39,7 +39,7 @@ const services = [
     tag: "Irish Pub",
     title: "Dublin House",
     desc: "Cervezas importadas, cócteles y ambiente auténtico irlandés mientras juegas o descansas.",
-    cta: "Descubrir el pub",
+    cta: "Descubrir Dublin House",
     href: "/irish-pub-y-bar",
     bg: "#1A3D1A",
     rotate: -2,
@@ -53,7 +53,7 @@ const services = [
     tag: "Cumpleaños",
     title: "Fiestas & Celebraciones",
     desc: "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
-    cta: "Reservar ahora",
+    cta: "Reservar cumpleaños",
     href: "/cumpleanos-y-celebraciones",
     bg: "#0072CE",
     rotate: 3,
@@ -319,7 +319,7 @@ export function Layout370() {
   const seoOpacities = [seoOp0, seoOp1, seoOp2, seoOp3];
 
   return (
-    <section aria-label="Servicios de Bowling Pleno Zenia">
+    <section aria-label="Servicios de Bowling Pleno Zenia — bolera, arcade, pub y cumpleaños en Orihuela Costa">
 
       <div ref={containerRef} style={{ height: `${N * 100}vh`, position: "relative" }}>
         <div style={{ position: "sticky", top: 0, height: "100vh", overflow: "hidden", background: "#f5f4f0" }}>
