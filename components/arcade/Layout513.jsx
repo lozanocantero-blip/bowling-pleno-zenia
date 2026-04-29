@@ -38,9 +38,8 @@ export function Layout513() {
           <div className="lg:sticky lg:top-24">
             <p className="label-red mb-3">Máquinas</p>
             <h2 className="text-5xl md:text-7xl uppercase leading-none mb-6">Tenemos lo que buscas</h2>
-            <p className="text-brand-navy/60 md:text-md mb-8 max-w-md">
-              Desde simuladores hasta clásicos, cada máquina está lista para entretenerte.
-              Monedas o tarjeta recargable.
+            <p className="text-brand-navy/60 md:text-md mb-8 max-w-lg">
+              Desde simuladores de conducción hasta máquinas arcade clásicas, nuestra zona de arcade en Orihuela Costa está diseñada para ofrecer diversión sin límites. Disfruta de una amplia selección de juegos recreativos para todas las edades, con opciones para competir, ganar premios y pasar un día inolvidable en Zenia Boulevard.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
