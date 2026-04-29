@@ -168,7 +168,20 @@ export function Header83() {
           </div>
         </div>
 
-      </div>
+        {/* ── Three.js bowling pin — z-20, encima del texto ── */}
+        <iframe
+          src="/bowling-pin.html"
+          title="Bowling pin 3D"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full"
+          style={{
+            border: "none",
+            background: "transparent",
+            pointerEvents: "none",
+            zIndex: 20,
+          }}
+          allowTransparency={true}
+        />
     </section>
   );
 }
