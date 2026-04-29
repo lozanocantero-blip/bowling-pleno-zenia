@@ -1,206 +1,288 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
 
 const services = [
   {
     tag: "Bolera",
-    title: "Bowling — 10 Pistas",
-    desc: "Adaptadas para todas las edades. Sin reserva previa ni calzado especial.",
+    title: "Bowling",
+    sub: "10 Pistas",
+    desc: "Sin reserva previa ni calzado especial. Adaptadas para todas las edades.",
     cta: "Ver precios",
     href: "/bolera-y-precios",
-    color: "#E82040",
-    colorLight: "rgba(232,32,64,0.07)",
-    colorBorder: "rgba(232,32,64,0.25)",
+    bg: "#E82040",
+    textColor: "white",
+    rotate: -3,
     img: "/images/bolera.jpeg",
-    wide: false,
-    badge: null,
   },
   {
     tag: "Arcade",
-    title: "Máquinas Arcade y Juegos",
-    desc: "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
+    title: "Arcade",
+    sub: "y Juegos",
+    desc: "Simuladores, redemption, billar y futbolín. Sistema de tickets y premios.",
     cta: "Explorar",
     href: "/arcade-y-juegos",
-    color: "#FF7043",
-    colorLight: "rgba(255,112,67,0.07)",
-    colorBorder: "rgba(255,112,67,0.25)",
+    bg: "#FF7043",
+    textColor: "white",
+    rotate: 2.5,
     img: "/images/arcade.png",
-    wide: false,
-    badge: null,
   },
   {
     tag: "Irish Pub",
-    title: "Dublin House",
-    desc: "Cervezas importadas, cócteles y ambiente auténtico irlandés mientras juegas o descansas.",
+    title: "Dublin",
+    sub: "House",
+    desc: "El único Irish Pub dentro de una bolera en toda la zona. Cervezas importadas.",
     cta: "Descubrir el pub",
     href: "/irish-pub-y-bar",
-    color: "#2A6E4E",
-    colorLight: "rgba(42,110,78,0.07)",
-    colorBorder: "rgba(42,110,78,0.25)",
-    img: "/images/irishpub.jpeg",
-    wide: true,
+    bg: "#1A3D1A",
+    textColor: "white",
+    rotate: -2,
     badge: "ÚNICO EN LA ZONA",
+    img: "/images/irishpub.jpeg",
   },
   {
     tag: "Cumpleaños",
-    title: "Fiestas & Celebraciones",
+    title: "Fiestas &",
+    sub: "Celebraciones",
     desc: "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
     cta: "Reservar ahora",
     href: "/cumpleanos-y-celebraciones",
-    color: "#0072CE",
-    colorLight: "rgba(0,114,206,0.07)",
-    colorBorder: "rgba(0,114,206,0.25)",
+    bg: "#0072CE",
+    textColor: "white",
+    rotate: 3,
     img: null,
-    wide: false,
-    badge: null,
   },
 ];
 
-function CumpleBg({ color }) {
+function ServiceCard({ service, index, total, scrollYProgress }) {
+  const seg = 1 / total;
+  const s = index * seg;
+  const e = s + seg;
+  const isFirst = index === 0;
+
+  const behindY    = isFirst ? "0px"  : "70px";
+  const behindScale = isFirst ? 1 : 0.9 - (index - 1) * 0.025;
+  const behindRot  = isFirst ? service.rotate : service.rotate * 0.4;
+  const activeStart = isFirst ? 0 : s - seg * 0.35;
+  const safeStart   = Math.max(0, activeStart);
+
+  const y = useTransform(
+    scrollYProgress,
+    [safeStart, s, e * 0.82, e],
+    [behindY, "0px", "0px", "-170%"]
+  );
+  const rotate = useTransform(
+    scrollYProgress,
+    [safeStart, s, e * 0.82, e],
+    [behindRot, service.rotate, service.rotate, service.rotate + (service.rotate >= 0 ? 16 : -16)]
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [safeStart, s],
+    [behindScale, 1]
+  );
+  const opacity = useTransform(
+    scrollYProgress,
+    [e * 0.82, e],
+    [1, 0]
+  );
+
+  const zIndex = total - index;
+
   return (
-    <div
-      className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden"
+    <motion.div
       style={{
-        background: "linear-gradient(135deg, #0a1628 0%, #1A2744 40%, #0d3a7a 100%)",
+        position: "absolute",
+        inset: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        y, rotate, scale, opacity,
+        zIndex,
       }}
     >
-      {["🎂", "🎈", "🎉", "🎊", "🎳"].map((e, i) => (
-        <span
-          key={i}
-          className="absolute text-4xl opacity-20 pointer-events-none select-none"
+      <a
+        href={service.href}
+        className="block relative overflow-hidden"
+        style={{
+          background: service.bg,
+          borderRadius: "28px",
+          width: "min(420px, 84vw)",
+          minHeight: "460px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          textDecoration: "none",
+          cursor: "pointer",
+          boxShadow: "0 24px 60px rgba(0,0,0,0.25)",
+        }}
+      >
+        {/* Photo top half */}
+        {service.img && (
+          <div className="absolute inset-0" style={{ borderRadius: "28px", overflow: "hidden" }}>
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-full h-full object-cover"
+              style={{ opacity: 0.35 }}
+            />
+          </div>
+        )}
+
+        {/* Content */}
+        <div className="relative z-10 p-8 text-center">
+          {/* Badge */}
+          {service.badge && (
+            <span
+              className="inline-block mb-4 text-[10px] font-black uppercase tracking-[0.18em] px-3 py-1"
+              style={{ background: "rgba(255,255,255,0.25)", borderRadius: "9999px", color: "white" }}
+            >
+              {service.badge}
+            </span>
+          )}
+
+          {/* Tag */}
+          <p
+            className="text-xs font-bold uppercase tracking-[0.18em] mb-3"
+            style={{ color: "rgba(255,255,255,0.6)" }}
+          >
+            {service.tag}
+          </p>
+
+          {/* Title */}
+          <h3
+            style={{
+              fontFamily: "var(--font-heading, 'Barlow Condensed', sans-serif)",
+              fontWeight: 900,
+              fontSize: "clamp(3rem, 9vw, 4.5rem)",
+              lineHeight: 0.88,
+              letterSpacing: "-0.02em",
+              textTransform: "uppercase",
+              color: "white",
+              marginBottom: "6px",
+            }}
+          >
+            {service.title}
+          </h3>
+          <h3
+            style={{
+              fontFamily: "var(--font-heading, 'Barlow Condensed', sans-serif)",
+              fontWeight: 900,
+              fontSize: "clamp(3rem, 9vw, 4.5rem)",
+              lineHeight: 0.88,
+              letterSpacing: "-0.02em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.55)",
+              marginBottom: "20px",
+            }}
+          >
+            {service.sub}
+          </h3>
+
+          <p
+            className="text-sm leading-relaxed mb-6"
+            style={{ color: "rgba(255,255,255,0.75)", maxWidth: "300px", margin: "0 auto 24px" }}
+          >
+            {service.desc}
+          </p>
+
+          {/* CTA */}
+          <span
+            className="inline-flex items-center gap-2 font-bold uppercase tracking-wider text-xs"
+            style={{
+              background: "rgba(255,255,255,0.18)",
+              borderRadius: "9999px",
+              padding: "10px 22px",
+              color: "white",
+              backdropFilter: "blur(4px)",
+            }}
+          >
+            {service.cta} <RxChevronRight className="size-4" />
+          </span>
+        </div>
+
+        {/* Bottom gradient */}
+        <div
+          className="absolute inset-0 pointer-events-none"
           style={{
-            top: `${[15, 55, 25, 70, 45][i]}%`,
-            left: `${[10, 80, 50, 20, 65][i]}%`,
-            transform: `rotate(${[-15, 20, -5, 10, -20][i]}deg) scale(${[1.2, 0.9, 1.4, 1, 1.1][i]})`,
-            animation: `float-${i} ${3 + i * 0.5}s ease-in-out infinite alternate`,
+            borderRadius: "28px",
+            background: `linear-gradient(to top, ${service.bg} 30%, transparent 80%)`,
           }}
-        >
-          {e}
-        </span>
-      ))}
-      <span className="relative z-10 text-6xl drop-shadow-lg">🎂</span>
-      <p className="relative z-10 mt-3 text-xs font-black uppercase tracking-[0.2em] text-white/60">
-        Celebra con nosotros
-      </p>
-      <style>{`
-        @keyframes float-0 { to { transform: rotate(-10deg) scale(1.3) translateY(-6px); } }
-        @keyframes float-1 { to { transform: rotate(25deg) scale(0.85) translateY(-8px); } }
-        @keyframes float-2 { to { transform: rotate(-2deg) scale(1.5) translateY(-5px); } }
-        @keyframes float-3 { to { transform: rotate(15deg) scale(1.1) translateY(-7px); } }
-        @keyframes float-4 { to { transform: rotate(-15deg) scale(1.2) translateY(-6px); } }
-      `}</style>
-    </div>
+        />
+      </a>
+    </motion.div>
   );
 }
 
 export function Layout370() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
-      <div className="container">
-        <div className="mb-12 text-center md:mb-16">
-          <p className="label-red mb-3">Servicios</p>
-          <h2 style={{ fontWeight: 900, fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: 0.88, letterSpacing: "-0.03em", textTransform: "uppercase" }}>
-            Todo lo que<br /><span style={{ color: "#E82040" }}>buscas</span>
-          </h2>
-          <p className="mt-4 text-brand-navy/60 md:text-md max-w-md mx-auto">
-            Elige tu diversión favorita en Bowling Pleno Zenia
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s, i) => (
-            <a
-              key={i}
-              href={s.href}
-              className={`group relative flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 ${s.wide ? "sm:col-span-2" : ""}`}
-              style={{
-                border: `2px solid ${s.colorBorder}`,
-                borderTop: `4px solid ${s.color}`,
-              }}
-            >
-              {/* Badge */}
-              {s.badge && (
-                <div className="absolute top-3 right-3 z-20">
-                  <span
-                    className="inline-block text-[10px] font-black uppercase tracking-[0.15em] text-white px-2.5 py-1"
-                    style={{
-                      background: "#E82040",
-                      boxShadow: "0 2px 8px rgba(232,32,64,0.5)",
-                      animation: "pulse-badge 2s ease-in-out infinite",
-                    }}
-                  >
-                    {s.badge}
-                  </span>
-                </div>
-              )}
-
-              {/* Image */}
-              <div className="relative overflow-hidden bg-brand-blue-light aspect-video">
-                {s.img ? (
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <CumpleBg color={s.color} />
-                )}
-                {/* Color hover overlay */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ background: `${s.color}18` }}
-                />
-              </div>
-
-              {/* Body */}
-              <div
-                className="flex flex-1 flex-col justify-between p-5 md:p-6 transition-colors duration-300"
-                style={{ background: "white" }}
-              >
-                {/* Tag with color dot */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span
-                      className="inline-block w-2 h-2 rounded-full flex-shrink-0"
-                      style={{ background: s.color }}
-                    />
-                    <p className="text-xs font-bold uppercase tracking-widest" style={{ color: s.color }}>
-                      {s.tag}
-                    </p>
-                  </div>
-                  <h3 className="text-xl font-black uppercase leading-tight mb-2 md:text-2xl">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-brand-navy/60 leading-relaxed">{s.desc}</p>
-                </div>
-
-                {/* CTA */}
-                <div
-                  className="mt-4 flex items-center gap-1 text-sm font-bold uppercase tracking-wider group-hover:gap-2 transition-all"
-                  style={{ color: s.color }}
-                >
-                  {s.cta} <RxChevronRight className="size-4 transition-transform group-hover:translate-x-1" />
-                </div>
-              </div>
-
-              {/* Bottom accent bar on hover */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ background: s.color }}
-              />
-            </a>
-          ))}
-        </div>
+    <section>
+      {/* Header — fuera del sticky, encima */}
+      <div className="bg-white text-center px-[5%] pt-16 pb-8 md:pt-20">
+        <p className="label-red mb-3">Servicios</p>
+        <h2
+          style={{
+            fontWeight: 900,
+            fontSize: "clamp(3rem, 8vw, 7rem)",
+            lineHeight: 0.88,
+            letterSpacing: "-0.03em",
+            textTransform: "uppercase",
+          }}
+        >
+          Todo lo que<br />
+          <span style={{ color: "#E82040" }}>buscas</span>
+        </h2>
+        <p className="mt-4 text-brand-navy/60 md:text-md max-w-md mx-auto">
+          Elige tu diversión favorita en Bowling Pleno Zenia
+        </p>
       </div>
 
-      <style>{`
-        @keyframes pulse-badge {
-          0%, 100% { box-shadow: 0 2px 8px rgba(232,32,64,0.5); }
-          50% { box-shadow: 0 2px 16px rgba(232,32,64,0.85), 0 0 0 4px rgba(232,32,64,0.15); }
-        }
-      `}</style>
+      {/* Scroll container — 4 × 100vh */}
+      <div
+        ref={containerRef}
+        style={{ height: `${services.length * 100}vh`, position: "relative" }}
+      >
+        {/* Sticky viewport */}
+        <div
+          style={{
+            position: "sticky",
+            top: 0,
+            height: "100vh",
+            overflow: "hidden",
+            background: "#f5f4f0",
+          }}
+        >
+          {/* Hint scroll indicator at bottom */}
+          <div
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-1 pointer-events-none"
+            style={{ color: "rgba(26,39,68,0.35)" }}
+          >
+            <span className="text-[10px] font-bold uppercase tracking-widest">Scroll</span>
+            <div className="w-px h-8 bg-current opacity-40" />
+          </div>
+
+          {/* Cards */}
+          <div style={{ position: "absolute", inset: 0 }}>
+            {services.map((service, i) => (
+              <ServiceCard
+                key={i}
+                service={service}
+                index={i}
+                total={services.length}
+                scrollYProgress={scrollYProgress}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
