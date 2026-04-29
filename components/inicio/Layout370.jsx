@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
 
 // Scroll distance per card — more breathing room = smoother feel
-const SCROLL_PER_CARD = 1.4; // x viewport heights per card
+const SCROLL_PER_CARD = 1.0; // x viewport heights per card
 
 const services = [
   {
@@ -239,12 +239,8 @@ export function Layout370() {
     offset: ["start start", "end end"],
   });
 
-  // Spring makes the card animation feel organic — not robotically tied to scroll speed
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 180,
-    damping: 32,
-    mass: 0.6,
-  });
+  // Direct — no spring lag, instant scroll response
+  const smoothProgress = scrollYProgress;
 
   const totalHeight = services.length * SCROLL_PER_CARD;
 
@@ -265,8 +261,8 @@ export function Layout370() {
               <p className="label-red mb-4">Servicios</p>
               <h2 style={{
                 fontWeight: 900,
-                fontSize: "clamp(2.8rem, 5vw, 5.5rem)",
-                lineHeight: 0.88,
+                fontSize: "clamp(3.8rem, 7.5vw, 9rem)",
+                lineHeight: 0.86,
                 letterSpacing: "-0.03em",
                 textTransform: "uppercase",
                 color: "#1A2744",
@@ -308,7 +304,7 @@ export function Layout370() {
               {/* Mobile title — only on small screens */}
               <div className="md:hidden absolute top-8 left-0 right-0 z-50 text-center px-5">
                 <p className="label-red text-[10px] mb-1">Servicios</p>
-                <h2 style={{ fontWeight: 900, fontSize: "clamp(1.8rem,7vw,3rem)",
+                <h2 style={{ fontWeight: 900, fontSize: "clamp(2.4rem,9vw,4rem)",
                   lineHeight: 0.9, letterSpacing: "-0.03em", textTransform: "uppercase" }}>
                   Todo lo que <span style={{ color: "#E82040" }}>buscas</span>
                 </h2>
