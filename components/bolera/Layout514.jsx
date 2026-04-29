@@ -41,9 +41,8 @@ export function Layout514() {
             <h2 className="text-5xl md:text-7xl uppercase leading-none mb-6">
               ¿Qué incluye una pista?
             </h2>
-            <p className="text-brand-navy/60 md:text-md mb-8 max-w-md">
-              Las pistas están equipadas con todo lo esencial para que disfrutes sin preocupaciones.
-              Ven cuando quieras — sin reserva previa.
+            <p className="text-brand-navy/60 md:text-md mb-8 max-w-lg">
+              Nuestras pistas de bowling en Orihuela Costa están totalmente equipadas para que disfrutes desde el primer lanzamiento. Incluyen bolas de diferentes pesos, bumpers para niños y todo lo necesario para jugar cómodamente en familia o con amigos. Ven cuando quieras a Zenia Boulevard y juega sin reserva previa, de forma rápida y sencilla.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="/bolera-y-precios#tarifas"
