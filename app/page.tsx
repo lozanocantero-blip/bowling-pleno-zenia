@@ -3,6 +3,7 @@
 export const dynamic = 'force-dynamic'
 import { Navbar1 } from "@/components/inicio/Navbar1"
 import { Header83 } from "@/components/inicio/Header83"
+import { ScrollScene } from "@/components/inicio/ScrollScene"
 import { StatsTicker } from "@/components/inicio/StatsTicker"
 import { Layout370 } from "@/components/inicio/Layout370"
 import { Timeline19 } from "@/components/inicio/Timeline19"
@@ -14,6 +15,7 @@ import { Footer5 } from "@/components/inicio/Footer5"
 export default function Home() {
   return (
     <main>
+      <ScrollScene />
       <Navbar1 />
       <Header83 />
       <StatsTicker />

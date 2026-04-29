@@ -8,37 +8,17 @@ export function Header83() {
       className="relative overflow-hidden"
       style={{ height: "100vh", background: "#1A2744" }}
     >
-      {/* ── Three.js — z-8, detrás del texto ── */}
-      <iframe
-        src="/bowling-pin.html"
-        title="Escena 3D Bowling Pleno Zenia"
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          border: "none",
-          background: "transparent",
-          pointerEvents: "none",
-          zIndex: 8,
-          display: "block",
-        }}
-        allowTransparency={true}
-      />
-
-      {/* ── Vignette inferior para leer el texto ── */}
+      {/* Vignette inferior para leer el texto */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           zIndex: 9,
           background:
-            "linear-gradient(to bottom, rgba(26,39,68,0.15) 0%, transparent 30%, transparent 40%, rgba(26,39,68,0.72) 68%, rgba(26,39,68,0.97) 100%)",
+            "linear-gradient(to bottom, transparent 0%, transparent 35%, rgba(26,39,68,0.6) 62%, rgba(26,39,68,0.97) 100%)",
         }}
       />
 
-      {/* ── Foreground — z-10, encima del Three.js ── */}
+      {/* Contenido — z-10 (encima de la escena de objetos en z-6) */}
       <div
         className="relative h-full flex flex-col px-[5%]"
         style={{ zIndex: 10 }}
