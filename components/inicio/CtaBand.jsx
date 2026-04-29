@@ -39,7 +39,7 @@ export function CtaBand() {
             }}
           >
             Sin reserva · Sin calzado especial<br className="hidden md:block" />
-            <span style={{ color: "#E82040" }}> Solo aparece y juega</span>
+            <span style={{ color: "#E82040" }}> Solo visítanos y juega</span>
           </h2>
         </div>
 
