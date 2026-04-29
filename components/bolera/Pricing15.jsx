@@ -32,10 +32,7 @@ const PriceCard = ({ price, label, primary, wide }) => (
         ))}
       </ul>
     </div>
-    <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-      className={`mt-8 block text-center rounded-full py-3.5 text-sm font-bold uppercase tracking-wider transition-colors ${primary ? "bg-brand-red text-white hover:bg-red-700" : "bg-brand-navy text-white hover:bg-brand-red"}`}>
-      Reservar ahora
-    </a>
+
   </div>
 );
 
@@ -75,9 +72,6 @@ export function Pricing15() {
           </TabsContent>
         </Tabs>
 
-        <p className="text-center text-brand-navy/40 text-xs mt-8">
-          Precios por persona. Menores de 4 años gratis. Sin reserva previa.
-        </p>
       </div>
     </section>
   );
