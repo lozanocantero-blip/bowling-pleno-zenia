@@ -1,8 +1,14 @@
 "use client";
 
-import { useMediaQuery } from "@relume_io/relume-ui";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+
+const services = [
+  { label: "Bolera",      href: "/bolera-y-precios",           color: "#E82040", bg: "rgba(232,32,64,0.09)"  },
+  { label: "Arcade",      href: "/arcade-y-juegos",            color: "#FF7043", bg: "rgba(255,112,67,0.09)" },
+  { label: "Irish Pub",   href: "/irish-pub-y-bar",            color: "#2A6E4E", bg: "rgba(42,110,78,0.09)"  },
+  { label: "Cumpleaños",  href: "/cumpleanos-y-celebraciones", color: "#0072CE", bg: "rgba(0,114,206,0.09)"  },
+];
 
 export function Navbar1() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,11 +22,7 @@ export function Navbar1() {
 
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href="/" className="flex items-center">
-            <img
-              src="/logo.png"
-              alt="Bowling Pleno Zenia"
-              className="h-12 w-auto object-contain"
-            />
+            <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-12 w-auto object-contain" />
           </a>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
@@ -39,30 +41,30 @@ export function Navbar1() {
         <motion.div
           variants={{ open:{height:"var(--height-open,100dvh)"}, close:{height:"var(--height-closed,0)"} }}
           initial="close" exit="close" animate={animate} transition={{duration:0.4}}
-          className="overflow-hidden bg-white px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+          className="overflow-hidden bg-white px-[5%] lg:flex lg:items-center lg:gap-1 lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
-          <a href="/bolera-y-precios" className="block py-3 text-sm font-semibold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2">
-            Bolera y Precios
-          </a>
-          <a href="/cumpleanos-y-celebraciones" className="block py-3 text-sm font-semibold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors lg:px-4 lg:py-2">
-            Cumpleaños
-          </a>
-          <a href="/irish-pub-y-bar" className="block py-3 text-sm font-semibold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors lg:px-4 lg:py-2">
-            Irish Pub
-          </a>
-          <a href="/arcade-y-juegos" className="block py-3 text-sm font-semibold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors lg:px-4 lg:py-2">
-            Arcade
-          </a>
-          <a href="#ubicacion" className="block py-3 text-sm font-semibold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors lg:px-4 lg:py-2">
+          {services.map((s) => (
+            <a key={s.href} href={s.href} className="block py-2 first:pt-7 lg:first:pt-2 lg:py-1.5">
+              <span
+                className="inline-flex items-center rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 hover:opacity-75"
+                style={{ background: s.bg, color: s.color, border: `1px solid ${s.color}33` }}
+              >
+                {s.label}
+              </span>
+            </a>
+          ))}
+
+          <a href="#ubicacion" className="block py-3 text-xs font-semibold uppercase tracking-wider text-[#1A2744]/50 hover:text-[#1A2744] transition-colors lg:px-3 lg:py-2">
             Cómo llegar
           </a>
-          <div className="mt-6 flex flex-col items-center gap-3 lg:ml-6 lg:mt-0 lg:flex-row">
+
+          <div className="mt-6 flex flex-col items-center gap-3 lg:ml-4 lg:mt-0 lg:flex-row">
             <a href="tel:+34965355815"
-              className="w-full lg:w-auto px-4 py-2 border-2 border-[#1A2744] text-[#1A2744] text-sm font-bold uppercase tracking-wider hover:bg-[#1A2744] hover:text-white transition-colors text-center">
+              className="w-full lg:w-auto px-4 py-2 border-2 border-[#1A2744] text-[#1A2744] text-xs font-bold uppercase tracking-wider hover:bg-[#1A2744] hover:text-white transition-colors text-center">
               Contacto
             </a>
             <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-              className="w-full lg:w-auto px-4 py-2 bg-[#E82040] text-white text-sm font-bold uppercase tracking-wider hover:bg-red-700 transition-colors text-center">
+              className="w-full lg:w-auto px-4 py-2 bg-[#E82040] text-white text-xs font-bold uppercase tracking-wider hover:bg-red-700 transition-colors text-center">
               Reservar
             </a>
           </div>

@@ -2,11 +2,11 @@
 
 import React from "react";
 
+// Irish Pub accent: brand-green #2A6E4E
 export function Header60() {
   return (
     <section className="relative overflow-hidden" style={{ minHeight: "92vh", display: "flex", alignItems: "flex-end", background: "#0d1f0d" }}>
 
-      {/* Imagen hero — placeholder hasta recibir imagen del cliente */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/irishpub.jpeg"
@@ -19,18 +19,35 @@ export function Header60() {
         }} />
       </div>
 
+      {/* Left color accent bar */}
+      <div
+        className="absolute left-0 top-0 bottom-0 z-10 w-1"
+        style={{ background: "linear-gradient(to bottom, transparent, #2A6E4E 30%, #2A6E4E 70%, transparent)" }}
+      />
+
       <div className="relative z-10 w-full px-[5%] pb-16 md:pb-20">
-        <span className="ht-eyebrow">Dublin House · Irish Pub · Único en la zona</span>
+
+        {/* Colored service pill */}
+        <div className="mb-5">
+          <span
+            className="inline-flex items-center rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wider"
+            style={{ background: "rgba(42,110,78,0.2)", color: "#4ade80", border: "1px solid rgba(42,110,78,0.5)" }}
+          >
+            🍀 Dublin House · Irish Pub · Único en la zona
+          </span>
+        </div>
+
         <h1 className="ht-title mb-8">
           DUBLIN<br />
-          <span className="accent">HOUSE</span>
+          <span style={{ color: "#4ade80" }}>HOUSE</span>
         </h1>
         <p style={{ color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-body)", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.78rem", marginBottom: "2rem" }}>
           El único Irish Pub dentro de una bolera · Cervezas importadas · Cócteles
         </p>
         <div className="flex flex-wrap gap-4">
           <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-            className="bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
+            className="text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors"
+            style={{ background: "#2A6E4E" }}>
             Reservar mesa
           </a>
           <a href="#ambiente"

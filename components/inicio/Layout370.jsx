@@ -11,6 +11,8 @@ const services = [
     cta: "Ver precios",
     href: "/bolera-y-precios",
     color: "#E82040",
+    colorLight: "rgba(232,32,64,0.07)",
+    colorBorder: "rgba(232,32,64,0.25)",
     img: "/images/bolera.jpeg",
     wide: false,
     badge: null,
@@ -22,6 +24,8 @@ const services = [
     cta: "Explorar",
     href: "/arcade-y-juegos",
     color: "#FF7043",
+    colorLight: "rgba(255,112,67,0.07)",
+    colorBorder: "rgba(255,112,67,0.25)",
     img: "/images/arcade.png",
     wide: false,
     badge: null,
@@ -33,6 +37,8 @@ const services = [
     cta: "Descubrir el pub",
     href: "/irish-pub-y-bar",
     color: "#2A6E4E",
+    colorLight: "rgba(42,110,78,0.07)",
+    colorBorder: "rgba(42,110,78,0.25)",
     img: "/images/irishpub.jpeg",
     wide: true,
     badge: "ÚNICO EN LA ZONA",
@@ -44,13 +50,15 @@ const services = [
     cta: "Reservar ahora",
     href: "/cumpleanos-y-celebraciones",
     color: "#0072CE",
+    colorLight: "rgba(0,114,206,0.07)",
+    colorBorder: "rgba(0,114,206,0.25)",
     img: null,
     wide: false,
     badge: null,
   },
 ];
 
-function CumpleBg() {
+function CumpleBg({ color }) {
   return (
     <div
       className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden"
@@ -58,7 +66,6 @@ function CumpleBg() {
         background: "linear-gradient(135deg, #0a1628 0%, #1A2744 40%, #0d3a7a 100%)",
       }}
     >
-      {/* Big emoji icons scattered */}
       {["🎂", "🎈", "🎉", "🎊", "🎳"].map((e, i) => (
         <span
           key={i}
@@ -74,9 +81,7 @@ function CumpleBg() {
         </span>
       ))}
       <span className="relative z-10 text-6xl drop-shadow-lg">🎂</span>
-      <p
-        className="relative z-10 mt-3 text-xs font-black uppercase tracking-[0.2em] text-white/60"
-      >
+      <p className="relative z-10 mt-3 text-xs font-black uppercase tracking-[0.2em] text-white/60">
         Celebra con nosotros
       </p>
       <style>{`
@@ -109,7 +114,11 @@ export function Layout370() {
             <a
               key={i}
               href={s.href}
-              className={`group relative flex flex-col border-2 border-brand-navy/10 hover:border-brand-navy transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${s.wide ? "sm:col-span-2" : ""}`}
+              className={`group relative flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 ${s.wide ? "sm:col-span-2" : ""}`}
+              style={{
+                border: `2px solid ${s.colorBorder}`,
+                borderTop: `4px solid ${s.color}`,
+              }}
             >
               {/* Badge */}
               {s.badge && (
@@ -127,6 +136,7 @@ export function Layout370() {
                 </div>
               )}
 
+              {/* Image */}
               <div className="relative overflow-hidden bg-brand-blue-light aspect-video">
                 {s.img ? (
                   <img
@@ -135,29 +145,51 @@ export function Layout370() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
-                  <CumpleBg />
+                  <CumpleBg color={s.color} />
                 )}
-                {/* Hover overlay */}
+                {/* Color hover overlay */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ background: `${s.color}22` }}
+                  style={{ background: `${s.color}18` }}
                 />
               </div>
 
-              <div className="flex flex-1 flex-col justify-between p-5 md:p-6">
+              {/* Body */}
+              <div
+                className="flex flex-1 flex-col justify-between p-5 md:p-6 transition-colors duration-300"
+                style={{ background: "white" }}
+              >
+                {/* Tag with color dot */}
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: s.color }}>
-                    {s.tag}
-                  </p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span
+                      className="inline-block w-2 h-2 rounded-full flex-shrink-0"
+                      style={{ background: s.color }}
+                    />
+                    <p className="text-xs font-bold uppercase tracking-widest" style={{ color: s.color }}>
+                      {s.tag}
+                    </p>
+                  </div>
                   <h3 className="text-xl font-black uppercase leading-tight mb-2 md:text-2xl">
                     {s.title}
                   </h3>
                   <p className="text-sm text-brand-navy/60 leading-relaxed">{s.desc}</p>
                 </div>
-                <div className="mt-4 flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-navy group-hover:gap-2 transition-all" style={{ color: s.color }}>
+
+                {/* CTA */}
+                <div
+                  className="mt-4 flex items-center gap-1 text-sm font-bold uppercase tracking-wider group-hover:gap-2 transition-all"
+                  style={{ color: s.color }}
+                >
                   {s.cta} <RxChevronRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
+
+              {/* Bottom accent bar on hover */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: s.color }}
+              />
             </a>
           ))}
         </div>

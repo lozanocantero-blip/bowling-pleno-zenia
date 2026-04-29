@@ -2,11 +2,11 @@
 
 import React from "react";
 
+// Cumpleaños accent: brand-blue #0072CE
 export function Header60() {
   return (
     <section className="relative overflow-hidden bg-brand-navy" style={{ minHeight: "92vh", display: "flex", alignItems: "flex-end" }}>
 
-      {/* Imagen hero — placeholder hasta recibir imagen del cliente */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/cumpleanos-hero.jpg"
@@ -19,18 +19,35 @@ export function Header60() {
         }} />
       </div>
 
+      {/* Left color accent bar */}
+      <div
+        className="absolute left-0 top-0 bottom-0 z-10 w-1"
+        style={{ background: "linear-gradient(to bottom, transparent, #0072CE 30%, #0072CE 70%, transparent)" }}
+      />
+
       <div className="relative z-10 w-full px-[5%] pb-16 md:pb-20">
-        <span className="ht-eyebrow">Cumpleaños y Celebraciones · Todo incluido</span>
+
+        {/* Colored service pill */}
+        <div className="mb-5">
+          <span
+            className="inline-flex items-center rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wider"
+            style={{ background: "rgba(0,114,206,0.15)", color: "#60a5fa", border: "1px solid rgba(0,114,206,0.4)" }}
+          >
+            🎂 Cumpleaños y Celebraciones · Todo incluido
+          </span>
+        </div>
+
         <h1 className="ht-title mb-8">
           LA FIESTA<br />
-          <span className="accent">PERFECTA</span>
+          <span style={{ color: "#60a5fa" }}>PERFECTA</span>
         </h1>
         <p style={{ color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-body)", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.78rem", marginBottom: "2rem" }}>
           Paquetes todo incluido · Infantil y adultos · Zona reservada
         </p>
         <div className="flex flex-wrap gap-4">
           <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-            className="bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
+            className="text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors"
+            style={{ background: "#0072CE" }}>
             Reservar mi fiesta
           </a>
           <a href="#paquetes"

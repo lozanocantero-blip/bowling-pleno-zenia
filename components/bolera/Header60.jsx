@@ -2,11 +2,11 @@
 
 import React from "react";
 
+// Bolera accent: brand-red #E82040
 export function Header60() {
   return (
     <section className="relative overflow-hidden bg-brand-navy" style={{ minHeight: "92vh", display: "flex", alignItems: "flex-end" }}>
 
-      {/* Imagen hero */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/bolera-pistas.jpg"
@@ -19,8 +19,24 @@ export function Header60() {
         }} />
       </div>
 
+      {/* Left color accent bar — Maxima per-section identity */}
+      <div
+        className="absolute left-0 top-0 bottom-0 z-10 w-1"
+        style={{ background: "linear-gradient(to bottom, transparent, #E82040 30%, #E82040 70%, transparent)" }}
+      />
+
       <div className="relative z-10 w-full px-[5%] pb-16 md:pb-20">
-        <span className="ht-eyebrow">Bolera · 10 Pistas · Zenia Boulevard</span>
+
+        {/* Colored service pill */}
+        <div className="mb-5">
+          <span
+            className="inline-flex items-center rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wider"
+            style={{ background: "rgba(232,32,64,0.15)", color: "#E82040", border: "1px solid rgba(232,32,64,0.4)" }}
+          >
+            🎳 Bolera · 10 Pistas · Zenia Boulevard
+          </span>
+        </div>
+
         <h1 className="ht-title mb-8">
           10 PISTAS<br />
           <span className="accent">DE BOWLING</span>
@@ -30,7 +46,8 @@ export function Header60() {
         </p>
         <div className="flex flex-wrap gap-4">
           <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
-            className="bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
+            className="text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors"
+            style={{ background: "#E82040" }}>
             Reservar ahora
           </a>
           <a href="#tarifas"

@@ -2,13 +2,20 @@
 
 import React from "react";
 
+const serviceStrip = [
+  { label: "🎳 Bolera",     color: "#E82040", bg: "rgba(232,32,64,0.12)",  href: "/bolera-y-precios"           },
+  { label: "🕹️ Arcade",    color: "#FF7043", bg: "rgba(255,112,67,0.12)", href: "/arcade-y-juegos"            },
+  { label: "🍺 Dublin House", color: "#2A6E4E", bg: "rgba(42,110,78,0.12)", href: "/irish-pub-y-bar"           },
+  { label: "🎂 Cumpleaños", color: "#0072CE", bg: "rgba(0,114,206,0.12)",  href: "/cumpleanos-y-celebraciones" },
+];
+
 export function Header83() {
   return (
     <section
       className="relative overflow-hidden"
       style={{ height: "100vh", background: "#1A2744" }}
     >
-      {/* Vignette inferior para leer el texto */}
+      {/* Vignette */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -18,11 +25,9 @@ export function Header83() {
         }}
       />
 
-      {/* Contenido — z-10 (encima de la escena de objetos en z-6) */}
-      <div
-        className="relative h-full flex flex-col px-[5%]"
-        style={{ zIndex: 10 }}
-      >
+      {/* Content */}
+      <div className="relative h-full flex flex-col px-[5%]" style={{ zIndex: 10 }}>
+
         {/* Logo */}
         <div className="flex-1 flex items-center justify-start">
           <img
@@ -37,8 +42,28 @@ export function Header83() {
           />
         </div>
 
-        {/* Texto y CTAs */}
+        {/* Text + CTAs */}
         <div className="pb-16 w-full">
+
+          {/* Service strip — the Maxima "world per program" signal */}
+          <div className="flex flex-wrap gap-2 mb-7">
+            {serviceStrip.map((s) => (
+              <a
+                key={s.href}
+                href={s.href}
+                className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider transition-all duration-200 hover:scale-105"
+                style={{
+                  background: s.bg,
+                  color: s.color,
+                  border: `1px solid ${s.color}55`,
+                  backdropFilter: "blur(6px)",
+                }}
+              >
+                {s.label}
+              </a>
+            ))}
+          </div>
+
           <p
             className="mb-5"
             style={{
@@ -52,6 +77,7 @@ export function Header83() {
           >
             Zenia Boulevard · Orihuela Costa · Abiertos 365 días
           </p>
+
           <h1
             className="mb-6 text-white uppercase"
             style={{
@@ -65,6 +91,7 @@ export function Header83() {
             La bolera de<br />
             <span style={{ color: "#E82040" }}>Orihuela Costa</span>
           </h1>
+
           <p
             className="mb-8 max-w-xl text-white/50"
             style={{
@@ -76,6 +103,7 @@ export function Header83() {
           >
             10 pistas · Irish Pub · Arcade · Cumpleaños
           </p>
+
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="/cumpleanos-y-celebraciones"
