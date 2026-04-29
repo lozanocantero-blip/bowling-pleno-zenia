@@ -18,9 +18,14 @@ export function Navbar1() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-end px-[5%] py-3"
+      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between px-[5%] py-3"
       style={{ height: "72px" }}
     >
+      {/* Logo — link to home */}
+      <a href="/" className="flex items-center flex-shrink-0">
+        <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-11 w-auto object-contain" />
+      </a>
+
       {/* Desktop: single services pill + CTAs */}
       <div className="hidden lg:flex items-center gap-3">
 
