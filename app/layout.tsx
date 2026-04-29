@@ -16,8 +16,61 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Bowling Pleno Zenia | Bolera en Orihuela Costa',
-  description: 'El plan de ocio familiar mas completo de Orihuela Costa. 10 pistas de bowling, Arcade y Irish Pub. Abiertos 365 dias en Zenia Boulevard.',
+  // ── Title ───────────────────────────────────────────────────────────────────
+  // default para la home · template para páginas internas (añade la marca)
+  title: {
+    default: 'Bowling Pleno Zenia · Bolera, Arcade y Pub Orihuela Costa',
+    template: '%s · Bowling Pleno Zenia',
+  },
+
+  // ── Meta description ────────────────────────────────────────────────────────
+  description:
+    'Bowling Pleno Zenia, la bolera en Orihuela Costa con 10 pistas, arcade, pub irlandés y fiestas de cumpleaños. Abiertos 365 días. ¡Reserva hoy!',
+
+  // ── Keywords ────────────────────────────────────────────────────────────────
+  keywords: [
+    'bolera en Orihuela Costa',
+    'bowling Orihuela Costa',
+    'Bowling Pleno Zenia',
+    'bolera Zenia Boulevard',
+    'pistas de bolos Alicante',
+    'cumpleaños infantiles Orihuela Costa',
+    'pub irlandés Orihuela Costa',
+    'ocio familiar Orihuela Costa',
+    'arcade Orihuela Costa',
+    'qué hacer en Orihuela Costa con niños',
+  ],
+
+  // ── Canonical ───────────────────────────────────────────────────────────────
+  alternates: {
+    canonical: 'https://bowling-pleno-zenia.vercel.app',
+  },
+
+  // ── Robots ──────────────────────────────────────────────────────────────────
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+
+  // ── Open Graph (redes sociales / WhatsApp / iMessage) ───────────────────────
+  openGraph: {
+    title: 'Bowling Pleno Zenia · Bolera, Arcade y Pub Orihuela Costa',
+    description:
+      '10 pistas de bowling, arcade, Dublin House Irish Pub y fiestas de cumpleaños en Zenia Boulevard, Orihuela Costa.',
+    url: 'https://bowling-pleno-zenia.vercel.app',
+    siteName: 'Bowling Pleno Zenia',
+    locale: 'es_ES',
+    type: 'website',
+    images: [
+      {
+        url: '/images/bolera.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Bowling Pleno Zenia — Bolera en Orihuela Costa, Zenia Boulevard',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

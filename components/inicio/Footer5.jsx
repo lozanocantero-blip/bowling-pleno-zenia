@@ -36,16 +36,43 @@ export function Footer5() {
         {/* Links grid */}
         <div className="mb-12 grid grid-cols-2 gap-8 md:mb-16 md:grid-cols-4 lg:grid-cols-5">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-1">
-            <a href="/" className="inline-block">
-              <img src="/logo-navy.png" alt="Bowling Pleno Zenia" className="h-16 w-auto object-contain" />
+          {/* Columna marca + NAP semántico */}
+          <div className="col-span-2 md:col-span-1 lg:col-span-1"
+            itemScope itemType="https://schema.org/BowlingAlley">
+            <a href="/" className="inline-block" aria-label="Bowling Pleno Zenia — inicio">
+              <img
+                src="/logo-navy.png"
+                alt="Bowling Pleno Zenia — Bolera en Orihuela Costa"
+                className="h-16 w-auto object-contain"
+                itemProp="image"
+              />
             </a>
-            <p className="mt-3 text-white/60 text-xs leading-relaxed">
-              Calle Jade 2<br/>CC Zenia Boulevard<br/>Orihuela Costa, Alicante
-            </p>
+            <address
+              className="not-italic mt-3 text-white/60 text-xs leading-relaxed"
+              itemProp="address"
+              itemScope
+              itemType="https://schema.org/PostalAddress"
+            >
+              <span className="sr-only" itemProp="name">Bowling Pleno Zenia</span>
+              <span itemProp="streetAddress">Calle Jade 2, CC Zenia Boulevard</span><br />
+              <span itemProp="addressLocality">Orihuela Costa</span>,{" "}
+              <span itemProp="addressRegion">Alicante</span>{" "}
+              <span itemProp="postalCode">03189</span>
+            </address>
             <p className="mt-2 text-white/60 text-xs">
-              ⭐ 4,3 Google · +1.230 reseñas
+              <span itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
+                ⭐{" "}
+                <span itemProp="ratingValue">4,3</span> Google ·{" "}
+                +<span itemProp="reviewCount">1.230</span> reseñas
+              </span>
             </p>
+            <a
+              href="tel:+34965355815"
+              className="mt-2 block text-white/60 text-xs hover:text-white transition-colors"
+              itemProp="telephone"
+            >
+              📞 965 35 58 15
+            </a>
           </div>
 
           <div>
