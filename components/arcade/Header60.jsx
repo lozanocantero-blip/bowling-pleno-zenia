@@ -9,10 +9,10 @@ export function Header60() {
 
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/arcade.png"
+          src="/images/arcade-hero.jpg"
           className="size-full object-cover"
-          style={{ objectPosition: "center center" }}
-          alt="Arcade Bowling Pleno Zenia"
+          style={{ objectPosition: "center 40%" }}
+          alt="Máquinas arcade con sistema de tickets en Bowling Pleno Zenia — Orihuela Costa"
         />
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to bottom, rgba(13,13,32,0.2) 0%, rgba(13,13,32,0.1) 30%, rgba(13,13,32,0.6) 60%, rgba(13,13,32,0.97) 100%)"
