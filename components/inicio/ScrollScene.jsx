@@ -2,12 +2,14 @@
 
 import { useEffect, useRef } from "react";
 
+const NAV_H = 72; // altura del navbar
+
 export function ScrollScene() {
-  const wrapRef   = useRef(null);
-  const pinRef    = useRef(null);
-  const arcadeRef = useRef(null);
-  const arcadeRRef= useRef(null);
-  const ballRef   = useRef(null);
+  const wrapRef    = useRef(null);
+  const pinRef     = useRef(null);
+  const arcadeRef  = useRef(null);
+  const arcadeRRef = useRef(null);
+  const ballRef    = useRef(null);
 
   useEffect(() => {
     const wrap    = wrapRef.current;
@@ -18,7 +20,7 @@ export function ScrollScene() {
     if (!wrap || !pin || !arcade || !arcadeR || !ball) return;
 
     let raf;
-    let idleT = 0;
+    let idleT    = 0;
     let lastTime = performance.now();
 
     function tick(now) {
@@ -27,40 +29,32 @@ export function ScrollScene() {
       idleT += dt;
 
       const scrollY = window.scrollY;
-      const vh      = window.innerHeight;
-      const p       = Math.min(Math.max(scrollY / vh, 0), 1);
-      const eased   = p * p * (3 - 2 * p);
+      const vh      = window.innerHeight - NAV_H;
+      // p: 0→1 durante el hero, puede superar 1 pero usamos clamp para translate
+      const raw     = scrollY / vh;
+      const eased   = Math.min(raw, 1);
+      const e       = eased * eased * (3 - 2 * eased); // smoothstep 0→1
 
-      // Siempre visible — sin fade
-      wrap.style.opacity = "1";
+      // ── Flotar idle ──────────────────────────────────────
+      const fPin  = Math.sin(idleT * 1.05)       * 10;
+      const fL    = Math.sin(idleT * 0.93 + 2.4) * 8;
+      const fR    = Math.sin(idleT * 0.82 + 1.2) * 9;
+      const fBall = Math.sin(idleT * 0.78 + 0.7) * 7;
 
-      // Flotar idle
-      const floatPin    = Math.sin(idleT * 1.05) * 10;
-      const floatL      = Math.sin(idleT * 0.93 + 2.4) * 8;
-      const floatR      = Math.sin(idleT * 0.82 + 1.2) * 9;
-      const floatBall   = Math.sin(idleT * 0.78 + 0.7) * 7;
+      // ── Rotación CONTINUA basada en scrollY (no se para) ──
+      const rot = scrollY * 0.07; // gira indefinidamente al scrollear
 
-      // Pin: sube hacia arriba al hacer scroll
-      const pinY   = floatPin - eased * 200;
-      const pinRot = eased * 18;
-      const pinS   = 1 - eased * 0.12;
-      pin.style.transform = `translateY(${pinY}px) rotate(${pinRot}deg) scale(${pinS})`;
+      // Pin — sube + rota continuo
+      pin.style.transform = `translateY(${fPin - e * 220}px) rotate(${rot}deg) scale(${1 - e * 0.12})`;
 
-      // Arcade izquierda: sale por la izquierda
-      const arcX = -eased * 200;
-      const arcY = floatL + eased * 40;
-      arcade.style.transform = `translate(${arcX}px, ${arcY}px) rotate(${eased * 10}deg) scale(${1 - eased * 0.1})`;
+      // Arcade izquierda — sale izq + rota contrario
+      arcade.style.transform = `translate(${-e * 220}px, ${fL + e * 40}px) rotate(${-rot * 0.75}deg) scale(${1 - e * 0.1})`;
 
-      // Arcade derecha (donde estaba la cerveza): sale por la derecha
-      const arcRX = eased * 200;
-      const arcRY = floatR + eased * 50;
-      arcadeR.style.transform = `translate(${arcRX}px, ${arcRY}px) rotate(${-eased * 14}deg) scale(${1 - eased * 0.1})`;
+      // Arcade derecha (espejo) — sale der + rota
+      arcadeR.style.transform = `translate(${e * 220}px, ${fR + e * 50}px) scaleX(-1) rotate(${rot * 0.65}deg) scale(${1 - e * 0.1})`;
 
-      // Bola: rueda abajo-derecha
-      const ballX  = eased * 80;
-      const ballY  = floatBall + eased * 150;
-      const ballRot= eased * 540;
-      ball.style.transform = `translate(${ballX}px, ${ballY}px) rotate(${ballRot}deg) scale(${1 - eased * 0.2})`;
+      // Bola — rueda: rotación más rápida proporcional al scroll
+      ball.style.transform = `translate(${e * 80}px, ${fBall + e * 160}px) rotate(${scrollY * 0.35}deg) scale(${1 - e * 0.2})`;
 
       raf = requestAnimationFrame(tick);
     }
@@ -82,33 +76,33 @@ export function ScrollScene() {
       aria-hidden="true"
       style={{
         position: "fixed",
-        top: 0,
+        top: NAV_H,                        // empieza BAJO la navbar
         left: 0,
         width: "100%",
-        height: "100vh",
+        height: `calc(100vh - ${NAV_H}px)`,
         zIndex: 6,
         pointerEvents: "none",
         overflow: "hidden",
       }}
     >
-      {/* Bolo — centro */}
+      {/* Bolo — protagonista central */}
       <img ref={pinRef} src="/images/obj-pin.png" alt=""
-        style={{ ...base, right: "32%", top: "4%", height: "clamp(280px, 50vh, 560px)", width: "auto", transformOrigin: "bottom center" }}
+        style={{ ...base, right: "32%", top: "3%", height: "clamp(260px, 48vh, 520px)", width: "auto", transformOrigin: "bottom center" }}
       />
 
       {/* Arcade — izquierda */}
       <img ref={arcadeRef} src="/images/obj-arcade.png" alt=""
-        style={{ ...base, left: "-3%", top: "3%", height: "clamp(220px, 42vh, 460px)", width: "auto", transformOrigin: "bottom center", opacity: 0.92 }}
+        style={{ ...base, left: "-3%", top: "2%", height: "clamp(200px, 40vh, 440px)", width: "auto", transformOrigin: "bottom center", opacity: 0.92 }}
       />
 
-      {/* Arcade — derecha (donde estaba la cerveza) */}
+      {/* Arcade — derecha (espejo) */}
       <img ref={arcadeRRef} src="/images/obj-arcade.png" alt=""
-        style={{ ...base, right: "3%", top: "8%", height: "clamp(200px, 38vh, 400px)", width: "auto", transformOrigin: "bottom center", opacity: 0.88, transform: "scaleX(-1)" }}
+        style={{ ...base, right: "3%", top: "6%", height: "clamp(180px, 36vh, 390px)", width: "auto", transformOrigin: "bottom center", opacity: 0.88 }}
       />
 
       {/* Bola — derecha baja */}
       <img ref={ballRef} src="/images/obj-ball.png" alt=""
-        style={{ ...base, right: "14%", bottom: "22%", height: "clamp(110px, 17vh, 190px)", width: "auto", transformOrigin: "center center" }}
+        style={{ ...base, right: "14%", bottom: "20%", height: "clamp(100px, 16vh, 180px)", width: "auto", transformOrigin: "center center" }}
       />
     </div>
   );
