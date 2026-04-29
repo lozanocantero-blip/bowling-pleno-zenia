@@ -18,34 +18,26 @@ export function Navbar1() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between px-[5%] py-3"
+      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-end px-[5%] py-3"
       style={{ height: "72px" }}
     >
-      {/* Logo */}
-      <a href="/" className="flex items-center flex-shrink-0">
-        <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-11 w-auto object-contain" />
-      </a>
-
       {/* Desktop: single services pill + CTAs */}
       <div className="hidden lg:flex items-center gap-3">
 
-        {/* Single pill with all services */}
+        {/* Single pill */}
         <div
           className="flex items-center"
           style={{
             background: "white",
             borderRadius: "9999px",
-            boxShadow: "0 2px 16px rgba(0,0,0,0.12)",
+            boxShadow: "0 2px 16px rgba(0,0,0,0.15)",
             padding: "6px 8px",
           }}
         >
           {services.map((s, i) => (
             <React.Fragment key={s.href}>
               {i > 0 && (
-                <span
-                  className="flex-shrink-0 self-stretch w-px my-1"
-                  style={{ background: "rgba(26,39,68,0.12)" }}
-                />
+                <span className="flex-shrink-0 self-stretch w-px my-1" style={{ background: "rgba(26,39,68,0.12)" }} />
               )}
               <a
                 href={s.href}
@@ -57,7 +49,7 @@ export function Navbar1() {
           ))}
         </div>
 
-        {/* CTAs outside the pill */}
+        {/* CTAs outside pill */}
         <a
           href="tel:+34965355815"
           className="px-5 py-2 rounded-full border-2 border-white/70 text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1A2744] transition-all whitespace-nowrap"
@@ -75,7 +67,7 @@ export function Navbar1() {
         </a>
       </div>
 
-      {/* Mobile: hamburger */}
+      {/* Mobile: hamburger only */}
       <button
         className="flex size-11 flex-col items-center justify-center rounded-full bg-white/90 shadow lg:hidden"
         onClick={toggle}
@@ -94,15 +86,15 @@ export function Navbar1() {
         variants={{ open:{height:"auto",opacity:1}, close:{height:0,opacity:0} }}
         initial="close" exit="close" animate={animate}
         transition={{ duration: 0.3 }}
-        className="absolute top-full left-4 right-4 overflow-hidden rounded-2xl bg-white shadow-xl lg:hidden"
+        className="absolute right-4 overflow-hidden rounded-2xl bg-white shadow-xl lg:hidden"
         style={{ top: "68px" }}
       >
-        <div className="flex flex-col p-4 gap-1">
+        <div className="flex flex-col p-4 gap-1 min-w-[200px]">
           {services.map((s) => (
             <a
               key={s.href}
               href={s.href}
-              className="py-3 px-4 rounded-full text-sm font-bold uppercase tracking-wider text-[#1A2744] hover:bg-[#E82040]/8 hover:text-[#E82040] transition-colors"
+              className="py-3 px-4 rounded-full text-sm font-bold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors"
             >
               {s.label}
             </a>
