@@ -74,6 +74,9 @@ export function Header83() {
     width: "100%",
     height: "100%",
     objectFit: "cover",
+    objectPosition: "55% center",
+    transform: "scale(1.08)",
+    transformOrigin: "center center",
     zIndex: 0,
     willChange: "opacity",
   };
