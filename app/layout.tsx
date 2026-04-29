@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Barlow_Condensed, Inter } from 'next/font/google'
 import './globals.css'
+import { CookieBanner } from '@/components/shared/CookieBanner'
 
 const barlowCondensed = Barlow_Condensed({
   weight: ['400', '600', '700', '800', '900'],
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='es'>
       <body className={barlowCondensed.variable + ' ' + inter.variable + ' antialiased'}>
         {children}
+        <CookieBanner />
       </body>
     </html>
   )
