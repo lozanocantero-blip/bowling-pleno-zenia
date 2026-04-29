@@ -85,9 +85,9 @@ export function Header83() {
     <section className="relative overflow-hidden" style={{ height: "100vh", background: "#0d1220" }}>
 
       <video ref={v1Ref} style={{ ...videoStyle, opacity: 1 }}
-        src="/hero-bowling.mp4" muted playsInline preload="auto" />
+        src="/bowling-pleno-zenia-orihuela-costa.mp4" muted playsInline preload="auto" />
       <video ref={v2Ref} style={{ ...videoStyle, opacity: 0 }}
-        src="/hero-bowling.mp4" muted playsInline preload="auto" />
+        src="/bowling-pleno-zenia-orihuela-costa.mp4" muted playsInline preload="auto" />
 
       <div
         className="absolute inset-0 pointer-events-none"
