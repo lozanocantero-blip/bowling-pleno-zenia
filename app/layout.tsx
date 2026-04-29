@@ -3,7 +3,7 @@ import { Barlow_Condensed, Inter } from 'next/font/google'
 import './globals.css'
 
 const barlowCondensed = Barlow_Condensed({
-  weight: ['400', '600', '700', '800'],
+  weight: ['400', '600', '700', '800', '900'],
   subsets: ['latin'],
   variable: '--font-heading',
   display: 'swap',

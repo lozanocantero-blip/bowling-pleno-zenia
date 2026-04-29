@@ -106,26 +106,28 @@ export function Header83() {
           </div>
 
           {/* Texto y CTAs — abajo */}
-          <div className="pb-16 w-full text-center">
+          <div className="pb-16 w-full">
             <p
-              className="mb-4 text-xs font-bold uppercase tracking-[0.25em]"
-              style={{ color: "#E82040" }}
+              className="mb-5"
+              style={{ color: "#E82040", fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.28em", fontFamily: "var(--font-heading)" }}
             >
               Zenia Boulevard · Orihuela Costa · Abiertos 365 días
             </p>
             <h1
-              className="mb-6 text-white uppercase leading-none"
+              className="mb-6 text-white uppercase"
               style={{
                 fontFamily: "var(--font-heading, 'Barlow Condensed', sans-serif)",
-                fontWeight: 800,
-                fontSize: "clamp(3rem, 10vw, 7rem)",
+                fontWeight: 900,
+                fontSize: "clamp(4rem, 11vw, 10.5rem)",
+                lineHeight: 0.86,
+                letterSpacing: "-0.03em",
               }}
             >
-              La bolera de<br />Orihuela Costa
+              La bolera de<br /><span style={{ color: "#E82040" }}>Orihuela Costa</span>
             </h1>
-            <p className="mx-auto mb-8 max-w-xl text-white/80 text-base md:text-lg leading-relaxed">
-              10 pistas de bowling, zona arcade y el único pub irlandés
-              dentro de una bolera en toda la zona.
+            <p className="mb-8 max-w-xl text-white/50"
+              style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              10 pistas · Irish Pub · Arcade · Cumpleaños
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a

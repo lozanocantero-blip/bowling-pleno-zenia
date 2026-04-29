@@ -96,8 +96,8 @@ export function Layout370() {
       <div className="container">
         <div className="mb-12 text-center md:mb-16">
           <p className="label-red mb-3">Servicios</p>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl uppercase">
-            Todo lo que buscas
+          <h2 style={{ fontWeight: 900, fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: 0.88, letterSpacing: "-0.03em", textTransform: "uppercase" }}>
+            Todo lo que<br /><span style={{ color: "#E82040" }}>buscas</span>
           </h2>
           <p className="mt-4 text-brand-navy/60 md:text-md max-w-md mx-auto">
             Elige tu diversión favorita en Bowling Pleno Zenia

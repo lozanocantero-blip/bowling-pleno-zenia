@@ -46,7 +46,7 @@ export function Timeline19() {
         {/* Header */}
         <div className="mb-12 text-center md:mb-16">
           <p className="label-red mb-3">Horarios</p>
-          <h2 className="text-white text-5xl md:text-7xl lg:text-8xl uppercase leading-none">
+          <h2 style={{ fontWeight: 900, fontSize: "clamp(2.8rem, 7vw, 6.5rem)", lineHeight: 0.88, letterSpacing: "-0.03em", textTransform: "uppercase", color: "white" }}>
             Abiertos los 365 días del año
           </h2>
           <p className="mt-4 text-white/60 md:text-md max-w-lg mx-auto">

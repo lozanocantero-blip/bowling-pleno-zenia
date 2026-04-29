@@ -27,7 +27,7 @@ export function CtaBand() {
             ¿Listo para jugar?
           </p>
           <h2
-            className="text-white text-4xl md:text-5xl lg:text-6xl uppercase leading-none font-black"
+            style={{ fontWeight: 900, fontSize: "clamp(2.5rem, 6vw, 5.5rem)", lineHeight: 0.88, letterSpacing: "-0.03em", textTransform: "uppercase", color: "white" }}
             style={{ fontFamily: "var(--font-heading, 'Barlow Condensed', sans-serif)" }}
           >
             Sin reserva · Sin calzado especial<br className="hidden md:block" />
