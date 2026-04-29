@@ -2,22 +2,22 @@
 
 import React, { useRef, useEffect } from "react";
 
-const CROSSFADE_BEFORE_END = 1.2;  // segundos antes del fin para arrancar el fade
-const CROSSFADE_MS        = 900;   // duración del crossfade en ms
+const CROSSFADE_BEFORE_END = 1.2;
+const CROSSFADE_MS = 900;
 
 export function Header83() {
-  const v1Ref = useRef<HTMLVideoElement>(null);
-  const v2Ref = useRef<HTMLVideoElement>(null);
-  const activeRef    = useRef<1 | 2>(1);
-  const crossfading  = useRef(false);
-  const rafRef       = useRef<number | null>(null);
+  const v1Ref = useRef(null);
+  const v2Ref = useRef(null);
+  const activeRef   = useRef(1);
+  const crossfading = useRef(false);
+  const rafRef      = useRef(null);
 
   useEffect(() => {
     const v1 = v1Ref.current;
     const v2 = v2Ref.current;
     if (!v1 || !v2) return;
 
-    function crossfadeTo(from: HTMLVideoElement, to: HTMLVideoElement) {
+    function crossfadeTo(from, to) {
       if (crossfading.current) return;
       crossfading.current = true;
 
@@ -25,7 +25,7 @@ export function Header83() {
       to.play().catch(() => {});
 
       const start = performance.now();
-      function tick(now: number) {
+      function tick(now) {
         const p = Math.min((now - start) / CROSSFADE_MS, 1);
         from.style.opacity = String(1 - p);
         to.style.opacity   = String(p);
@@ -43,13 +43,13 @@ export function Header83() {
       rafRef.current = requestAnimationFrame(tick);
     }
 
-    function onTimeUpdate(this: HTMLVideoElement) {
+    function onTimeUpdate() {
       if (crossfading.current || !this.duration) return;
       const remaining = this.duration - this.currentTime;
       if (remaining <= CROSSFADE_BEFORE_END) {
         const isV1Active = activeRef.current === 1;
         if ((isV1Active && this === v1) || (!isV1Active && this === v2)) {
-          crossfadeTo(this, isV1Active ? v2! : v1!);
+          crossfadeTo(this, isV1Active ? v2 : v1);
         }
       }
     }
@@ -68,7 +68,7 @@ export function Header83() {
     };
   }, []);
 
-  const videoStyle: React.CSSProperties = {
+  const videoStyle = {
     position: "absolute",
     inset: 0,
     width: "100%",
@@ -76,19 +76,16 @@ export function Header83() {
     objectFit: "cover",
     zIndex: 0,
     willChange: "opacity",
-    transition: "none",
   };
 
   return (
     <section className="relative overflow-hidden" style={{ height: "100vh" }}>
 
-      {/* Dos vídeos superpuestos para el crossfade */}
       <video ref={v1Ref} style={{ ...videoStyle, opacity: 1 }}
         src="/hero-bowling.mp4" muted playsInline preload="auto" />
       <video ref={v2Ref} style={{ ...videoStyle, opacity: 0 }}
         src="/hero-bowling.mp4" muted playsInline preload="auto" />
 
-      {/* Gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -98,10 +95,8 @@ export function Header83() {
         }}
       />
 
-      {/* Contenido */}
       <div className="relative h-full flex flex-col px-[5%]" style={{ zIndex: 10 }}>
 
-        {/* Logo hero — más grande */}
         <div className="flex-1 flex items-center justify-start">
           <img
             src="/logo-hero.png"
@@ -115,7 +110,6 @@ export function Header83() {
           />
         </div>
 
-        {/* Texto y CTAs */}
         <div className="pb-16 w-full">
           <p
             className="mb-5"
@@ -157,7 +151,7 @@ export function Header83() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="/cumpleanos-y-celebraciones"
-              className="inline-block rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:opacity-90"
+              className="inline-block rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:opacity-90 transition-opacity"
               style={{ background: "#E82040" }}
             >
               Reservar cumpleaños
