@@ -187,6 +187,8 @@ export function Header83() {
           }}
           allowTransparency={true}
         />
+
+      </div>
     </section>
   );
 }
