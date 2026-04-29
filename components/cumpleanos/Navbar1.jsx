@@ -18,27 +18,31 @@ export function Navbar1() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between px-[5%] py-3"
+      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-end px-[5%] py-3"
       style={{ height: "72px" }}
     >
-      {/* Logo — link to home */}
-      <a href="/" className="flex items-center flex-shrink-0">
-        <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-11 w-auto object-contain" />
-      </a>
-
-      {/* Desktop: single services pill + CTAs */}
+      {/* Desktop */}
       <div className="hidden lg:flex items-center gap-3">
 
-        {/* Single pill */}
+        {/* Single pill — logo first, then service links */}
         <div
           className="flex items-center"
           style={{
             background: "white",
             borderRadius: "9999px",
             boxShadow: "0 2px 16px rgba(0,0,0,0.15)",
-            padding: "6px 8px",
+            padding: "5px 8px",
           }}
         >
+          {/* Logo como primer elemento de la pill */}
+          <a href="/" className="flex items-center px-2 mr-1">
+            <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-8 w-auto object-contain" />
+          </a>
+
+          {/* Divisor */}
+          <span className="flex-shrink-0 self-stretch w-px my-1" style={{ background: "rgba(26,39,68,0.12)" }} />
+
+          {/* Service links */}
           {services.map((s, i) => (
             <React.Fragment key={s.href}>
               {i > 0 && (
@@ -54,7 +58,7 @@ export function Navbar1() {
           ))}
         </div>
 
-        {/* CTAs outside pill */}
+        {/* CTAs fuera de la pill */}
         <a
           href="tel:+34965355815"
           className="px-5 py-2 rounded-full border-2 border-white/70 text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1A2744] transition-all whitespace-nowrap"
@@ -72,7 +76,7 @@ export function Navbar1() {
         </a>
       </div>
 
-      {/* Mobile: hamburger only */}
+      {/* Mobile: hamburger */}
       <button
         className="flex size-11 flex-col items-center justify-center rounded-full bg-white/90 shadow lg:hidden"
         onClick={toggle}
@@ -95,6 +99,10 @@ export function Navbar1() {
         style={{ top: "68px" }}
       >
         <div className="flex flex-col p-4 gap-1 min-w-[200px]">
+          <a href="/" className="flex items-center px-4 py-2 mb-1">
+            <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-8 w-auto object-contain" />
+          </a>
+          <div className="border-t border-[#E2E8F0] mb-1" />
           {services.map((s) => (
             <a
               key={s.href}
