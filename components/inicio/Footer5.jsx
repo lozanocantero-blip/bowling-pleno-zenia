@@ -140,9 +140,9 @@ export function Footer5() {
         <div className="flex flex-col gap-3 border-t border-white/20 pt-8 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
           <p>© 2025 Bowling Pleno Zenia S.L. · Todos los derechos reservados</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white/70 transition-colors">Aviso legal</a>
-            <a href="#" className="hover:text-white/70 transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-white/70 transition-colors">Cookies</a>
+            <a href="https://bowlingzenia.com/politica-de-cookies-2/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Aviso legal</a>
+            <a href="https://bowlingzenia.com/politica-de-privacidad/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Privacidad</a>
+            <a href="https://bowlingzenia.com/politica-de-cookies/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Cookies</a>
           </div>
         </div>
       </div>
