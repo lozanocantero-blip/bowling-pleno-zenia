@@ -36,9 +36,20 @@ export function Footer5() {
         {/* Links grid */}
         <div className="mb-12 grid grid-cols-2 gap-8 md:mb-16 md:grid-cols-4 lg:grid-cols-5">
           {/* Brand */}
-          {/* Columna marca + NAP semántico */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-1"
-            itemScope itemType="https://schema.org/BowlingAlley">
+          {/* Columna marca + NAP semántico ─────────────────────────────────
+               itemScope en el div raíz = BowlingAlley.
+               name, telephone y aggregateRating son hijos directos del BowlingAlley.
+               PostalAddress solo contiene campos de dirección.               */}
+          <div
+            className="col-span-2 md:col-span-1 lg:col-span-1"
+            itemScope
+            itemType="https://schema.org/BowlingAlley"
+          >
+            {/* name directamente en BowlingAlley — fix del error crítico */}
+            <meta itemProp="name" content="Bowling Pleno Zenia" />
+            <meta itemProp="telephone" content="+34965355815" />
+            <meta itemProp="priceRange" content="€€" />
+
             <a href="/" className="inline-block" aria-label="Bowling Pleno Zenia — inicio">
               <img
                 src="/logo-navy.png"
@@ -47,29 +58,36 @@ export function Footer5() {
                 itemProp="image"
               />
             </a>
+
+            {/* PostalAddress — solo campos de dirección, sin name */}
             <address
               className="not-italic mt-3 text-white/60 text-xs leading-relaxed"
               itemProp="address"
               itemScope
               itemType="https://schema.org/PostalAddress"
             >
-              <span className="sr-only" itemProp="name">Bowling Pleno Zenia</span>
               <span itemProp="streetAddress">Calle Jade 2, CC Zenia Boulevard</span><br />
               <span itemProp="addressLocality">Orihuela Costa</span>,{" "}
               <span itemProp="addressRegion">Alicante</span>{" "}
               <span itemProp="postalCode">03189</span>
             </address>
-            <p className="mt-2 text-white/60 text-xs">
-              <span itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
-                ⭐{" "}
-                <span itemProp="ratingValue">4,3</span> Google ·{" "}
-                +<span itemProp="reviewCount">1.230</span> reseñas
-              </span>
+
+            {/* aggregateRating — ratingValue con punto, reviewCount entero */}
+            <p
+              className="mt-2 text-white/60 text-xs"
+              itemProp="aggregateRating"
+              itemScope
+              itemType="https://schema.org/AggregateRating"
+            >
+              <meta itemProp="ratingValue" content="4.3" />
+              <meta itemProp="reviewCount" content="1230" />
+              <meta itemProp="bestRating" content="5" />
+              ⭐ 4,3 Google · +1.230 reseñas
             </p>
+
             <a
               href="tel:+34965355815"
               className="mt-2 block text-white/60 text-xs hover:text-white transition-colors"
-              itemProp="telephone"
             >
               📞 965 35 58 15
             </a>
