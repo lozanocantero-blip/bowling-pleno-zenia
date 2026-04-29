@@ -82,7 +82,7 @@ export function Header83() {
   };
 
   return (
-    <section className="relative overflow-hidden" style={{ height: "100vh" }}>
+    <section className="relative overflow-hidden" style={{ height: "100vh", background: "#0d1220" }}>
 
       <video ref={v1Ref} style={{ ...videoStyle, opacity: 1 }}
         src="/hero-bowling.mp4" muted playsInline preload="auto" />
