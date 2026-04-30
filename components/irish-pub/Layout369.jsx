@@ -17,10 +17,12 @@ const cards = [
     wide: false,
   },
   {
-    tag: "Ambiente",
-    title: "Música en vivo los fines de semana",
-    desc: "Algunos viernes y sábados hay música en directo.",
+    tag: "Café & Descanso",
+    title: "El mejor café mientras juegas o descansas",
+    desc: "Cappuccinos, cafés con leche y mucho más. Tómate un respiro con estilo.",
     wide: false,
+    img: "/cafe-cappuccino-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg",
+    imgAlt: "Café cappuccino Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa",
   },
 ];
 
@@ -39,8 +41,8 @@ export function Layout369() {
           {cards.map((c, i) => (
             <div key={i} className={`bg-white border-2 border-brand-navy/10 hover:border-brand-navy transition-colors overflow-hidden ${c.wide ? "sm:col-span-2 flex flex-col sm:flex-row" : ""}`}>
               <div className={`${c.wide ? "sm:w-1/2" : "w-full"} overflow-hidden bg-brand-blue-light aspect-video`}>
-                <img src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                  alt={c.title}
+                <img src={c.img || "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"}
+                  alt={c.imgAlt || c.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex flex-col justify-center">
