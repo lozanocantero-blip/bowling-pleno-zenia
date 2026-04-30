@@ -24,7 +24,6 @@ export function Layout16() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer" className="border-2 border-brand-navy text-brand-navy px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-brand-navy hover:text-white transition-colors">{t("btn1")}</a>
               <a href="#ambiente" className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline">{t("btn2")} <RxChevronRight className="size-4" /></a>
             </div>
           </div>

@@ -156,15 +156,6 @@ export function Header83() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="https://wa.me/34965355815"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:opacity-90 transition-opacity"
-              style={{ background: "#E82040" }}
-            >
-              {t("ctaBirthday")}
-            </a>
-            <a
               href="/bolera-y-precios"
               aria-label={t("ariaCtaPrices")}
               className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors"

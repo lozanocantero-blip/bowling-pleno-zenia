@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { RxChevronRight } from "react-icons/rx";
 import { useTranslations } from "next-intl";
 
 const cardImgs = [
@@ -12,7 +11,6 @@ const cardImgs = [
 export function Layout369() {
   const t = useTranslations("pub_page.ambiente");
   const cards = t.raw("cards");
-  const reserve = t("reserve");
   return (
     <section id="ambiente" className="px-[5%] py-16 md:py-24 lg:py-28 bg-brand-blue-light">
       <div className="container">
@@ -32,10 +30,7 @@ export function Layout369() {
                 <div className="p-6 flex flex-col justify-center">
                   <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-1">{c.tag}</p>
                   <h3 className="text-xl font-black uppercase mb-2">{c.title}</h3>
-                  <p className="text-brand-navy/60 text-sm mb-4">{c.desc}</p>
-                  <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-bold text-brand-navy hover:text-brand-red transition-colors">
-                    {reserve} <RxChevronRight className="size-4" />
-                  </a>
+                  <p className="text-brand-navy/60 text-sm">{c.desc}</p>
                 </div>
               </div>
             );
