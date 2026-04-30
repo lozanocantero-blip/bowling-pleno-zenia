@@ -6,20 +6,24 @@ import { RxChevronRight } from "react-icons/rx";
 const cards = [
   {
     tag: "Comodidad",
-    title: "Toma algo mientras esperas tu pista",
-    desc: "No necesitas estar jugando para disfrutar del pub.",
+    title: "Más de 5 cervezas de barril para elegir",
+    desc: "Guinness, Heineken, Cruzcampo y más — directamente del grifo. No necesitas estar jugando para disfrutar del pub en Orihuela Costa.",
     wide: true,
+    img: "/images/grifos-guinness-heineken-cruzcampo-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg",
+    imgAlt: "Grifos de cerveza Guinness Heineken Cruzcampo Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa",
   },
   {
     tag: "Grupos",
-    title: "Perfecto para reuniones",
-    desc: "Reserva tu zona y disfruta con amigos.",
+    title: "Dardos electrónicos y zona de relax",
+    desc: "Reta a tus amigos a una partida de dardos electrónicos. El plan perfecto para grupos en Zenia Boulevard.",
     wide: false,
+    img: "/images/dardos-electronicos-salon-chesterfield-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg",
+    imgAlt: "Dardos electrónicos y sofá Chesterfield Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa",
   },
   {
     tag: "Café & Descanso",
     title: "El mejor café mientras juegas o descansas",
-    desc: "Cappuccinos, cafés con leche y mucho más. Tómate un respiro con estilo.",
+    desc: "Cappuccinos, cafés con leche y mucho más. Tómate un respiro con estilo en el Dublin House.",
     wide: false,
     img: "/cafe-cappuccino-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg",
     imgAlt: "Café cappuccino Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa",
@@ -33,8 +37,8 @@ export function Layout369() {
         <div className="text-center mb-12 md:mb-16">
           <p className="label-red mb-3">Ambiente</p>
           <h2 className="text-5xl md:text-7xl uppercase leading-none mb-4">Espacio auténtico para adultos</h2>
-          <p className="text-brand-navy/60 md:text-md max-w-md mx-auto">
-            Paredes de ladrillo, música en vivo algunos fines de semana, luz cálida y la mejor selección de cervezas
+          <p className="text-brand-navy/60 md:text-md max-w-lg mx-auto">
+            Cervezas de barril, dardos electrónicos, sofás Chesterfield y café de especialidad — todo en el único Irish Pub de Orihuela Costa
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

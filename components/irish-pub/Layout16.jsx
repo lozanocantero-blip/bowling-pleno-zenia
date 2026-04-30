@@ -15,11 +15,10 @@ export function Layout16() {
               Cervezas y bebidas de calidad
             </h2>
             <p className="text-brand-navy/60 mb-6 md:text-md">
-              Una selección cuidada de cervezas importadas y bebidas premium.
-              Lo que no encontrarás en ningún otro local de la costa.
+              Guinness, Heineken, Cruzcampo, Águila Sin Filtrar y más — más de 5 cervezas de barril en nuestro Irish Pub en Orihuela Costa. Una selección que no encontrarás en ningún otro local de Zenia Boulevard.
             </p>
             <ul className="space-y-3 mb-8">
-              {["Cervezas irlandesas auténticas de barril","Bebidas internacionales variadas","Cócteles y tragos especiales","Café y bebidas sin alcohol"].map((item, i) => (
+              {["Guinness, Heineken y Cruzcampo de barril","Combinados y cócteles internacionales","Vinos, refrescos y bebidas sin alcohol","Café y cappuccinos de especialidad"].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <BiCheck className="size-5 text-brand-green shrink-0 mt-0.5" />
                   <span className="text-brand-navy/70 text-sm">{item}</span>
@@ -39,9 +38,9 @@ export function Layout16() {
           </div>
           <div className="overflow-hidden bg-brand-blue-light aspect-square md:aspect-auto md:h-[480px]">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/cerveza-heineken-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              alt="Cervezas Dublin House Irish Pub"
+              alt="Cerveza Heineken en mesa Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa"
             />
           </div>
         </div>
