@@ -18,7 +18,15 @@
     "ariaCtaPrices": "Ver precios de la bolera en Orihuela Costa"
   },
   "ticker": {
-    "items": ["🎳 10 Pistas de Bowling", "⭐ 4,3 en Google", "🎂 Fiestas & Cumpleaños", "🎳 Sin Reserva Previa", "🍺 Irish Pub Dublin House", "📍 Zenia Boulevard", "🎮 Sala Arcade"]
+    "items": [
+      "🎳 10 Pistas de Bowling",
+      "⭐ 4,3 en Google",
+      "🎂 Fiestas & Cumpleaños",
+      "🎳 Sin Reserva Previa",
+      "🍺 Irish Pub Dublin House",
+      "📍 Zenia Boulevard",
+      "🎮 Sala Arcade"
+    ]
   },
   "services": {
     "label": "Servicios",
@@ -67,10 +75,32 @@
     "label": "Horarios",
     "title": "Abiertos los 365 días del año",
     "seasons": {
-      "baja": { "periodo": "Enero — Junio", "nombre": "Temporada Baja", "dias1": "Lunes a Viernes", "horas1": "14:00 — 23:30", "dias2": "Sáb, Dom y Festivos", "horas2": "12:00 — 00:00" },
-      "santaSemana": { "periodo": "30 Mar — 12 Abr", "nombre": "Semana Santa", "dias1": "Todos los días", "horas1": "12:00 — 00:00" },
-      "alta": { "periodo": "Julio — Agosto", "nombre": "Temporada Alta", "dias1": "Todos los días", "horas1": "11:00 — 01:00" },
-      "navidad": { "periodo": "22 Dic — 06 Ene", "nombre": "Navidad", "dias1": "Todos los días", "horas1": "12:00 — 00:00" }
+      "baja": {
+        "periodo": "Enero — Junio",
+        "nombre": "Temporada Baja",
+        "dias1": "Lunes a Viernes",
+        "horas1": "14:00 — 23:30",
+        "dias2": "Sáb, Dom y Festivos",
+        "horas2": "12:00 — 00:00"
+      },
+      "santaSemana": {
+        "periodo": "30 Mar — 12 Abr",
+        "nombre": "Semana Santa",
+        "dias1": "Todos los días",
+        "horas1": "12:00 — 00:00"
+      },
+      "alta": {
+        "periodo": "Julio — Agosto",
+        "nombre": "Temporada Alta",
+        "dias1": "Todos los días",
+        "horas1": "11:00 — 01:00"
+      },
+      "navidad": {
+        "periodo": "22 Dic — 06 Ene",
+        "nombre": "Navidad",
+        "dias1": "Todos los días",
+        "horas1": "12:00 — 00:00"
+      }
     }
   },
   "reviews": {
@@ -98,11 +128,31 @@
     "openMaps": "Abrir en Google Maps",
     "quickInfo": "Info rápida",
     "infoItems": {
-      "where": ["📍", "Dónde", "Planta baja, Zenia Boulevard, Orihuela Costa"],
-      "parking": ["🅿️", "Parking", "Gratuito en el centro comercial"],
-      "lanes": ["🎳", "Pistas", "10 pistas · Sin reserva previa · Sin calzado especial"],
-      "rating": ["⭐", "Valoración", "4,3/5 en Google con más de 1.230 reseñas"],
-      "open": ["📅", "Apertura", "Abiertos los 365 días del año"]
+      "where": [
+        "📍",
+        "Dónde",
+        "Planta baja, Zenia Boulevard, Orihuela Costa"
+      ],
+      "parking": [
+        "🅿️",
+        "Parking",
+        "Gratuito en el centro comercial"
+      ],
+      "lanes": [
+        "🎳",
+        "Pistas",
+        "10 pistas · Sin reserva previa · Sin calzado especial"
+      ],
+      "rating": [
+        "⭐",
+        "Valoración",
+        "4,3/5 en Google con más de 1.230 reseñas"
+      ],
+      "open": [
+        "📅",
+        "Apertura",
+        "Abiertos los 365 días del año"
+      ]
     }
   },
   "footer": {
@@ -115,7 +165,12 @@
     "scheduleTitle": "Horarios",
     "contactTitle": "Contacto",
     "followTitle": "Síguenos",
-    "scheduleItems": ["L–V: 14:00 – 23:30", "Sáb, Dom y Fest: 12:00 – 00:00", "Verano (Jul–Ago): 11:00 – 01:00", "Navidad y S.Santa: 12:00 – 00:00"],
+    "scheduleItems": [
+      "L–V: 14:00 – 23:30",
+      "Sáb, Dom y Fest: 12:00 – 00:00",
+      "Verano (Jul–Ago): 11:00 – 01:00",
+      "Navidad y S.Santa: 12:00 – 00:00"
+    ],
     "howToGet": "Cómo llegar",
     "copyright": "© 2025 Bowling Pleno Zenia S.L. · Todos los derechos reservados",
     "legal": "Aviso legal",
@@ -145,5 +200,216 @@
     "marketingDesc": "Se usan para mostrar anuncios relevantes en otras plataformas.",
     "acceptAll": "Aceptar todas",
     "essentialOnly": "Solo esenciales"
+  },
+  "bolera_page": {
+    "header": {
+      "pill": "🎳 Bolera · 10 Pistas · Zenia Boulevard",
+      "h1": "10 PISTAS",
+      "h1Red": "DE BOWLING",
+      "sub": "Sin reserva previa · Sin calzado especial · Bumpers para niños",
+      "btn1": "Reservar ahora",
+      "btn2": "Ver tarifas"
+    },
+    "pricing": {
+      "label": "Tarifas",
+      "h2": "¿Cuánto cuesta jugar?",
+      "sub": "Los precios cambian según día de la semana y temporada",
+      "tabLow": "Temporada Baja",
+      "tabHigh": "Temporada Alta",
+      "perPerson": "por persona · una partida",
+      "labelWeekday": "Lun — Vie",
+      "labelWeekend": "Fin de semana y festivos",
+      "labelSummer": "Jul — Ago · Todos los días",
+      "features": [
+        "Una partida completa",
+        "Hasta 6 jugadores por pista",
+        "Bolas de todos los pesos",
+        "Bumpers para niños",
+        "Sin calzado especial"
+      ]
+    },
+    "features": {
+      "label": "Lo que ofrecemos",
+      "h2": "¿Qué incluye una pista?",
+      "body": "Nuestras pistas de bowling en Orihuela Costa están totalmente equipadas para que disfrutes desde el primer lanzamiento. Incluyen bolas de diferentes pesos, bumpers para niños y todo lo necesario para jugar cómodamente en familia o con amigos. Ven cuando quieras a Zenia Boulevard y juega sin reserva previa, de forma rápida y sencilla.",
+      "btn1": "Ver tarifas",
+      "btn2": "WhatsApp",
+      "items": [
+        {
+          "tag": "Comodidad",
+          "title": "Sin calzado obligatorio",
+          "desc": "Puedes jugar con tus propios zapatos. No necesitas alquilar ni comprar nada especial para disfrutar."
+        },
+        {
+          "tag": "Equipamiento",
+          "title": "Bolas de varios pesos",
+          "desc": "Desde las más ligeras para niños hasta las estándar para adultos. Tenemos el peso adecuado para cada jugador."
+        },
+        {
+          "tag": "Familiar",
+          "title": "Bumpers para los más pequeños",
+          "desc": "Instalamos las guías para que los niños siempre lleguen al final de la pista. La diversión está garantizada."
+        },
+        {
+          "tag": "Accesible",
+          "title": "Rampas para quien las necesite",
+          "desc": "Disponemos de rampas de lanzamiento para los más pequeños y para cualquier jugador que quiera una ayuda extra."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Grupos grandes",
+      "h2": "¿Más de seis personas?",
+      "body": "Si vienen más de seis, hay opciones mejores para vosotros. Escríbenos y lo organizamos todo.",
+      "btn1": "Escribir por WhatsApp",
+      "btn2": "Llamar"
+    },
+    "reviews": {
+      "label": "Reseñas",
+      "h2": "Lo que dicen",
+      "sub": "Gente que ha jugado aquí · Reseñas de Google",
+      "items": [
+        {
+          "quote": "Vinimos con los niños y fue perfecto, sin complicaciones con el calzado. Muy cómodo y asequible.",
+          "author": "María García",
+          "role": "Visitante local"
+        },
+        {
+          "quote": "Las pistas están bien mantenidas y el personal sabe lo que hace. Lo mejor de la costa para el bowling.",
+          "author": "Carlos Ruiz",
+          "role": "Cliente habitual"
+        },
+        {
+          "quote": "Mejor que otras boleras de la zona, y los precios son justos. Ideal para toda la familia.",
+          "author": "Elena Martínez",
+          "role": "Turista"
+        }
+      ]
+    },
+    "gallery": {
+      "label": "Galería",
+      "h2": "Nuestras Pistas",
+      "sub": "10 pistas de bowling profesionales en Bowling Pleno Zenia — Orihuela Costa"
+    }
+  },
+  "arcade_page": {
+    "header": {
+      "pill": "🕹️ Arcade y Juegos · Simuladores · Premios",
+      "h1": "PURA",
+      "h1Accent": "DIVERSIÓN",
+      "sub": "Simuladores · Redemption · Billar · Futbolín · Sistema de tickets",
+      "btn1": "Ir a jugar",
+      "btn2": "Ver máquinas"
+    },
+    "machines": {
+      "label": "Máquinas",
+      "h2": "Tenemos lo que buscas",
+      "body": "Desde simuladores de conducción hasta máquinas arcade clásicas, nuestra zona de arcade en Orihuela Costa está diseñada para ofrecer diversión sin límites. Disfruta de una amplia selección de juegos recreativos para todas las edades, con opciones para competir, ganar premios y pasar un día inolvidable en Zenia Boulevard.",
+      "btn1": "Ir a jugar",
+      "btn2": "Sistema de tickets",
+      "items": [
+        {
+          "tag": "Acción",
+          "title": "Simuladores",
+          "desc": "Conducción, motos y aventuras en primera persona. La adrenalina garantizada."
+        },
+        {
+          "tag": "Tickets",
+          "title": "Redemption",
+          "desc": "Acumula tickets en cada partida y canjéalos por premios en nuestro catálogo."
+        },
+        {
+          "tag": "Clásico",
+          "title": "Billar",
+          "desc": "Mesas de billar profesionales disponibles por horas. Ideal para grupos."
+        },
+        {
+          "tag": "Familiar",
+          "title": "Futbolín",
+          "desc": "Compite en partidas rápidas de futbolín con amigos o familia. Siempre libre."
+        }
+      ]
+    },
+    "system": {
+      "label": "Sistema",
+      "h2": "Cómo jugar y ganar",
+      "sub": "Juega, acumula tickets y canjéalos por premios en nuestra sala arcade",
+      "ticketsTag": "Tickets",
+      "ticketsH3": "Acumula puntos mientras juegas",
+      "ticketsDesc": "Gana tickets en cada partida según tu desempeño. Cuanto mejor juegas, más acumulas. Disponible en todas las máquinas arcade de nuestra sala en Bowling Pleno Zenia, Orihuela Costa.",
+      "prizesTag": "Premios",
+      "prizesH3": "Canjea tus tickets por regalos",
+      "prizesDesc": "Elige entre nuestro catálogo de premios en Zenia Boulevard, Orihuela Costa. Desde peluches y juguetes hasta artículos especiales — cuantos más tickets, mejor el premio."
+    },
+    "cta": {
+      "label": "Arcade",
+      "h2": "Juega y gana",
+      "body": "El sistema de tickets te permite canjear premios reales mientras disfrutas de todas las máquinas.",
+      "btn1": "Ir a jugar",
+      "btn2": "Contactar"
+    },
+    "gallery": {
+      "label": "Galería",
+      "h2": "La Sala Arcade",
+      "sub": "Simuladores, tickets, premios y mucho más en Bowling Pleno Zenia — Orihuela Costa"
+    }
+  },
+  "pub_page": {
+    "header": {
+      "pill": "🍀 Dublin House · Irish Pub · Único en la zona",
+      "h1": "DUBLIN",
+      "h1Accent": "HOUSE",
+      "sub": "El único Irish Pub dentro de una bolera · Cervezas importadas · Cócteles",
+      "btn1": "Reservar mesa",
+      "btn2": "Descubrir"
+    },
+    "drinks": {
+      "label": "Bebidas",
+      "h2": "Cervezas y bebidas de calidad",
+      "body": "Guinness, Heineken, Cruzcampo, Águila Sin Filtrar y más — más de 5 cervezas de barril en nuestro Irish Pub en Orihuela Costa. Una selección que no encontrarás en ningún otro local de Zenia Boulevard.",
+      "btn1": "Reservar mesa",
+      "btn2": "Ver ambiente",
+      "items": [
+        "Guinness, Heineken y Cruzcampo de barril",
+        "Combinados y cócteles internacionales",
+        "Vinos, refrescos y bebidas sin alcohol",
+        "Café y cappuccinos de especialidad"
+      ]
+    },
+    "ambiente": {
+      "label": "Ambiente",
+      "h2": "Espacio auténtico para adultos",
+      "sub": "Cervezas de barril, dardos electrónicos, sofás Chesterfield y café de especialidad — todo en el único Irish Pub de Orihuela Costa",
+      "cards": [
+        {
+          "tag": "Comodidad",
+          "title": "Más de 5 cervezas de barril para elegir",
+          "desc": "Guinness, Heineken, Cruzcampo y más — directamente del grifo. No necesitas estar jugando para disfrutar del pub en Orihuela Costa."
+        },
+        {
+          "tag": "Grupos",
+          "title": "Dardos electrónicos y zona de relax",
+          "desc": "Reta a tus amigos a una partida de dardos electrónicos. El plan perfecto para grupos en Zenia Boulevard."
+        },
+        {
+          "tag": "Café & Descanso",
+          "title": "El mejor café mientras juegas o descansas",
+          "desc": "Cappuccinos, cafés con leche y mucho más. Tómate un respiro con estilo en el Dublin House."
+        }
+      ],
+      "reserve": "Reservar"
+    },
+    "cta": {
+      "label": "Dublin House",
+      "h2": "Vive la experiencia",
+      "body": "Reserva tu mesa para grupos y disfruta de una noche diferente en Zenia Boulevard, Orihuela Costa.",
+      "btn1": "Reservar mesa",
+      "btn2": "Llamar"
+    },
+    "gallery": {
+      "label": "Galería",
+      "h2": "El Dublin House",
+      "sub": "Así es el Irish Pub dentro de Bowling Pleno Zenia — Orihuela Costa"
+    }
   }
 }

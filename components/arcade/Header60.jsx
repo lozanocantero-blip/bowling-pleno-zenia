@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const VIDEO_SRC = "/arcade-sala-juegos-bowling-pleno-zenia-orihuela-costa.mp4";
 const CROSSFADE_BEFORE_END = 1.0;
@@ -8,6 +9,7 @@ const CROSSFADE_MS = 900;
 
 // Arcade accent: brand-coral #FF7043
 export function Header60() {
+  const t = useTranslations("arcade_page.header");
   const v1Ref = useRef(null);
   const v2Ref = useRef(null);
   const activeRef   = useRef(1);
@@ -104,17 +106,17 @@ export function Header60() {
         <div className="mb-5">
           <span className="inline-flex items-center rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wider"
             style={{ background: "rgba(255,112,67,0.15)", color: "#FF7043", border: "1px solid rgba(255,112,67,0.4)" }}>
-            🕹️ Arcade y Juegos · Simuladores · Premios
+            {t("pill")}
           </span>
         </div>
 
         <h1 className="ht-title mb-8" style={{ "--accent-color": "#FF7043" }}>
-          PURA<br />
-          <span style={{ color: "#FF7043" }}>DIVERSIÓN</span>
+          {t("h1")}<br />
+          <span style={{ color: "#FF7043" }}>{t("h1Accent")}</span>
         </h1>
 
         <p style={{ color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-body)", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "0.78rem", marginBottom: "2rem" }}>
-          Simuladores · Redemption · Billar · Futbolín · Sistema de tickets
+          {t("sub")}
         </p>
 
         <div className="flex flex-wrap gap-4">
@@ -125,7 +127,7 @@ export function Header60() {
           </a>
           <a href="#maquinas"
             className="rounded-full border-2 border-white/40 text-white/80 px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:border-white hover:text-white transition-colors">
-            Ver máquinas
+            {t("btn2")}
           </a>
         </div>
       </div>
