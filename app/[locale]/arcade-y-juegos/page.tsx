@@ -6,6 +6,7 @@ import { Header60 } from "@/components/arcade/Header60"
 import nextDynamic from "next/dynamic"
 const Layout513 = nextDynamic(() => import("@/components/arcade/Layout513").then(m => ({ default: m.Layout513 })), { ssr: false })
 import { Layout384 } from "@/components/arcade/Layout384"
+import { Gallery9 } from "@/components/arcade/Gallery9"
 import { Cta51 } from "@/components/arcade/Cta51"
 import { Footer5 } from "@/components/arcade/Footer5"
 
@@ -16,6 +17,7 @@ export default function ArcadeYJuegos() {
       <Header60 />
       <Layout513 />
       <Layout384 />
+      <Gallery9 />
       <Cta51 />
       <Footer5 />
     </main>
