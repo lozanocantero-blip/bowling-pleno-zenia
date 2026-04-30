@@ -117,6 +117,7 @@ function StatsHeader() {
 }
 
 export function Testimonial17() {
+  const t = useTranslations("reviews");
   return (
     <section className="bg-brand-blue-light px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
