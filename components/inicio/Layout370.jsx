@@ -141,7 +141,7 @@ function CumpleBg() {
 }
 
 // ── Dots de progreso ──────────────────────────────────────────────────────────
-function ProgressDots({ scrollYProgress }) {
+function ProgressDots({ scrollYProgress, services }) {
   const seg = 1 / N;
   const op0 = useTransform(scrollYProgress, [0, 0.04, seg - 0.04, seg], [1, 1, 1, 0.25]);
   const op1 = useTransform(scrollYProgress, [seg - 0.04, seg, seg * 2 - 0.04, seg * 2], [0.25, 1, 1, 0.25]);
@@ -165,7 +165,7 @@ function ProgressDots({ scrollYProgress }) {
 //  Texto 0 se va (0.22→0.25) → Texto 1 llega (0.25→0.28).
 //  Nunca hay dos textos visibles al mismo tiempo.
 //
-function SeoPanel({ seoOpacities }) {
+function SeoPanel({ seoOpacities, services }) {
   return (
     <div className="mt-4 relative" style={{ height: "140px" }}>
       {services.map((s, i) => (
@@ -199,7 +199,7 @@ function SeoPanel({ seoOpacities }) {
 }
 
 // ── Sección SEO móvil ─────────────────────────────────────────────────────────
-function MobileSeoSection() {
+function MobileSeoSection({ services }) {
   return (
     <div className="md:hidden bg-[#f5f4f0] px-5 pt-2 pb-12">
       <div className="space-y-8">
@@ -298,8 +298,8 @@ export function Layout370() {
                 {tServices("title")}<br />{tServices("titleLine2")}<br />
                 <span style={{ color: "#E82040" }}>{tServices("titleRed")}</span>
               </h2>
-              <SeoPanel seoOpacities={seoOpacities} />
-              <ProgressDots scrollYProgress={scrollYProgress} />
+              <SeoPanel seoOpacities={seoOpacities} services={services} />
+              <ProgressDots scrollYProgress={scrollYProgress} services={services} />
             </div>
 
             {/* DERECHA — tarjetas */}
@@ -331,7 +331,7 @@ export function Layout370() {
         </div>
       </div>
 
-      <MobileSeoSection />
+      <MobileSeoSection services={services} />
 
     </section>
   );
