@@ -3,13 +3,50 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 const services = [
   { labelKey: "bolera",    href: "/bolera-y-precios"           },
   { labelKey: "arcade",    href: "/arcade-y-juegos"            },
   { labelKey: "pub",       href: "/irish-pub-y-bar"            },
 ];
+
+function MobileLanguageSwitcher() {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const langs = [
+    { code: "es", label: "ES", cc: "es" },
+    { code: "en", label: "EN", cc: "gb" },
+    { code: "de", label: "DE", cc: "de" },
+    { code: "ru", label: "RU", cc: "ru" },
+  ];
+  return (
+    <div className="flex items-center justify-center gap-1 px-2 pb-1">
+      {langs.map((l) => (
+        <button
+          key={l.code}
+          onClick={() => router.replace(pathname, { locale: l.code })}
+          className={`flex items-center gap-1.5 px-2.5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-colors ${
+            l.code === locale
+              ? "bg-[#E82040] text-white"
+              : "text-[#1A2744]/60 hover:text-[#1A2744]"
+          }`}
+          aria-label={l.label}
+        >
+          <img
+            src={`https://flagcdn.com/20x15/${l.cc}.png`}
+            srcSet={`https://flagcdn.com/40x30/${l.cc}.png 2x`}
+            width="20" height="15" alt={l.label}
+            style={{ borderRadius: "2px", objectFit: "cover", display: "block" }}
+          />
+          <span>{l.label}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function Navbar1() {
   const t = useTranslations("nav");
@@ -116,6 +153,8 @@ export function Navbar1() {
             className="py-2.5 px-4 rounded-full border-2 border-[#1A2744] text-[#1A2744] text-sm font-bold uppercase tracking-wider text-center hover:bg-[#1A2744] hover:text-white transition-colors">
             Contacto
           </a>
+          <div className="border-t border-[#E2E8F0] mt-3 mb-2" />
+          <MobileLanguageSwitcher />
         </div>
       </motion.div>
     </nav>
