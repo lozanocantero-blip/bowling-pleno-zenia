@@ -9,7 +9,7 @@ export function Layout384() {
         <div className="text-center mb-12 md:mb-16">
           <p className="label-red mb-3">Sistema</p>
           <h2 className="text-5xl md:text-7xl uppercase leading-none mb-4">Cómo jugar y ganar</h2>
-          <p className="text-brand-navy/60 md:text-md">Cada máquina funciona con monedas o tarjeta recargable</p>
+          <p className="text-brand-navy/60 md:text-md">Juega, acumula tickets y canjéalos por premios en nuestra sala arcade</p>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
 
@@ -26,7 +26,7 @@ export function Layout384() {
               <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">Tickets</p>
               <h3 className="text-2xl font-black uppercase mb-2">Acumula puntos mientras juegas</h3>
               <p className="text-brand-navy/60 text-sm flex-1">
-                Gana tickets en cada partida según tu desempeño. Cuanto mejor juegas, más ganas.
+                Gana tickets en cada partida según tu desempeño. Cuanto mejor juegas, más acumulas. Disponible en todas las máquinas arcade de nuestra sala en Bowling Pleno Zenia, Orihuela Costa.
               </p>
             </div>
           </div>
@@ -44,7 +44,7 @@ export function Layout384() {
               <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">Premios</p>
               <h3 className="text-white text-2xl font-black uppercase mb-2">Canjea tus tickets por regalos</h3>
               <p className="text-white/60 text-sm">
-                Elige entre nuestro catálogo de premios. Desde pequeños detalles hasta artículos especiales.
+                Elige entre nuestro catálogo de premios en Zenia Boulevard, Orihuela Costa. Desde peluches y juguetes hasta artículos especiales — cuantos más tickets, mejor el premio.
               </p>
             </div>
           </div>
