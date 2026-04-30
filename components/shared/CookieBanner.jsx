@@ -94,11 +94,11 @@ export function CookieBanner() {
               {t("acceptAll")}
             </button>
             <button
-              onClick={() => save("essential")}}
+              onClick={() => save("essential")}
               className="flex-1 py-3 text-xs font-black uppercase tracking-[0.15em] border-2 transition-colors hover:bg-brand-navy hover:text-white"
               style={{ borderColor: "#1A2744", color: "#1A2744", borderRadius: "8px" }}
             >
-              Solo esenciales
+              {t("essentialOnly")}
             </button>
           </div>
 
