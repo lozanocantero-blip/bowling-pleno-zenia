@@ -3,11 +3,11 @@ import React from "react";
 import { useTranslations } from "next-intl";
 
 const photos = [
-  { src: "/images/arcade-orihuela-costa-maquinas-recreativas.png", alt: "Máquinas recreativas arcade Bowling Pleno Zenia Orihuela Costa Zenia Boulevard", span: "row-span-2" },
+  { src: "/images/arcade-motos-speed-rider-asphalt-bowling-pleno-zenia-orihuela-costa.jpg", alt: "Simuladores de motos Speed Rider Asphalt 9 arcade Bowling Pleno Zenia Orihuela Costa", span: "row-span-2" },
   { src: "/images/arcade-hero.jpg", alt: "Sala de arcade y juegos recreativos Bowling Pleno Zenia Orihuela Costa" },
   { src: "/images/arcade.png", alt: "Zona arcade familiar Bowling Pleno Zenia Zenia Boulevard Orihuela Costa" },
   { src: "/images/arcade-tickets.jpg", alt: "Sistema de tickets máquinas arcade Bowling Pleno Zenia Orihuela Costa" },
-  { src: "/images/arcade-premios.jpg", alt: "Premios y regalos canjeables con tickets arcade Bowling Pleno Zenia Orihuela Costa" },
+  { src: "/images/arcade-coches-outrun-simulador-bowling-pleno-zenia-orihuela-costa.jpg", alt: "Simuladores de coches OutRun arcade Bowling Pleno Zenia Orihuela Costa" },
 ];
 
 export function Gallery9() {
