@@ -54,6 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'en': 'https://bowling-pleno-zenia.vercel.app/en',
         'de': 'https://bowling-pleno-zenia.vercel.app/de',
         'ru': 'https://bowling-pleno-zenia.vercel.app/ru',
+        'x-default': 'https://bowling-pleno-zenia.vercel.app',
       },
     },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
