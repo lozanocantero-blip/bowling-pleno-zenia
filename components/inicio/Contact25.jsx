@@ -1,19 +1,21 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import { RxChevronRight } from "react-icons/rx";
 
 export function Contact25() {
+  const t = useTranslations("location");
   return (
-    <section id="ubicacion" aria-label="Cómo llegar a Bowling Pleno Zenia en Orihuela Costa" className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
+    <section id="ubicacion" aria-label={t("howToGet") + " — Bowling Pleno Zenia"} className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
         <div className="mb-12 text-center md:mb-16">
           <p className="label-red mb-3">Ubicación</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl uppercase leading-none">
-            Visítanos en<br />Zenia Boulevard,{" "}<span className="text-brand-red">Orihuela Costa</span>
+            {t("title")}<br />{t("titleBold")}{" "}<span className="text-brand-red">{t("titleRed")}</span>
           </h2>
           <p className="mt-4 text-brand-navy/60 max-w-md mx-auto md:text-md">
-            Planta baja del centro comercial. Parking gratuito para todos los visitantes.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -33,9 +35,9 @@ export function Contact25() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <h3 className="text-2xl font-black uppercase mb-2">Cómo llegar</h3>
+            <h3 className="text-2xl font-black uppercase mb-2">{t("howToGet")}</h3>
             <p className="text-brand-navy/60 text-sm mb-4">
-              Calle Jade 2, planta baja, CC Zenia Boulevard, Orihuela Costa (Alicante)
+              {t("address")}
             </p>
             <a
               href="https://maps.google.com/?q=Bowling+Pleno+Zenia+Zenia+Boulevard+Orihuela+Costa"
@@ -43,21 +45,21 @@ export function Contact25() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline"
             >
-              Abrir en Google Maps <RxChevronRight className="size-4" />
+              {t("openMaps")} <RxChevronRight className="size-4" />
             </a>
           </div>
 
           {/* Info card */}
           <div className="bg-brand-blue-light p-8 md:p-10 flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-black uppercase mb-6">Info rápida</h3>
+              <h3 className="text-2xl font-black uppercase mb-6">{t("quickInfo")}</h3>
               <div className="space-y-4">
                 {[
-                  ["📍", "Dónde", "Planta baja, Zenia Boulevard, Orihuela Costa"],
-                  ["🅿️", "Parking", "Gratuito en el centro comercial"],
-                  ["🎳", "Pistas", "10 pistas · Sin reserva previa · Sin calzado especial"],
-                  ["⭐", "Valoración", "4,3/5 en Google con más de 1.230 reseñas"],
-                  ["📅", "Apertura", "Abiertos los 365 días del año"],
+                  t.raw("infoItems.where"),
+                  t.raw("infoItems.parking"),
+                  t.raw("infoItems.lanes"),
+                  t.raw("infoItems.rating"),
+                  t.raw("infoItems.open"),
                 ].map(([icon, label, value]) => (
                   <div key={label} className="flex gap-3">
                     <span className="text-xl shrink-0">{icon}</span>

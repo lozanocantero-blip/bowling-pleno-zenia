@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 const services = [
-  { label: "Bolera",     href: "/bolera-y-precios"           },
-  { label: "Arcade",     href: "/arcade-y-juegos"            },
-  { label: "Irish Pub",  href: "/irish-pub-y-bar"            },
-  { label: "Cumpleaños", href: "/cumpleanos-y-celebraciones" },
+  { labelKey: "bolera",    href: "/bolera-y-precios"           },
+  { labelKey: "arcade",    href: "/arcade-y-juegos"            },
+  { labelKey: "pub",       href: "/irish-pub-y-bar"            },
+  { labelKey: "cumpleanos",href: "/cumpleanos-y-celebraciones" },
 ];
 
 export function Navbar1() {
+  const t = useTranslations("nav");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggle = () => setIsMobileMenuOpen((prev) => !prev);
   const animate = isMobileMenuOpen ? "open" : "close";
@@ -52,10 +55,15 @@ export function Navbar1() {
                 href={s.href}
                 className="px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors rounded-full whitespace-nowrap hover:bg-[#E82040]/5"
               >
-                {s.label}
+                {t(s.labelKey)}
               </a>
             </React.Fragment>
           ))}
+        </div>
+
+        {/* Selector de idioma */}
+        <div className="relative z-10">
+          <LanguageSwitcher />
         </div>
 
         {/* CTAs fuera de la pill */}
@@ -64,7 +72,7 @@ export function Navbar1() {
           className="px-5 py-2 rounded-full border-2 border-white/70 text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1A2744] transition-all whitespace-nowrap"
           style={{ backdropFilter: "blur(8px)", background: "rgba(255,255,255,0.1)" }}
         >
-          Contacto
+          {t("contacto")}
         </a>
         <a
           href="https://wa.me/34965355815"
@@ -72,7 +80,7 @@ export function Navbar1() {
           rel="noopener noreferrer"
           className="px-5 py-2 rounded-full bg-[#E82040] text-white text-sm font-bold uppercase tracking-wider hover:bg-red-700 transition-colors whitespace-nowrap"
         >
-          Reservar
+          {t("reservar")}
         </a>
       </div>
 
@@ -109,7 +117,7 @@ export function Navbar1() {
               href={s.href}
               className="py-3 px-4 rounded-full text-sm font-bold uppercase tracking-wider text-[#1A2744] hover:text-[#E82040] transition-colors"
             >
-              {s.label}
+              {t(s.labelKey)}
             </a>
           ))}
           <div className="border-t border-[#E2E8F0] my-2" />

@@ -1,53 +1,26 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 
-const horarios = [
-  {
-    periodo: "Enero — Junio",
-    nombre: "Temporada Baja",
-    detalle: [
-      { dias: "Lunes a Viernes", horas: "14:00 — 23:30" },
-      { dias: "Sáb, Dom y Festivos", horas: "12:00 — 00:00" },
-    ],
-    icon: "❄️",
-  },
-  {
-    periodo: "30 Mar — 12 Abr",
-    nombre: "Semana Santa",
-    detalle: [
-      { dias: "Todos los días", horas: "12:00 — 00:00" },
-    ],
-    icon: "🌸",
-  },
-  {
-    periodo: "Julio — Agosto",
-    nombre: "Temporada Alta",
-    detalle: [
-      { dias: "Todos los días", horas: "11:00 — 01:00" },
-    ],
-    icon: "☀️",
-    highlight: true,
-  },
-  {
-    periodo: "22 Dic — 06 Ene",
-    nombre: "Navidad",
-    detalle: [
-      { dias: "Todos los días", horas: "12:00 — 00:00" },
-    ],
-    icon: "🎄",
-  },
-];
+
 
 export function Timeline19() {
+  const t = useTranslations("schedule");
+  const horarios = [
+    { periodo: t("seasons.baja.periodo"), nombre: t("seasons.baja.nombre"), detalle: [{ dias: t("seasons.baja.dias1"), horas: t("seasons.baja.horas1") }, { dias: t("seasons.baja.dias2"), horas: t("seasons.baja.horas2") }], icon: "❄️" },
+    { periodo: t("seasons.santaSemana.periodo"), nombre: t("seasons.santaSemana.nombre"), detalle: [{ dias: t("seasons.santaSemana.dias1"), horas: t("seasons.santaSemana.horas1") }], icon: "🌸" },
+    { periodo: t("seasons.alta.periodo"), nombre: t("seasons.alta.nombre"), detalle: [{ dias: t("seasons.alta.dias1"), horas: t("seasons.alta.horas1") }], icon: "☀️", highlight: true },
+    { periodo: t("seasons.navidad.periodo"), nombre: t("seasons.navidad.nombre"), detalle: [{ dias: t("seasons.navidad.dias1"), horas: t("seasons.navidad.horas1") }], icon: "🎄" },
+  ];
   return (
     <section id="horarios" className="bg-brand-navy px-[5%] py-16 md:py-24 lg:py-28 section-dark">
       <div className="container">
         {/* Header */}
         <div className="mb-12 text-center md:mb-16">
-          <p className="label-red mb-3">Horarios</p>
+          <p className="label-red mb-3">{t("label")}</p>
           <h2 style={{ fontWeight: 900, fontSize: "clamp(2.8rem, 7vw, 6.5rem)", lineHeight: 0.88, letterSpacing: "-0.03em", textTransform: "uppercase", color: "white" }}>
-            Abiertos los 365 días del año
+            {t("title")}
           </h2>
           <p className="mt-4 text-white/60 md:text-md max-w-lg mx-auto">
             Los horarios varían según la temporada. Consulta cuál corresponde a tu visita.

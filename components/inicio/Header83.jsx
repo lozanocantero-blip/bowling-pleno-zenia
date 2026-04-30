@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const CROSSFADE_BEFORE_END = 1.2;
 const CROSSFADE_MS = 900;
 
 export function Header83() {
+  const t = useTranslations("hero");
+  const tSched = useTranslations("schedule");
   const v1Ref = useRef(null);
   const v2Ref = useRef(null);
   const activeRef   = useRef(1);
@@ -125,7 +128,7 @@ export function Header83() {
               fontFamily: "var(--font-heading)",
             }}
           >
-            Zenia Boulevard · Orihuela Costa · Abiertos 365 días
+            {t("location")}
           </p>
           <h1
             className="mb-6 text-white uppercase"
@@ -137,8 +140,8 @@ export function Header83() {
               letterSpacing: "-0.03em",
             }}
           >
-            La bolera de<br />
-            <span style={{ color: "#E82040" }}>Orihuela Costa</span>
+            {t("title")}<br />
+            <span style={{ color: "#E82040" }}>{t("titleRed")}</span>
           </h1>
           <p
             className="mb-8 max-w-xl text-white/50"
@@ -149,29 +152,29 @@ export function Header83() {
               textTransform: "uppercase",
             }}
           >
-            10 pistas · Irish Pub · Arcade · Cumpleaños
+            {t("subtitle")}
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="/cumpleanos-y-celebraciones"
-              aria-label="Reservar cumpleaños infantiles en Orihuela Costa"
+              aria-label={t("ariaCtaBirthday")}
               className="inline-block rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:opacity-90 transition-opacity"
               style={{ background: "#E82040" }}
             >
-              Reservar cumpleaños
+              {t("ctaBirthday")}
             </a>
             <a
               href="/bolera-y-precios"
-              aria-label="Ver precios de la bolera en Orihuela Costa"
+              aria-label={t("ariaCtaPrices")}
               className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors"
             >
-              Ver precios bolera
+              {t("ctaPrices")}
             </a>
             <a
               href="#horarios"
               className="inline-block rounded-full border-2 border-white/50 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition-colors"
             >
-              Horarios
+              {tSched("label")}
             </a>
           </div>
         </div>

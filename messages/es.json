@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "bolera": "Bolera",
+    "arcade": "Arcade",
+    "pub": "Irish Pub",
+    "cumpleanos": "Cumpleaños",
+    "contacto": "Contacto",
+    "reservar": "Reservar"
+  },
+  "hero": {
+    "location": "Zenia Boulevard · Orihuela Costa · Abiertos 365 días",
+    "title": "La bolera de",
+    "titleRed": "Orihuela Costa",
+    "subtitle": "10 pistas · Irish Pub · Arcade · Cumpleaños",
+    "ctaBirthday": "Reservar cumpleaños",
+    "ctaPrices": "Ver precios bolera",
+    "ariaCtaBirthday": "Reservar cumpleaños infantiles en Orihuela Costa",
+    "ariaCtaPrices": "Ver precios de la bolera en Orihuela Costa"
+  },
+  "ticker": {
+    "items": ["🎳 10 Pistas de Bowling", "⭐ 4,3 en Google", "🎂 Fiestas & Cumpleaños", "🎳 Sin Reserva Previa", "🍺 Irish Pub Dublin House", "📍 Zenia Boulevard", "🎮 Sala Arcade"]
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Todo lo",
+    "titleLine2": "que",
+    "titleRed": "buscas",
+    "subtitle": "Elige tu diversión favorita en Bowling Pleno Zenia",
+    "scrollHint": "Scroll",
+    "cards": {
+      "bolera": {
+        "tag": "Bolera",
+        "title": "Bowling — 10 Pistas",
+        "desc": "Adaptadas para todas las edades. Sin reserva previa ni calzado especial.",
+        "cta": "Ver precios de la bolera",
+        "seoTitle": "Bolera en Orihuela Costa",
+        "seoText": "El bowling en Zenia Boulevard más completo de la costa alicantina. Nuestras 10 pistas de bolos están adaptadas para todas las edades: familias con niños, grupos de amigos y parejas. Sin reserva previa, con calzado incluido y turnos ágiles. La bolera en Orihuela Costa que combina calidad, precio justo y diversión garantizada los 365 días del año."
+      },
+      "arcade": {
+        "tag": "Arcade",
+        "title": "Máquinas Arcade y Juegos",
+        "desc": "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
+        "cta": "Explorar sala arcade",
+        "seoTitle": "Arcade en Orihuela Costa",
+        "seoText": "Nuestra sala de arcade en Orihuela Costa reúne más de 30 máquinas recreativas: simuladores de conducción, juegos de habilidad y redemption con sistema de tickets canjeables por premios. Billar, futbolín y los últimos lanzamientos en ocio familiar. El plan perfecto cuando el sol aprieta o simplemente quieres alargar la diversión en grupo."
+      },
+      "pub": {
+        "tag": "Irish Pub",
+        "title": "Dublin House",
+        "desc": "Cervezas importadas, cócteles y ambiente auténtico irlandés mientras juegas o descansas.",
+        "cta": "Descubrir Dublin House",
+        "badge": "ÚNICO EN LA ZONA",
+        "seoTitle": "Pub irlandés en Orihuela Costa",
+        "seoText": "Dublin House es el único pub irlandés de Orihuela Costa con auténtico ambiente celta. Cerveza irlandesa de barril, combinados artesanales y una carta de picoteo para acompañar tu partida de bowling o descansar entre juego y juego. El mejor bar en Zenia Boulevard donde el ocio anglosajón se funde con la hospitalidad mediterránea."
+      },
+      "cumpleanos": {
+        "tag": "Cumpleaños",
+        "title": "Fiestas & Celebraciones",
+        "desc": "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
+        "cta": "Reservar cumpleaños",
+        "seoTitle": "Cumpleaños infantiles en Orihuela Costa",
+        "seoText": "Celebra los cumpleaños infantiles más especiales en Orihuela Costa. Nuestros paquetes para celebrar cumpleaños en Alicante incluyen partidas de bowling, acceso al arcade, menú o merienda y zona privada decorada. Fiestas infantiles para grupos de hasta 30 personas, disponibles todos los días. Adultos, despedidas y eventos de empresa también tienen su espacio."
+      }
+    }
+  },
+  "schedule": {
+    "label": "Horarios",
+    "title": "Abiertos los 365 días del año",
+    "seasons": {
+      "baja": { "periodo": "Enero — Junio", "nombre": "Temporada Baja", "dias1": "Lunes a Viernes", "horas1": "14:00 — 23:30", "dias2": "Sáb, Dom y Festivos", "horas2": "12:00 — 00:00" },
+      "santaSemana": { "periodo": "30 Mar — 12 Abr", "nombre": "Semana Santa", "dias1": "Todos los días", "horas1": "12:00 — 00:00" },
+      "alta": { "periodo": "Julio — Agosto", "nombre": "Temporada Alta", "dias1": "Todos los días", "horas1": "11:00 — 01:00" },
+      "navidad": { "periodo": "22 Dic — 06 Ene", "nombre": "Navidad", "dias1": "Todos los días", "horas1": "12:00 — 00:00" }
+    }
+  },
+  "reviews": {
+    "label": "Reseñas",
+    "srTitle": "Reseñas de Bowling Pleno Zenia en Google — bolera en Orihuela Costa",
+    "families": "Familias que ya nos visitaron",
+    "rating": "Valoración media en Google",
+    "source": "Reseñas verificadas de Google Business"
+  },
+  "cta": {
+    "label": "¿Listo para jugar?",
+    "title": "Sin reserva · Sin calzado especial",
+    "titleRed": "Solo visítanos y juega",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "phone": "📞 965 35 58 15"
+  },
+  "location": {
+    "label": "Ubicación",
+    "title": "Visítanos en",
+    "titleBold": "Zenia Boulevard,",
+    "titleRed": "Orihuela Costa",
+    "subtitle": "Planta baja del centro comercial. Parking gratuito para todos los visitantes.",
+    "howToGet": "Cómo llegar",
+    "address": "Calle Jade 2, planta baja, CC Zenia Boulevard, Orihuela Costa (Alicante)",
+    "openMaps": "Abrir en Google Maps",
+    "quickInfo": "Info rápida",
+    "infoItems": {
+      "where": ["📍", "Dónde", "Planta baja, Zenia Boulevard, Orihuela Costa"],
+      "parking": ["🅿️", "Parking", "Gratuito en el centro comercial"],
+      "lanes": ["🎳", "Pistas", "10 pistas · Sin reserva previa · Sin calzado especial"],
+      "rating": ["⭐", "Valoración", "4,3/5 en Google con más de 1.230 reseñas"],
+      "open": ["📅", "Apertura", "Abiertos los 365 días del año"]
+    }
+  },
+  "footer": {
+    "newsletterLabel": "Newsletter",
+    "newsletterTitle": "Mantente informado",
+    "newsletterSubtitle": "Eventos, promociones y novedades de Bowling Pleno Zenia",
+    "emailPlaceholder": "tu@correo.com",
+    "subscribe": "Suscribir",
+    "servicesTitle": "Servicios",
+    "scheduleTitle": "Horarios",
+    "contactTitle": "Contacto",
+    "followTitle": "Síguenos",
+    "scheduleItems": ["L–V: 14:00 – 23:30", "Sáb, Dom y Fest: 12:00 – 00:00", "Verano (Jul–Ago): 11:00 – 01:00", "Navidad y S.Santa: 12:00 – 00:00"],
+    "howToGet": "Cómo llegar",
+    "copyright": "© 2025 Bowling Pleno Zenia S.L. · Todos los derechos reservados",
+    "legal": "Aviso legal",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "links": {
+      "bolera": "Bolera y Precios en Orihuela Costa",
+      "cumpleanos": "Cumpleaños Infantiles",
+      "pub": "Irish Pub Dublin House",
+      "arcade": "Arcade y Juegos"
+    }
+  },
+  "cookie": {
+    "title": "🍪 Usamos cookies",
+    "text": "Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte contenido relevante. Puedes aceptarlas, rechazarlas o",
+    "manage": "gestionar tus preferencias",
+    "moreInfo": "Más info",
+    "manageBtn": "Gestionar",
+    "rejectBtn": "Rechazar",
+    "acceptBtn": "Aceptar todas",
+    "modalTitle": "Gestionar el Consentimiento",
+    "essential": "Cookies esenciales",
+    "essentialDesc": "Necesarias para el funcionamiento básico del sitio. No se pueden desactivar.",
+    "analytics": "Cookies analíticas",
+    "analyticsDesc": "Nos ayudan a entender cómo los visitantes usan la web (Google Analytics).",
+    "marketing": "Cookies de marketing",
+    "marketingDesc": "Se usan para mostrar anuncios relevantes en otras plataformas.",
+    "acceptAll": "Aceptar todas",
+    "essentialOnly": "Solo esenciales"
+  }
+}

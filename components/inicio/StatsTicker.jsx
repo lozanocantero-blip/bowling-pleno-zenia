@@ -1,21 +1,11 @@
 "use client";
 
 import React from "react";
-
-const items = [
-  "🎳 10 Pistas de Bowling",
-  "⭐ 4,3 en Google",
-  "💬 +1.230 Reseñas",
-  "🍺 Dublin House Irish Pub",
-  "🎮 Zona Arcade y Juegos",
-  "🎂 Fiestas & Cumpleaños",
-  "📅 Abiertos 365 Días",
-  "🏆 El Único Irish Pub en una Bolera",
-  "🅿️ Parking Gratuito",
-  "🎳 Sin Reserva Previa",
-];
+import { useTranslations } from "next-intl";
 
 export function StatsTicker() {
+  const t = useTranslations("ticker");
+  const items = t.raw("items");
   const doubled = [...items, ...items];
 
   return (
@@ -40,11 +30,10 @@ export function StatsTicker() {
           </span>
         ))}
       </div>
-
       <style>{`
         @keyframes ticker-scroll {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
         }
       `}</style>
     </div>

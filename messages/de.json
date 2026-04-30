@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "bolera": "Bowling",
+    "arcade": "Arcade",
+    "pub": "Irish Pub",
+    "cumpleanos": "Geburtstage",
+    "contacto": "Kontakt",
+    "reservar": "Buchen"
+  },
+  "hero": {
+    "location": "Zenia Boulevard · Orihuela Costa · 365 Tage geöffnet",
+    "title": "Die Bowlingbahn in",
+    "titleRed": "Orihuela Costa",
+    "subtitle": "10 Bahnen · Irish Pub · Arcade · Geburtstagspartys",
+    "ctaBirthday": "Geburtstag buchen",
+    "ctaPrices": "Preise ansehen",
+    "ariaCtaBirthday": "Kindergeburtstag in Orihuela Costa buchen",
+    "ariaCtaPrices": "Bowling-Preise in Orihuela Costa ansehen"
+  },
+  "ticker": {
+    "items": ["🎳 10 Bowlingbahnen", "⭐ 4,3 bei Google", "🎂 Geburtstagspartys", "🎳 Ohne Reservierung", "🍺 Irish Pub Dublin House", "📍 Zenia Boulevard", "🎮 Arcaderaum"]
+  },
+  "services": {
+    "label": "Angebote",
+    "title": "Alles",
+    "titleLine2": "was du",
+    "titleRed": "suchst",
+    "subtitle": "Wähle deinen Lieblingsspaß beim Bowling Pleno Zenia",
+    "scrollHint": "Scrollen",
+    "cards": {
+      "bolera": {
+        "tag": "Bowling",
+        "title": "Bowling — 10 Bahnen",
+        "desc": "Für alle Altersgruppen. Keine Reservierung oder Spezialschuhe erforderlich.",
+        "cta": "Preise ansehen",
+        "seoTitle": "Bowling in Orihuela Costa",
+        "seoText": "Die vollständigste Bowlingbahn am Zenia Boulevard an der Küste von Alicante. Unsere 10 Bowlingbahnen sind für alle Altersgruppen geeignet: Familien mit Kindern, Freundesgruppen und Paare. Keine Vorausreservierung, Schuhe inklusive und schnelle Runden. Die Bowlingbahn in Orihuela Costa, die Qualität, faire Preise und garantierten Spaß an 365 Tagen im Jahr verbindet."
+      },
+      "arcade": {
+        "tag": "Arcade",
+        "title": "Arcade-Automaten & Spiele",
+        "desc": "Simulatoren, Redemption, Billard, Tischfußball. Ticket- und Prämensystem.",
+        "cta": "Arcade erkunden",
+        "seoTitle": "Arcade in Orihuela Costa",
+        "seoText": "Unser Arcaderaum in Orihuela Costa verfügt über mehr als 30 Unterhaltungsautomaten: Fahrsimulator, Geschicklichkeitsspiele und Redemption mit einem Ticket-System zum Einlösen gegen Preise. Billard, Tischfußball und die neuesten Familienunterhaltungs-Releases. Der perfekte Plan, wenn die Sonne brennt oder du einfach mehr Spaß in der Gruppe haben möchtest."
+      },
+      "pub": {
+        "tag": "Irish Pub",
+        "title": "Dublin House",
+        "desc": "Importierte Biere, Cocktails und authentische irische Atmosphäre beim Spielen oder Entspannen.",
+        "cta": "Dublin House entdecken",
+        "badge": "EINZIGARTIG IN DER REGION",
+        "seoTitle": "Irish Pub in Orihuela Costa",
+        "seoText": "Das Dublin House ist der einzige irische Pub in Orihuela Costa mit authentischer keltischer Atmosphäre. Irisches Fassbier, handgefertigte Cocktails und eine Snack-Karte für dein Bowlingspiel oder zur Entspannung zwischen den Runden. Die beste Bar am Zenia Boulevard, wo britisch-irische Freizeitkultur auf mediterrane Gastfreundschaft trifft."
+      },
+      "cumpleanos": {
+        "tag": "Geburtstage",
+        "title": "Feiern & Veranstaltungen",
+        "desc": "All-inclusive-Pakete für Kinder und Erwachsene. Privater Bereich verfügbar.",
+        "cta": "Geburtstagsfeier buchen",
+        "seoTitle": "Kindergeburtstage in Orihuela Costa",
+        "seoText": "Feiere die schönsten Kindergeburtstage in Orihuela Costa. Unsere Pakete für Geburtstagsfeierlichkeiten in Alicante beinhalten Bowling-Runden, Arcade-Zugang, ein Menü oder Snacks sowie einen dekorierten Privatbereich. Geburtstagspartys für Gruppen bis zu 30 Personen, täglich verfügbar. Auch für Erwachsene, Junggesellenabschiede und Firmenevents."
+      }
+    }
+  },
+  "schedule": {
+    "label": "Öffnungszeiten",
+    "title": "An allen 365 Tagen des Jahres geöffnet",
+    "seasons": {
+      "baja": { "periodo": "Januar — Juni", "nombre": "Nebensaison", "dias1": "Montag bis Freitag", "horas1": "14:00 — 23:30", "dias2": "Sa, So & Feiertage", "horas2": "12:00 — 00:00" },
+      "santaSemana": { "periodo": "30. Mär — 12. Apr", "nombre": "Ostern", "dias1": "Täglich", "horas1": "12:00 — 00:00" },
+      "alta": { "periodo": "Juli — August", "nombre": "Hochsaison", "dias1": "Täglich", "horas1": "11:00 — 01:00" },
+      "navidad": { "periodo": "22. Dez — 06. Jan", "nombre": "Weihnachten", "dias1": "Täglich", "horas1": "12:00 — 00:00" }
+    }
+  },
+  "reviews": {
+    "label": "Bewertungen",
+    "srTitle": "Bewertungen von Bowling Pleno Zenia bei Google — Bowlingbahn in Orihuela Costa",
+    "families": "Familien, die uns bereits besucht haben",
+    "rating": "Durchschnittliche Google-Bewertung",
+    "source": "Verifizierte Google Business-Bewertungen"
+  },
+  "cta": {
+    "label": "Bereit zu spielen?",
+    "title": "Keine Reservierung · Keine Spezialschuhe",
+    "titleRed": "Einfach vorbeikommen und spielen",
+    "whatsapp": "WhatsApp schreiben",
+    "phone": "📞 965 35 58 15"
+  },
+  "location": {
+    "label": "Lage",
+    "title": "Besuche uns im",
+    "titleBold": "Zenia Boulevard,",
+    "titleRed": "Orihuela Costa",
+    "subtitle": "Erdgeschoss des Einkaufszentrums. Kostenloser Parkplatz für alle Besucher.",
+    "howToGet": "Anfahrt",
+    "address": "Calle Jade 2, Erdgeschoss, CC Zenia Boulevard, Orihuela Costa (Alicante)",
+    "openMaps": "In Google Maps öffnen",
+    "quickInfo": "Kurzinfo",
+    "infoItems": {
+      "where": ["📍", "Wo", "Erdgeschoss, Zenia Boulevard, Orihuela Costa"],
+      "parking": ["🅿️", "Parkplatz", "Kostenlos im Einkaufszentrum"],
+      "lanes": ["🎳", "Bahnen", "10 Bahnen · Keine Reservierung · Keine Spezialschuhe"],
+      "rating": ["⭐", "Bewertung", "4,3/5 bei Google mit über 1.230 Rezensionen"],
+      "open": ["📅", "Öffnung", "An 365 Tagen im Jahr geöffnet"]
+    }
+  },
+  "footer": {
+    "newsletterLabel": "Newsletter",
+    "newsletterTitle": "Bleib informiert",
+    "newsletterSubtitle": "Veranstaltungen, Aktionen und Neuigkeiten von Bowling Pleno Zenia",
+    "emailPlaceholder": "deine@email.com",
+    "subscribe": "Abonnieren",
+    "servicesTitle": "Angebote",
+    "scheduleTitle": "Öffnungszeiten",
+    "contactTitle": "Kontakt",
+    "followTitle": "Folge uns",
+    "scheduleItems": ["Mo–Fr: 14:00 – 23:30", "Sa, So & Feiertage: 12:00 – 00:00", "Sommer (Jul–Aug): 11:00 – 01:00", "Weihnachten & Ostern: 12:00 – 00:00"],
+    "howToGet": "Anfahrt",
+    "copyright": "© 2025 Bowling Pleno Zenia S.L. · Alle Rechte vorbehalten",
+    "legal": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "links": {
+      "bolera": "Bowling & Preise in Orihuela Costa",
+      "cumpleanos": "Kindergeburtstage",
+      "pub": "Dublin House Irish Pub",
+      "arcade": "Arcade & Spiele"
+    }
+  },
+  "cookie": {
+    "title": "🍪 Wir verwenden Cookies",
+    "text": "Wir verwenden eigene Cookies und Cookies von Drittanbietern, um dein Erlebnis zu verbessern. Du kannst sie akzeptieren, ablehnen oder",
+    "manage": "deine Einstellungen verwalten",
+    "moreInfo": "Mehr Info",
+    "manageBtn": "Verwalten",
+    "rejectBtn": "Ablehnen",
+    "acceptBtn": "Alle akzeptieren",
+    "modalTitle": "Einwilligung verwalten",
+    "essential": "Notwendige Cookies",
+    "essentialDesc": "Für den grundlegenden Betrieb der Website erforderlich. Können nicht deaktiviert werden.",
+    "analytics": "Analytische Cookies",
+    "analyticsDesc": "Helfen uns zu verstehen, wie Besucher die Website nutzen (Google Analytics).",
+    "marketing": "Marketing-Cookies",
+    "marketingDesc": "Werden verwendet, um relevante Anzeigen auf anderen Plattformen zu schalten.",
+    "acceptAll": "Alle akzeptieren",
+    "essentialOnly": "Nur notwendige"
+  }
+}

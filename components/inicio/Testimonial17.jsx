@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 
 import React, { useEffect, useRef, useState } from "react";
 import { BiSolidStar } from "react-icons/bi";
@@ -44,6 +45,7 @@ function useCountUp(target, duration = 1800, startTrigger) {
 }
 
 function StatsHeader() {
+  const t = useTranslations("reviews");
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -62,10 +64,8 @@ function StatsHeader() {
   return (
     <div ref={ref} className="mb-12 md:mb-16">
       {/* H2 sr-only: invisible visualmente, semántico para Google */}
-      <h2 className="sr-only">
-        Reseñas de Bowling Pleno Zenia en Google — bolera en Orihuela Costa
-      </h2>
-      <p className="label-red mb-3 text-center" aria-hidden="true">Reseñas</p>
+      <h2 className="sr-only">{t("srTitle")}</h2>
+      <p className="label-red mb-3 text-center" aria-hidden="true">{t("label")}</p>
 
       {/* Big stats row */}
       <div className="flex flex-col items-center gap-6 md:flex-row md:justify-center md:gap-16 mb-8">
@@ -81,7 +81,7 @@ function StatsHeader() {
             +{reviews.toLocaleString("es-ES")}
           </div>
           <p className="text-brand-navy/50 text-sm font-bold uppercase tracking-widest mt-1">
-            Familias que ya nos visitaron
+            {t("families")}
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export function Testimonial17() {
         </div>
 
         <p className="text-center text-brand-navy/40 text-xs mt-8 uppercase tracking-wider">
-          Reseñas verificadas de Google Business
+          {t("source")}
         </p>
       </div>
     </section>

@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const COOKIE_KEY = "bpz_cookie_consent"; // bowling pleno zenia
 
 export function CookieBanner() {
+  const t = useTranslations("cookie");
   const [status, setStatus] = useState(null); // null | "visible" | "settings" | "hidden"
 
   useEffect(() => {
@@ -45,7 +47,7 @@ export function CookieBanner() {
         >
           {/* Header */}
           <div className="px-7 pt-7 pb-5 border-b border-brand-navy/10">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-red mb-1">Privacidad</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-red mb-1">🔒</p>
             <h2
               className="uppercase leading-none"
               style={{
@@ -55,7 +57,7 @@ export function CookieBanner() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Gestionar el Consentimiento
+              {t("modalTitle")}
             </h2>
           </div>
 
@@ -63,21 +65,21 @@ export function CookieBanner() {
           <div className="px-7 py-5 space-y-4">
             {/* Esenciales — siempre activas */}
             <CookieRow
-              label="Cookies esenciales"
-              desc="Necesarias para el funcionamiento básico del sitio. No se pueden desactivar."
+              label={t("essential")}
+              desc={t("essentialDesc")}
               locked
               checked
             />
             {/* Analíticas */}
             <CookieRow
-              label="Cookies analíticas"
-              desc="Nos ayudan a entender cómo los visitantes usan la web (Google Analytics)."
+              label={t("analytics")}
+              desc={t("analyticsDesc")}
               id="analytics"
             />
             {/* Marketing */}
             <CookieRow
-              label="Cookies de marketing"
-              desc="Se usan para mostrar anuncios relevantes en otras plataformas."
+              label={t("marketing")}
+              desc={t("marketingDesc")}
               id="marketing"
             />
           </div>
@@ -89,10 +91,10 @@ export function CookieBanner() {
               className="flex-1 py-3 text-xs font-black uppercase tracking-[0.15em] text-white transition-colors hover:bg-red-700"
               style={{ background: "#E82040", borderRadius: "8px" }}
             >
-              Aceptar todas
+              {t("acceptAll")}
             </button>
             <button
-              onClick={() => save("essential")}
+              onClick={() => save("essential")}}
               className="flex-1 py-3 text-xs font-black uppercase tracking-[0.15em] border-2 transition-colors hover:bg-brand-navy hover:text-white"
               style={{ borderColor: "#1A2744", color: "#1A2744", borderRadius: "8px" }}
             >
@@ -153,16 +155,16 @@ export function CookieBanner() {
               letterSpacing: "-0.01em",
             }}
           >
-            🍪 Usamos cookies
+            {t("title")}
           </p>
           <p className="text-white/55 text-xs leading-relaxed">
-            Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte contenido relevante.
+            {t("text")}
             Puedes aceptarlas, rechazarlas o{" "}
             <button
               onClick={() => setStatus("settings")}
               className="underline text-white/75 hover:text-white transition-colors font-bold"
             >
-              gestionar tus preferencias
+              {t("manage")}
             </button>
             .{" "}
             <a
@@ -171,7 +173,7 @@ export function CookieBanner() {
               rel="noopener noreferrer"
               className="underline text-white/55 hover:text-white/80 transition-colors"
             >
-              Más info
+              {t("moreInfo")}
             </a>
           </p>
         </div>
@@ -183,21 +185,21 @@ export function CookieBanner() {
             className="px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.15em] text-white/70 border border-white/20 hover:border-white/50 hover:text-white transition-colors"
             style={{ borderRadius: "8px" }}
           >
-            Gestionar
+            {t("manageBtn")}
           </button>
           <button
             onClick={() => save("essential")}
             className="px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.15em] text-white/70 border border-white/20 hover:border-white/50 hover:text-white transition-colors"
             style={{ borderRadius: "8px" }}
           >
-            Rechazar
+            {t("rejectBtn")}
           </button>
           <button
             onClick={() => save("all")}
             className="px-5 py-2.5 text-[10px] font-black uppercase tracking-[0.15em] text-white hover:bg-red-700 transition-colors"
             style={{ background: "#E82040", borderRadius: "8px" }}
           >
-            Aceptar todas
+            {t("acceptBtn")}
           </button>
         </div>
       </div>

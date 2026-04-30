@@ -1,69 +1,14 @@
 "use client";
 
 import React, { useRef } from "react";
+import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
 
-const N = 4;
+const N = 4; // número de servicios
 
-const services = [
-  {
-    tag: "Bolera",
-    title: "Bowling — 10 Pistas",
-    desc: "Adaptadas para todas las edades. Sin reserva previa ni calzado especial.",
-    cta: "Ver precios de la bolera",
-    href: "/bolera-y-precios",
-    bg: "#E82040",
-    rotate: -3,
-    img: "/images/bolera-orihuela-costa-10-pistas.jpg",
-    badge: null,
-    seoTitle: "Bolera en Orihuela Costa",
-    seoText:
-      "El bowling en Zenia Boulevard más completo de la costa alicantina. Nuestras 10 pistas de bolos están adaptadas para todas las edades: familias con niños, grupos de amigos y parejas. Sin reserva previa, con calzado incluido y turnos ágiles. La bolera en Orihuela Costa que combina calidad, precio justo y diversión garantizada los 365 días del año.",
-  },
-  {
-    tag: "Arcade",
-    title: "Máquinas Arcade y Juegos",
-    desc: "Simuladores, redemption, billar, futbolín. Sistema de tickets y premios.",
-    cta: "Explorar sala arcade",
-    href: "/arcade-y-juegos",
-    bg: "#FF7043",
-    rotate: 2.5,
-    img: "/images/arcade-orihuela-costa-maquinas-recreativas.png",
-    badge: null,
-    seoTitle: "Arcade en Orihuela Costa",
-    seoText:
-      "Nuestra sala de arcade en Orihuela Costa reúne más de 30 máquinas recreativas: simuladores de conducción, juegos de habilidad y redemption con sistema de tickets canjeables por premios. Billar, futbolín y los últimos lanzamientos en ocio familiar. El plan perfecto cuando el sol aprieta o simplemente quieres alargar la diversión en grupo.",
-  },
-  {
-    tag: "Irish Pub",
-    title: "Dublin House",
-    desc: "Cervezas importadas, cócteles y ambiente auténtico irlandés mientras juegas o descansas.",
-    cta: "Descubrir Dublin House",
-    href: "/irish-pub-y-bar",
-    bg: "#1A3D1A",
-    rotate: -2,
-    img: "/images/pub-irlandes-dublin-house-orihuela-costa.jpg",
-    badge: "ÚNICO EN LA ZONA",
-    seoTitle: "Pub irlandés en Orihuela Costa",
-    seoText:
-      "Dublin House es el único pub irlandés de Orihuela Costa con auténtico ambiente celta. Cerveza irlandesa de barril, combinados artesanales y una carta de picoteo para acompañar tu partida de bowling o descansar entre juego y juego. El mejor bar en Zenia Boulevard donde el ocio anglosajón se funde con la hospitalidad mediterránea.",
-  },
-  {
-    tag: "Cumpleaños",
-    title: "Fiestas & Celebraciones",
-    desc: "Paquetes todo incluido para infantiles y adultos. Zona reservada.",
-    cta: "Reservar cumpleaños",
-    href: "/cumpleanos-y-celebraciones",
-    bg: "#0072CE",
-    rotate: 3,
-    img: null,
-    badge: null,
-    seoTitle: "Cumpleaños infantiles en Orihuela Costa",
-    seoText:
-      "Celebra los cumpleaños infantiles más especiales en Orihuela Costa. Nuestros paquetes para celebrar cumpleaños en Alicante incluyen partidas de bowling, acceso al arcade, menú o merienda y zona privada decorada. Fiestas infantiles para grupos de hasta 30 personas, disponibles todos los días. Adultos, despedidas y eventos de empresa también tienen su espacio.",
-  },
-];
+// services array is built dynamically via useServices() hook below
+
 
 // ── Card individual ───────────────────────────────────────────────────────────
 function ServiceCard({ service, index, scrollYProgress }) {
@@ -294,9 +239,22 @@ function MobileSeoSection() {
   );
 }
 
+// ── Hook que genera el array de servicios con traducciones ───────────────────
+function useServices(t) {
+  return [
+    { tag: t("cards.bolera.tag"), title: t("cards.bolera.title"), desc: t("cards.bolera.desc"), cta: t("cards.bolera.cta"), href: "/bolera-y-precios", bg: "#E82040", rotate: -3, img: "/images/bolera.jpeg", badge: null, seoTitle: t("cards.bolera.seoTitle"), seoText: t("cards.bolera.seoText") },
+    { tag: t("cards.arcade.tag"), title: t("cards.arcade.title"), desc: t("cards.arcade.desc"), cta: t("cards.arcade.cta"), href: "/arcade-y-juegos", bg: "#FF7043", rotate: 2.5, img: "/images/arcade.png", badge: null, seoTitle: t("cards.arcade.seoTitle"), seoText: t("cards.arcade.seoText") },
+    { tag: t("cards.pub.tag"), title: t("cards.pub.title"), desc: t("cards.pub.desc"), cta: t("cards.pub.cta"), href: "/irish-pub-y-bar", bg: "#1A3D1A", rotate: -2, img: "/images/irishpub.jpeg", badge: t("cards.pub.badge"), seoTitle: t("cards.pub.seoTitle"), seoText: t("cards.pub.seoText") },
+    { tag: t("cards.cumpleanos.tag"), title: t("cards.cumpleanos.title"), desc: t("cards.cumpleanos.desc"), cta: t("cards.cumpleanos.cta"), href: "/cumpleanos-y-celebraciones", bg: "#0072CE", rotate: 3, img: null, badge: null, seoTitle: t("cards.cumpleanos.seoTitle"), seoText: t("cards.cumpleanos.seoText") },
+  ];
+}
+
 // ── Componente principal ──────────────────────────────────────────────────────
 export function Layout370() {
+  const tServices = useTranslations("services");
   const containerRef = useRef(null);
+  const services = useServices(tServices);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
@@ -328,7 +286,7 @@ export function Layout370() {
             {/* IZQUIERDA — título + SEO + dots */}
             <div className="hidden md:flex flex-col justify-center px-10 lg:px-16"
               style={{ width: "40%", flexShrink: 0 }}>
-              <p className="label-red mb-4">Servicios</p>
+              <p className="label-red mb-4">{tServices("label")}</p>
               <h2 style={{
                 fontWeight: 900,
                 fontSize: "clamp(3.8rem, 7.5vw, 9rem)",
@@ -337,8 +295,8 @@ export function Layout370() {
                 textTransform: "uppercase",
                 color: "#1A2744",
               }}>
-                Todo lo<br />que<br />
-                <span style={{ color: "#E82040" }}>buscas</span>
+                {tServices("title")}<br />{tServices("titleLine2")}<br />
+                <span style={{ color: "#E82040" }}>{tServices("titleRed")}</span>
               </h2>
               <SeoPanel seoOpacities={seoOpacities} />
               <ProgressDots scrollYProgress={scrollYProgress} />
@@ -351,7 +309,7 @@ export function Layout370() {
                 <p className="label-red text-[10px] mb-1">Servicios</p>
                 <h2 style={{ fontWeight: 900, fontSize: "clamp(2rem,8vw,3.2rem)",
                   lineHeight: 0.9, letterSpacing: "-0.03em", textTransform: "uppercase" }}>
-                  Todo lo que <span style={{ color: "#E82040" }}>buscas</span>
+                  {tServices("title")} {tServices("titleLine2")} <span style={{ color: "#E82040" }}>{tServices("titleRed")}</span>
                 </h2>
               </div>
 
