@@ -3,6 +3,7 @@ import { Barlow_Condensed, Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getLocale } from 'next-intl/server'
 import { CookieBanner } from '@/components/shared/CookieBanner'
+import { SchemaOrg } from '@/components/shared/SchemaOrg'
 import '../globals.css'
 
 const barlowCondensed = Barlow_Condensed({
@@ -63,7 +64,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Bowling Pleno Zenia',
       locale: locale === 'es' ? 'es_ES' : locale === 'en' ? 'en_GB' : locale === 'de' ? 'de_DE' : 'ru_RU',
       type: 'website',
-      images: [{ url: '/images/bolera.jpeg', width: 1200, height: 630, alt: 'Bowling Pleno Zenia — Orihuela Costa' }],
+      images: [{ url: '/images/bolera.jpeg', width: 1200, height: 630, alt: 'Bowling Pleno Zenia — Bolera, Arcade y Pub Irlandés en Orihuela Costa' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[locale] ?? titles.es,
+      description: descriptions[locale] ?? descriptions.es,
+      images: ['/images/bolera.jpeg'],
     },
   }
 }
@@ -80,6 +87,7 @@ export default async function LocaleLayout({
   return (
     <html lang={(await params).locale}>
       <body className={barlowCondensed.variable + ' ' + inter.variable + ' antialiased'}>
+        <SchemaOrg />
         <NextIntlClientProvider messages={messages}>
           {children}
           <CookieBanner />
