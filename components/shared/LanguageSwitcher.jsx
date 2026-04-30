@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { useState } from 'react';
 
 const locales = [
@@ -27,21 +27,13 @@ function FlagImg({ countryCode, label }) {
 export function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname(); // ruta sin prefijo de locale
   const [open, setOpen] = useState(false);
 
   function switchLocale(newLocale) {
-    let newPath = pathname;
-    const localePrefix = `/${locale}`;
-    if (newPath.startsWith(localePrefix + '/')) {
-      newPath = newPath.slice(localePrefix.length);
-    } else if (newPath === localePrefix) {
-      newPath = '/';
-    }
-    if (newLocale !== 'es') {
-      newPath = `/${newLocale}${newPath === '/' ? '' : newPath}`;
-    }
-    router.push(newPath || '/');
+    // usePathname de next-intl devuelve la ruta SIN prefijo de locale
+    // router.replace de next-intl acepta { locale } para cambiar de idioma
+    router.replace(pathname, { locale: newLocale });
     setOpen(false);
   }
 
