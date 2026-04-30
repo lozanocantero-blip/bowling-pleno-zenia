@@ -245,7 +245,7 @@ function useServices(t) {
     { tag: t("cards.bolera.tag"), title: t("cards.bolera.title"), desc: t("cards.bolera.desc"), cta: t("cards.bolera.cta"), href: "/bolera-y-precios", bg: "#E82040", rotate: -3, img: "/images/bolera.jpeg", badge: null, seoTitle: t("cards.bolera.seoTitle"), seoText: t("cards.bolera.seoText") },
     { tag: t("cards.arcade.tag"), title: t("cards.arcade.title"), desc: t("cards.arcade.desc"), cta: t("cards.arcade.cta"), href: "/arcade-y-juegos", bg: "#FF7043", rotate: 2.5, img: "/images/arcade.png", badge: null, seoTitle: t("cards.arcade.seoTitle"), seoText: t("cards.arcade.seoText") },
     { tag: t("cards.pub.tag"), title: t("cards.pub.title"), desc: t("cards.pub.desc"), cta: t("cards.pub.cta"), href: "/irish-pub-y-bar", bg: "#1A3D1A", rotate: -2, img: "/images/irishpub.jpeg", badge: t("cards.pub.badge"), seoTitle: t("cards.pub.seoTitle"), seoText: t("cards.pub.seoText") },
-    { tag: t("cards.cumpleanos.tag"), title: t("cards.cumpleanos.title"), desc: t("cards.cumpleanos.desc"), cta: t("cards.cumpleanos.cta"), href: "/cumpleanos-y-celebraciones", bg: "#0072CE", rotate: 3, img: null, badge: null, seoTitle: t("cards.cumpleanos.seoTitle"), seoText: t("cards.cumpleanos.seoText") },
+    // { tag: t("cards.cumpleanos.tag"), title: t("cards.cumpleanos.title"), desc: t("cards.cumpleanos.desc"), cta: t("cards.cumpleanos.cta"), href: "/cumpleanos-y-celebraciones", bg: "#0072CE", rotate: 3, img: null, badge: null, seoTitle: t("cards.cumpleanos.seoTitle"), seoText: t("cards.cumpleanos.seoText") },
   ];
 }
 

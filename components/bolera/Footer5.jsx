@@ -100,7 +100,6 @@ export function Footer5() {
             <ul className="space-y-2.5">
               {[
                 ["/bolera-y-precios",                 "links.bolera"],
-                ["/cumpleanos-y-celebraciones",        "links.cumpleanos"],
                 ["/irish-pub-y-bar",                   "links.pub"],
                 ["/arcade-y-juegos",                   "links.arcade"],
               ].map(([href, key]) => (
