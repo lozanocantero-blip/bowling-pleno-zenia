@@ -8,6 +8,7 @@ import { useRouter, usePathname } from "@/i18n/navigation";
 
 const services = [
   { labelKey: "bolera",    href: "/bolera-y-precios"           },
+  { labelKey: "cumpleanos", href: "/cumpleanos-y-celebraciones" },
   { labelKey: "arcade",    href: "/arcade-y-juegos"            },
   { labelKey: "pub",       href: "/irish-pub-y-bar"            },
 ];

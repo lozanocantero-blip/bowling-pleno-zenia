@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 const services = [
   { labelKey: "bolera",    href: "/bolera-y-precios"           },
+  { labelKey: "cumpleanos", href: "/cumpleanos-y-celebraciones" },
   { labelKey: "arcade",    href: "/arcade-y-juegos"            },
   { labelKey: "pub",       href: "/irish-pub-y-bar"            },
 ];
