@@ -87,10 +87,16 @@ export function Header83() {
   return (
     <section className="relative overflow-hidden" style={{ height: "100vh", background: "#0d1220" }}>
 
+      {/* poster: pinta una imagen al instante mientras carga el vídeo (mejora LCP en móvil).
+          El segundo vídeo solo entra en el crossfade del bucle, así que no necesita preload. */}
       <video ref={v1Ref} style={{ ...videoStyle, opacity: 1 }}
-        src="/bowling-pleno-zenia-orihuela-costa.mp4" muted playsInline preload="auto" />
+        src="/bowling-pleno-zenia-orihuela-costa.mp4"
+        poster="/images/bolera-orihuela-costa-10-pistas.jpg"
+        muted playsInline preload="auto" />
       <video ref={v2Ref} style={{ ...videoStyle, opacity: 0 }}
-        src="/bowling-pleno-zenia-orihuela-costa.mp4" muted playsInline preload="auto" />
+        src="/bowling-pleno-zenia-orihuela-costa.mp4"
+        poster="/images/bolera-orihuela-costa-10-pistas.jpg"
+        muted playsInline preload="none" />
 
       <div
         className="absolute inset-0 pointer-events-none"

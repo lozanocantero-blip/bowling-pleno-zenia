@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getLocale } from 'next-intl/server'
+import { localizedUrl, languageAlternates } from '@/lib/site'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -16,21 +17,18 @@ export async function generateMetadata(): Promise<Metadata> {
     ru: 'Боулинг в Орихуэла-Коста без предварительной записи. 10 дорожек для всех возрастов, бамперы для детей. От 4,50€. Zenia Boulevard, открыто 365 дней.',
   }
   return {
-    title: titles[locale] ?? titles.es,
+    // absolute evita que la plantilla del layout padre ('%s · Bowling Pleno
+    // Zenia') duplique la marca, ya que el título ya la incluye.
+    title: { absolute: titles[locale] ?? titles.es },
     description: descriptions[locale] ?? descriptions.es,
     alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app/bolera-y-precios',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app/bolera-y-precios',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en/bolera-y-precios',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de/bolera-y-precios',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru/bolera-y-precios',
-      },
+      canonical: localizedUrl(locale, 'bolera-y-precios'),
+      languages: languageAlternates('bolera-y-precios'),
     },
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app/bolera-y-precios',
+      url: localizedUrl(locale, 'bolera-y-precios'),
       images: [{ url: '/images/bolera-orihuela-costa-10-pistas.jpg', width: 1200, height: 630, alt: '10 pistas de bowling Bowling Pleno Zenia Orihuela Costa' }],
     },
   }

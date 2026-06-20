@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getLocale } from 'next-intl/server'
+import { localizedUrl, languageAlternates } from '@/lib/site'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -16,21 +17,16 @@ export async function generateMetadata(): Promise<Metadata> {
     ru: 'Лучший аркадный зал в Орихуэла-Коста. Более 30 автоматов: симуляторы, redemption с призами, бильярд и настольный футбол. Zenia Boulevard.',
   }
   return {
-    title: titles[locale] ?? titles.es,
+    title: { absolute: titles[locale] ?? titles.es },
     description: descriptions[locale] ?? descriptions.es,
     alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app/arcade-y-juegos',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app/arcade-y-juegos',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en/arcade-y-juegos',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de/arcade-y-juegos',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru/arcade-y-juegos',
-      },
+      canonical: localizedUrl(locale, 'arcade-y-juegos'),
+      languages: languageAlternates('arcade-y-juegos'),
     },
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app/arcade-y-juegos',
+      url: localizedUrl(locale, 'arcade-y-juegos'),
       images: [{ url: '/images/arcade-orihuela-costa-maquinas-recreativas.png', width: 1200, height: 630, alt: 'Sala arcade Bowling Pleno Zenia Orihuela Costa' }],
     },
   }

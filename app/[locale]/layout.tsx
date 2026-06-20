@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getLocale } from 'next-intl/server'
 import { CookieBanner } from '@/components/shared/CookieBanner'
 import { SchemaOrg } from '@/components/shared/SchemaOrg'
+import { SITE_URL, localizedUrl, languageAlternates } from '@/lib/site'
 import '../globals.css'
 
 const barlowCondensed = Barlow_Condensed({
@@ -36,6 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: {
       default: titles[locale] ?? titles.es,
       template: '%s · Bowling Pleno Zenia',
@@ -48,20 +50,14 @@ export async function generateMetadata(): Promise<Metadata> {
       'ocio familiar Orihuela Costa', 'arcade Orihuela Costa',
     ],
     alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru',
-        'x-default': 'https://bowling-pleno-zenia.vercel.app',
-      },
+      canonical: localizedUrl(locale, ''),
+      languages: languageAlternates(''),
     },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app',
+      url: localizedUrl(locale, ''),
       siteName: 'Bowling Pleno Zenia',
       locale: locale === 'es' ? 'es_ES' : locale === 'en' ? 'en_GB' : locale === 'de' ? 'de_DE' : 'ru_RU',
       type: 'website',

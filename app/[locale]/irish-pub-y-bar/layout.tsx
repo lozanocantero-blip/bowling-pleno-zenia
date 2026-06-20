@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getLocale } from 'next-intl/server'
+import { localizedUrl, languageAlternates } from '@/lib/site'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -16,21 +17,16 @@ export async function generateMetadata(): Promise<Metadata> {
     ru: 'Единственный ирландский паб в Орихуэла-Коста, внутри Bowling Pleno Zenia в Zenia Boulevard. Guinness, Heineken на разлив, электронные дартс, коктейли.',
   }
   return {
-    title: titles[locale] ?? titles.es,
+    title: { absolute: titles[locale] ?? titles.es },
     description: descriptions[locale] ?? descriptions.es,
     alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app/irish-pub-y-bar',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app/irish-pub-y-bar',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en/irish-pub-y-bar',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de/irish-pub-y-bar',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru/irish-pub-y-bar',
-      },
+      canonical: localizedUrl(locale, 'irish-pub-y-bar'),
+      languages: languageAlternates('irish-pub-y-bar'),
     },
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app/irish-pub-y-bar',
+      url: localizedUrl(locale, 'irish-pub-y-bar'),
       images: [{ url: '/images/interior-barra-ara%C3%B1a-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg', width: 1200, height: 630, alt: 'Dublin House Irish Pub interior Bowling Pleno Zenia Orihuela Costa' }],
     },
   }
