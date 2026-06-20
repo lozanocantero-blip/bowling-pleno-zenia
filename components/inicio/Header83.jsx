@@ -164,13 +164,13 @@ export function Header83() {
             <a
               href="/bolera-y-precios"
               aria-label={t("ariaCtaPrices")}
-              className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors"
+              className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#1A2744] transition-colors btn-lift"
             >
               {t("ctaPrices")}
             </a>
             <a
               href="#horarios"
-              className="inline-block rounded-full border-2 border-white/50 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition-colors"
+              className="inline-block rounded-full border-2 border-white/50 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition-colors btn-lift"
             >
               {tSched("label")}
             </a>

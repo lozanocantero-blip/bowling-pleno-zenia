@@ -5,7 +5,7 @@ import { BiCheck } from "react-icons/bi";
 import { useTranslations } from "next-intl";
 
 const PriceCard = ({ price, label, primary, wide, perPerson, features }) => (
-  <div className={`flex flex-col justify-between p-8 border-2 ${wide ? "md:col-span-2 md:max-w-md md:mx-auto md:w-full" : ""} ${primary ? "border-brand-red bg-brand-navy text-white" : "border-brand-navy/20 bg-white"}`}>
+  <div className={`flex flex-col justify-between p-8 border-2 card-lift ${wide ? "md:col-span-2 md:max-w-md md:mx-auto md:w-full" : ""} ${primary ? "border-brand-red bg-brand-navy text-white" : "border-brand-navy/20 bg-white"}`}>
     <div>
       <div className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 rounded-full ${primary ? "bg-brand-red text-white" : "bg-brand-blue-light text-brand-navy"}`}>{label}</div>
       <div className={`text-6xl font-black uppercase mb-1 md:text-8xl lg:text-9xl ${primary ? "text-white" : "text-brand-navy"}`}>{price}</div>

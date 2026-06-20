@@ -25,7 +25,7 @@ export function Header60() {
           {t("sub")}
         </p>
         <div className="flex flex-wrap gap-4">
-          <a href="#tarifas" className="rounded-full border-2 border-white/40 text-white/80 px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:border-white hover:text-white transition-colors">
+          <a href="#tarifas" className="rounded-full border-2 border-white/40 text-white/80 px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:border-white hover:text-white transition-colors btn-lift">
             {t("btn2")}
           </a>
         </div>
