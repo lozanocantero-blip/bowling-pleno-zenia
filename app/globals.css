@@ -86,3 +86,52 @@ a { color: inherit; text-decoration: none }
 .page-with-fixed-nav > *:not(:first-child):not(:nth-child(2)) {
   scroll-margin-top: 80px;
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Pase de pulido (UI/UX) — 100% aditivo: no cambia layout ni componentes.
+   Solo añade estados de interacción, accesibilidad y detalles de marca.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Foco visible solo con teclado (anillo de marca). No aparece al hacer clic
+   con el ratón, así que no molesta en uso normal; mejora accesibilidad y
+   da aspecto profesional al navegar con Tab. */
+:where(a, button, [role="button"], input, textarea, select, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid #E82040;
+  outline-offset: 3px;
+}
+
+/* Selección de texto con el rojo de marca. */
+::selection {
+  background: #E82040;
+  color: #fff;
+}
+
+/* Taps más limpios en móvil: elimina el destello gris por defecto de Android
+   (la web ya define sus propios estados :hover/:active). */
+a, button, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar de marca (sutil): navy en reposo, rojo al pasar el cursor. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1A2744 transparent;
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #1A2744;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover { background: #E82040; }
+
+/* Respeta la preferencia del sistema "reducir movimiento": minimiza
+   animaciones y transiciones CSS para usuarios sensibles al movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
