@@ -30,9 +30,9 @@ export function Timeline19() {
               className="border-2 border-white text-white px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-brand-navy transition-colors">
               Llamar
             </a>
-            <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+            <a href="/contacto"
               className="bg-brand-red text-white px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-red-700 transition-colors">
-              WhatsApp
+              Contacto
             </a>
           </div>
         </div>

@@ -73,11 +73,11 @@ export function Layout373() {
                   </ul>
                 </div>
                 <div className="mt-auto flex flex-col gap-3">
-                  <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+                  <a href="/contacto"
                     className={`block text-center py-3 text-sm font-bold uppercase tracking-wider transition-colors ${p.highlight ? "bg-brand-red text-white hover:bg-red-700" : "bg-brand-navy text-white hover:bg-brand-red"}`}>
                     {p.cta}
                   </a>
-                  <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+                  <a href="/contacto"
                     className="flex items-center justify-center gap-1 text-xs font-bold uppercase tracking-wider text-brand-navy/50 hover:text-brand-red transition-colors">
                     Consultar por WhatsApp <RxChevronRight className="size-3" />
                   </a>

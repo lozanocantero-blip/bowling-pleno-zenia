@@ -44,7 +44,7 @@ export function Layout395() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+          <a href="/contacto"
             className="inline-block bg-brand-red text-white px-10 py-4 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors">
             Empezar por WhatsApp
           </a>

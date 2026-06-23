@@ -114,7 +114,7 @@
     "label": "¿Listo para jugar?",
     "title": "Sin reserva · Sin calzado especial",
     "titleRed": "Solo visítanos y juega",
-    "whatsapp": "Escríbenos por WhatsApp",
+    "whatsapp": "Escríbenos",
     "phone": "📞 965 35 58 15"
   },
   "location": {
@@ -233,7 +233,7 @@
       "h2": "¿Qué incluye una pista?",
       "body": "Nuestras pistas de bowling en Orihuela Costa están totalmente equipadas para que disfrutes desde el primer lanzamiento. Incluyen bolas de diferentes pesos, bumpers para niños y todo lo necesario para jugar cómodamente en familia o con amigos. Ven cuando quieras a Zenia Boulevard y juega sin reserva previa, de forma rápida y sencilla.",
       "btn1": "Ver tarifas",
-      "btn2": "WhatsApp",
+      "btn2": "Contacto",
       "items": [
         {
           "tag": "Comodidad",
@@ -261,7 +261,7 @@
       "label": "Grupos grandes",
       "h2": "¿Más de seis personas?",
       "body": "Si vienen más de seis, hay opciones mejores para vosotros. Escríbenos y lo organizamos todo.",
-      "btn1": "Escribir por WhatsApp",
+      "btn1": "Escríbenos",
       "btn2": "Llamar"
     },
     "reviews": {
@@ -403,7 +403,7 @@
       "label": "Dublin House",
       "h2": "Vive la experiencia",
       "body": "Ven cuando quieras y disfruta de una noche diferente en Zenia Boulevard, Orihuela Costa.",
-      "btn1": "Escribir por WhatsApp",
+      "btn1": "Escríbenos",
       "btn2": "Llamar"
     },
     "gallery": {

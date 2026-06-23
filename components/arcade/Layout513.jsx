@@ -15,7 +15,7 @@ export function Layout513() {
             <h2 className="text-5xl md:text-7xl uppercase leading-none mb-6">{t("h2")}</h2>
             <p className="text-brand-navy/60 md:text-md mb-8 max-w-lg">{t("body")}</p>
             <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer" className="border-2 border-brand-navy text-brand-navy px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-brand-navy hover:text-white transition-colors">{t("btn1")}</a>
+              <a href="/contacto" className="border-2 border-brand-navy text-brand-navy px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-brand-navy hover:text-white transition-colors">{t("btn1")}</a>
               <a href="#sistema" className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline">{t("btn2")} <RxChevronRight className="size-4" /></a>
             </div>
           </div>

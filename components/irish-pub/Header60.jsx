@@ -25,7 +25,7 @@ export function Header60() {
           {t("sub")}
         </p>
         <div className="flex flex-wrap gap-4">
-          <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer" className="rounded-full text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors" style={{ background: "#2A6E4E" }}>{t("btn1")}</a>
+          <a href="/contacto" className="rounded-full text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors" style={{ background: "#2A6E4E" }}>{t("btn1")}</a>
           <a href="#ambiente" className="rounded-full border-2 border-white/40 text-white/80 px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:border-white hover:text-white transition-colors">{t("btn2")}</a>
         </div>
       </div>

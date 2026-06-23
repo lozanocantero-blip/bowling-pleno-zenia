@@ -100,7 +100,6 @@ export function Footer5() {
             <ul className="space-y-2.5">
               {[
                 ["/bolera-y-precios",                 "links.bolera"],
-                ["/cumpleanos-y-celebraciones",        "links.cumpleanos"],
                 ["/irish-pub-y-bar",                   "links.pub"],
                 ["/arcade-y-juegos",                   "links.arcade"],
               ].map(([href, key]) => (
@@ -123,7 +122,7 @@ export function Footer5() {
             <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">{t("contactTitle")}</h4>
             <ul className="space-y-2.5">
               <li><a href="tel:+34965355815" className="text-sm text-white/70 hover:text-white transition-colors">📞 965 35 58 15</a></li>
-              <li><a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">💬 WhatsApp</a></li>
+              <li><a href="/contacto" className="text-sm text-white/70 hover:text-white transition-colors">✉️ Contacto</a></li>
               <li><a href="https://maps.google.com/?q=Bowling+Pleno+Zenia" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">{t("howToGet")}</a></li>
             </ul>
             <h4 className="mt-6 mb-4 text-xs font-bold uppercase tracking-widest text-brand-red">{t("followTitle")}</h4>

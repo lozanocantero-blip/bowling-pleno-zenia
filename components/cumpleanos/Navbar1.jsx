@@ -7,7 +7,6 @@ import { useTranslations } from "next-intl";
 
 const services = [
   { labelKey: "bolera",    href: "/bolera-y-precios"           },
-  { labelKey: "cumpleanos", href: "/cumpleanos-y-celebraciones" },
   { labelKey: "arcade",    href: "/arcade-y-juegos"            },
   { labelKey: "pub",       href: "/irish-pub-y-bar"            },
 ];
@@ -75,9 +74,7 @@ export function Navbar1() {
           {t("contacto")}
         </a>
         <a
-          href="https://wa.me/34965355815"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/contacto"
           className="px-5 py-2 rounded-full bg-[#E82040] text-white text-sm font-bold uppercase tracking-wider hover:bg-red-700 transition-colors whitespace-nowrap"
         >
           {t("reservar")}
@@ -125,7 +122,7 @@ export function Navbar1() {
             className="py-2.5 px-4 rounded-full border-2 border-[#1A2744] text-[#1A2744] text-sm font-bold uppercase tracking-wider text-center hover:bg-[#1A2744] hover:text-white transition-colors">
             Contacto
           </a>
-          <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+          <a href="/contacto"
             className="py-2.5 px-4 rounded-full bg-[#E82040] text-white text-sm font-bold uppercase tracking-wider text-center hover:bg-red-700 transition-colors">
             Reservar
           </a>

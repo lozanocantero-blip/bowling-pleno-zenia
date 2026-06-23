@@ -76,9 +76,9 @@ export function Contact25() {
                 className="bg-brand-navy text-white px-5 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-brand-red transition-colors">
                 Llamar
               </a>
-              <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+              <a href="/contacto"
                 className="border-2 border-brand-navy text-brand-navy px-5 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-brand-navy hover:text-white transition-colors">
-                WhatsApp
+                Contacto
               </a>
             </div>
           </div>

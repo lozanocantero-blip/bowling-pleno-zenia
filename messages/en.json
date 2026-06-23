@@ -114,7 +114,7 @@
     "label": "Ready to play?",
     "title": "No booking · No special footwear",
     "titleRed": "Just visit us and play",
-    "whatsapp": "Message us on WhatsApp",
+    "whatsapp": "Message us",
     "phone": "📞 965 35 58 15"
   },
   "location": {
@@ -233,7 +233,7 @@
       "h2": "What's included?",
       "body": "Our bowling lanes in Orihuela Costa are fully equipped so you can enjoy from the very first throw. They include balls of different weights, bumpers for kids and everything needed to play comfortably with family or friends. Come anytime to Zenia Boulevard and play without prior booking.",
       "btn1": "See prices",
-      "btn2": "WhatsApp",
+      "btn2": "Contact",
       "items": [
         {
           "tag": "Comfort",
@@ -261,7 +261,7 @@
       "label": "Large groups",
       "h2": "More than six people?",
       "body": "If you're coming as a larger group, we have better options for you. Message us and we'll sort everything out.",
-      "btn1": "Message us on WhatsApp",
+      "btn1": "Message us",
       "btn2": "Call us"
     },
     "reviews": {
@@ -403,7 +403,7 @@
       "label": "Dublin House",
       "h2": "Live the experience",
       "body": "Come anytime and enjoy a different night at Zenia Boulevard, Orihuela Costa.",
-      "btn1": "Contact via WhatsApp",
+      "btn1": "Contact us",
       "btn2": "Call us"
     },
     "gallery": {

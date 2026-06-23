@@ -21,7 +21,7 @@ export function Contact14() {
           <div className="space-y-8">
             {[
               { Icon: BiPhone, title: "Teléfono", sub: "Llamadas y mensajes", href: "tel:+34965355815", link: "965 35 58 15" },
-              { Icon: BiEnvelope, title: "WhatsApp", sub: "La forma más rápida", href: "https://wa.me/34965355815", link: "Escribir ahora →" },
+              { Icon: BiEnvelope, title: "WhatsApp", sub: "La forma más rápida", href: "/contacto", link: "Escribir ahora →" },
               { Icon: BiMap, title: "Ubicación", sub: "Zenia Boulevard, planta baja, Orihuela Costa", href: "https://maps.google.com/?q=Bowling+Pleno+Zenia", link: "Ver en Google Maps →" },
             ].map(({ Icon, title, sub, href, link }) => (
               <div key={title} className="flex gap-4">

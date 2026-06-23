@@ -45,7 +45,7 @@ export function Header60() {
           Paquetes todo incluido · Infantil y adultos · Zona reservada
         </p>
         <div className="flex flex-wrap gap-4">
-          <a href="https://wa.me/34965355815" target="_blank" rel="noopener noreferrer"
+          <a href="/contacto"
             className="rounded-full text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm transition-colors"
             style={{ background: "#0072CE" }}>
             Reservar mi fiesta
