@@ -6,22 +6,19 @@ import { BiSolidStar } from "react-icons/bi";
 
 const reviews = [
   {
-    quote: "Pasamos un día increíble en familia. Las pistas están bien cuidadas y el personal muy atento. Sin duda volveremos.",
-    author: "María García",
-    role: "Visitante de Torrevieja",
-    flag: "🇪🇸",
+    quote: "Un espacio maravilloso para disfrutar en familia, venimos siempre y el trato es espectacular, sobre todo por las chicas que son muy atentas con los niños.",
+    author: "Da2niela Maria Rosu",
+    role: "Reseña de Google",
   },
   {
-    quote: "El cumpleaños de mi hijo fue perfecto. Buena comida, ambiente genial y todo organizado sin estrés.",
-    author: "Carlos López",
-    role: "Padre de familia, Orihuela",
-    flag: "🇬🇧",
+    quote: "Muy buena atención, me encanta venir aquí porque mi hija se siente súper feliz con la atención que nos dan.",
+    author: "Jhonny Torres",
+    role: "Reseña de Google",
   },
   {
-    quote: "Único lugar en la zona donde puedes jugar a boliche y tomar una buena cerveza irlandesa. Muy recomendado.",
-    author: "David Martín",
-    role: "Cliente habitual",
-    flag: "🇩🇪",
+    quote: "¡Brutal! El bowling de La Zenia ha quedado increíble. La renovación se nota muchísimo y con las nuevas pantallas la experiencia es otro nivel: todo súper moderno y el ambiente genial.",
+    author: "AVILAN Multiservices",
+    role: "Reseña de Google",
   },
 ];
 
@@ -138,8 +135,8 @@ export function Testimonial17() {
                 </blockquote>
               </div>
               <div className="flex items-center gap-3">
-                <div className="size-10 rounded-full bg-brand-blue-light flex items-center justify-center text-lg">
-                  {r.flag}
+                <div className="size-10 rounded-full bg-brand-blue-light flex items-center justify-center text-lg font-black text-brand-navy">
+                  {r.author.charAt(0)}
                 </div>
                 <div>
                   <p className="font-bold text-brand-navy text-sm">{r.author}</p>
