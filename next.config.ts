@@ -8,9 +8,8 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Nota: en Next 16 la clave `eslint` en next.config ya no existe
+  // (ESLint no se ejecuta durante `next build`), por eso se ha eliminado.
   // Redirecciones permanentes. Next emite 308 (equivalente a 301 para SEO:
   // conserva el enlace/link equity y el método HTTP).
   async redirects() {
