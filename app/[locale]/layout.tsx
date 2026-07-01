@@ -1,10 +1,19 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { Barlow_Condensed, Inter } from 'next/font/google'
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, getLocale } from 'next-intl/server'
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
+import { getMessages, setRequestLocale } from 'next-intl/server'
+import { routing } from '@/i18n/routing'
 import { CookieBanner } from '@/components/shared/CookieBanner'
 import { SchemaOrg } from '@/components/shared/SchemaOrg'
+import { SITE_URL, buildAlternates, localizedUrl, ogLocale, type Locale } from '@/lib/site'
 import '../globals.css'
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+type LocaleParams = { params: Promise<{ locale: string }> }
 
 const barlowCondensed = Barlow_Condensed({
   weight: ['400', '600', '700', '800', '900'],
@@ -19,8 +28,10 @@ const inter = Inter({
   display: 'swap',
 })
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const { locale: raw } = await params
+  const locale = (hasLocale(routing.locales, raw) ? raw : routing.defaultLocale) as Locale
+  setRequestLocale(locale)
 
   const titles: Record<string, string> = {
     es: 'Bolera en Orihuela Costa · Arcade, Pub y Cumpleaños',
@@ -36,6 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: {
       default: titles[locale] ?? titles.es,
       template: '%s · Bowling Pleno Zenia',
@@ -47,25 +59,16 @@ export async function generateMetadata(): Promise<Metadata> {
       'cumpleaños infantiles Orihuela Costa', 'pub irlandés Orihuela Costa',
       'ocio familiar Orihuela Costa', 'arcade Orihuela Costa',
     ],
-    alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru',
-        'x-default': 'https://bowling-pleno-zenia.vercel.app',
-      },
-    },
+    alternates: buildAlternates(locale, ''),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app',
+      url: localizedUrl(locale, ''),
       siteName: 'Bowling Pleno Zenia',
-      locale: locale === 'es' ? 'es_ES' : locale === 'en' ? 'en_GB' : locale === 'de' ? 'de_DE' : 'ru_RU',
+      locale: ogLocale[locale] ?? 'es_ES',
       type: 'website',
-      images: [{ url: '/images/bolera.jpeg', width: 1200, height: 630, alt: 'Bowling Pleno Zenia — Bolera, Arcade y Pub Irlandés en Orihuela Costa' }],
+      images: [{ url: '/images/bolera.jpeg', width: 1920, height: 1440, alt: 'Bowling Pleno Zenia — Bolera, Arcade y Pub Irlandés en Orihuela Costa' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -83,10 +86,13 @@ export default async function LocaleLayout({
   children: React.ReactNode
   params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) notFound()
+  setRequestLocale(locale)
   const messages = await getMessages()
 
   return (
-    <html lang={(await params).locale}>
+    <html lang={locale}>
       <body className={barlowCondensed.variable + ' ' + inter.variable + ' antialiased'}>
         <SchemaOrg />
         <NextIntlClientProvider messages={messages}>

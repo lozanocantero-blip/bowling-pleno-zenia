@@ -1,8 +1,20 @@
 import type { Metadata } from 'next'
-import { getLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
+import { buildAlternates, localizedUrl, toLocale, type Locale } from '@/lib/site'
+import { BreadcrumbSchema } from '@/components/shared/BreadcrumbSchema'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
+const PATH = 'bolera-y-precios'
+const crumb: Record<Locale, string> = {
+  es: 'Bolera y precios',
+  en: 'Bowling & prices',
+  de: 'Bowling & Preise',
+  ru: 'Боулинг и цены',
+}
+type LocaleParams = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = toLocale((await params).locale)
+  setRequestLocale(locale)
   const titles: Record<string, string> = {
     es: 'Bolera en Orihuela Costa — 10 Pistas sin Reserva · Bowling Pleno Zenia',
     en: 'Bowling in Orihuela Costa — 10 Lanes, No Reservation · Bowling Pleno Zenia',
@@ -18,24 +30,28 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: titles[locale] ?? titles.es,
     description: descriptions[locale] ?? descriptions.es,
-    alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app/bolera-y-precios',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app/bolera-y-precios',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en/bolera-y-precios',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de/bolera-y-precios',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru/bolera-y-precios',
-      },
-    },
+    alternates: buildAlternates(locale, PATH),
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app/bolera-y-precios',
-      images: [{ url: '/images/bolera-orihuela-costa-10-pistas.jpg', width: 1200, height: 630, alt: '10 pistas de bowling Bowling Pleno Zenia Orihuela Costa' }],
+      url: localizedUrl(locale, PATH),
+      images: [{ url: '/images/bolera-orihuela-costa-10-pistas.jpg', width: 1920, height: 1440, alt: '10 pistas de bowling Bowling Pleno Zenia Orihuela Costa' }],
     },
   }
 }
 
-export default function BoleraLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default async function BoleraLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+} & LocaleParams) {
+  const locale = toLocale((await params).locale)
+  setRequestLocale(locale)
+  return (
+    <>
+      <BreadcrumbSchema locale={locale} path={PATH} name={crumb[locale] ?? crumb.es} />
+      {children}
+    </>
+  )
 }

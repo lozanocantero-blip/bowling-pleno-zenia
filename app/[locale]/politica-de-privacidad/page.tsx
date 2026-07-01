@@ -1,6 +1,5 @@
 "use client"
 
-export const dynamic = 'force-dynamic'
 import { Navbar1 } from "@/components/shared/Navbar1"
 import { LegalArticle } from "@/components/legal/LegalArticle"
 import { Footer5 } from "@/components/shared/Footer5"
