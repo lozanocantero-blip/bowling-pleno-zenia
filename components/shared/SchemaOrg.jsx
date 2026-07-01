@@ -1,5 +1,7 @@
-// Schema.org JSON-LD — LocalBusiness + BowlingAlley
-// Se incluye en el layout principal para todas las páginas
+// Schema.org JSON-LD — LocalBusiness + BowlingAlley + WebSite
+// Se incluye en el layout principal para todas las páginas.
+// URLs derivadas de SITE_URL (NEXT_PUBLIC_SITE_URL) para no fijar el dominio.
+import { SITE_URL } from '@/lib/site'
 
 export function SchemaOrg() {
   const schema = {
@@ -7,11 +9,11 @@ export function SchemaOrg() {
     "@graph": [
       {
         "@type": ["LocalBusiness", "BowlingAlley", "EntertainmentBusiness"],
-        "@id": "https://bowling-pleno-zenia.vercel.app/#business",
+        "@id": `${SITE_URL}/#business`,
         "name": "Bowling Pleno Zenia",
         "alternateName": ["Bolera Orihuela Costa", "Bowling Zenia Boulevard"],
         "description": "Bolera con 10 pistas, sala arcade, pub irlandés Dublin House y celebraciones de cumpleaños en Orihuela Costa. Abiertos 365 días en Zenia Boulevard.",
-        "url": "https://bowling-pleno-zenia.vercel.app",
+        "url": SITE_URL,
         "telephone": "+34965355815",
         "email": "info@bowlingplenozenia.com",
         "address": {
@@ -29,11 +31,11 @@ export function SchemaOrg() {
         },
         "hasMap": "https://maps.google.com/?q=Bowling+Pleno+Zenia+Orihuela+Costa",
         "image": [
-          "https://bowling-pleno-zenia.vercel.app/images/bolera-orihuela-costa-10-pistas.jpg",
-          "https://bowling-pleno-zenia.vercel.app/images/interior-barra-araña-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg",
-          "https://bowling-pleno-zenia.vercel.app/images/arcade-orihuela-costa-maquinas-recreativas.png"
+          `${SITE_URL}/images/bolera-orihuela-costa-10-pistas.jpg`,
+          `${SITE_URL}/images/interior-barra-ara%C3%B1a-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg`,
+          `${SITE_URL}/images/arcade-orihuela-costa-maquinas-recreativas.png`
         ],
-        "logo": "https://bowling-pleno-zenia.vercel.app/logo.png",
+        "logo": `${SITE_URL}/logo.png`,
         "priceRange": "€€",
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Cash, Credit Card",
@@ -65,19 +67,17 @@ export function SchemaOrg() {
           { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Birthday Parties", "value": true }
         ],
-        "numberOfRooms": 10,
         "sameAs": [
-          "https://www.google.com/maps/place/Bowling+Pleno+Zenia",
-          "https://www.tripadvisor.com"
+          "https://www.google.com/maps/place/Bowling+Pleno+Zenia"
         ]
       },
       {
         "@type": "WebSite",
-        "@id": "https://bowling-pleno-zenia.vercel.app/#website",
-        "url": "https://bowling-pleno-zenia.vercel.app",
+        "@id": `${SITE_URL}/#website`,
+        "url": SITE_URL,
         "name": "Bowling Pleno Zenia",
         "inLanguage": ["es", "en", "de", "ru"],
-        "publisher": { "@id": "https://bowling-pleno-zenia.vercel.app/#business" }
+        "publisher": { "@id": `${SITE_URL}/#business` }
       }
     ]
   };

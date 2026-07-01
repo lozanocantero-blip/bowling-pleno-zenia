@@ -1,8 +1,20 @@
 import type { Metadata } from 'next'
-import { getLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
+import { buildAlternates, localizedUrl, toLocale, type Locale } from '@/lib/site'
+import { BreadcrumbSchema } from '@/components/shared/BreadcrumbSchema'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
+const PATH = 'irish-pub-y-bar'
+const crumb: Record<Locale, string> = {
+  es: 'Irish Pub y bar',
+  en: 'Irish pub & bar',
+  de: 'Irish Pub & Bar',
+  ru: 'Ирландский паб и бар',
+}
+type LocaleParams = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = toLocale((await params).locale)
+  setRequestLocale(locale)
   const titles: Record<string, string> = {
     es: 'Dublin House — Pub Irlandés en Orihuela Costa · Único en la zona',
     en: 'Dublin House — Irish Pub in Orihuela Costa · Unique in the area',
@@ -18,24 +30,28 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: titles[locale] ?? titles.es,
     description: descriptions[locale] ?? descriptions.es,
-    alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app/irish-pub-y-bar',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app/irish-pub-y-bar',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en/irish-pub-y-bar',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de/irish-pub-y-bar',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru/irish-pub-y-bar',
-      },
-    },
+    alternates: buildAlternates(locale, PATH),
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app/irish-pub-y-bar',
-      images: [{ url: '/images/interior-barra-ara%C3%B1a-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg', width: 1200, height: 630, alt: 'Dublin House Irish Pub interior Bowling Pleno Zenia Orihuela Costa' }],
+      url: localizedUrl(locale, PATH),
+      images: [{ url: '/images/interior-barra-ara%C3%B1a-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg', width: 1400, height: 1050, alt: 'Dublin House Irish Pub interior Bowling Pleno Zenia Orihuela Costa' }],
     },
   }
 }
 
-export default function PubLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default async function PubLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+} & LocaleParams) {
+  const locale = toLocale((await params).locale)
+  setRequestLocale(locale)
+  return (
+    <>
+      <BreadcrumbSchema locale={locale} path={PATH} name={crumb[locale] ?? crumb.es} />
+      {children}
+    </>
+  )
 }

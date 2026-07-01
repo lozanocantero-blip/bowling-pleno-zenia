@@ -1,8 +1,20 @@
 import type { Metadata } from 'next'
-import { getLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
+import { buildAlternates, localizedUrl, toLocale, type Locale } from '@/lib/site'
+import { BreadcrumbSchema } from '@/components/shared/BreadcrumbSchema'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
+const PATH = 'arcade-y-juegos'
+const crumb: Record<Locale, string> = {
+  es: 'Arcade y juegos',
+  en: 'Arcade & games',
+  de: 'Arcade & Spiele',
+  ru: 'Аркада и игры',
+}
+type LocaleParams = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = toLocale((await params).locale)
+  setRequestLocale(locale)
   const titles: Record<string, string> = {
     es: 'Sala Arcade en Orihuela Costa — Simuladores, Tickets y Premios · Bowling Pleno Zenia',
     en: 'Arcade Room in Orihuela Costa — Simulators, Tickets & Prizes · Bowling Pleno Zenia',
@@ -18,24 +30,28 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: titles[locale] ?? titles.es,
     description: descriptions[locale] ?? descriptions.es,
-    alternates: {
-      canonical: 'https://bowling-pleno-zenia.vercel.app/arcade-y-juegos',
-      languages: {
-        'es': 'https://bowling-pleno-zenia.vercel.app/arcade-y-juegos',
-        'en': 'https://bowling-pleno-zenia.vercel.app/en/arcade-y-juegos',
-        'de': 'https://bowling-pleno-zenia.vercel.app/de/arcade-y-juegos',
-        'ru': 'https://bowling-pleno-zenia.vercel.app/ru/arcade-y-juegos',
-      },
-    },
+    alternates: buildAlternates(locale, PATH),
     openGraph: {
       title: titles[locale] ?? titles.es,
       description: descriptions[locale] ?? descriptions.es,
-      url: 'https://bowling-pleno-zenia.vercel.app/arcade-y-juegos',
-      images: [{ url: '/images/arcade-orihuela-costa-maquinas-recreativas.png', width: 1200, height: 630, alt: 'Sala arcade Bowling Pleno Zenia Orihuela Costa' }],
+      url: localizedUrl(locale, PATH),
+      images: [{ url: '/images/arcade-orihuela-costa-maquinas-recreativas.png', width: 1188, height: 886, alt: 'Sala arcade Bowling Pleno Zenia Orihuela Costa' }],
     },
   }
 }
 
-export default function ArcadeLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default async function ArcadeLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+} & LocaleParams) {
+  const locale = toLocale((await params).locale)
+  setRequestLocale(locale)
+  return (
+    <>
+      <BreadcrumbSchema locale={locale} path={PATH} name={crumb[locale] ?? crumb.es} />
+      {children}
+    </>
+  )
 }
