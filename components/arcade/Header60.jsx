@@ -88,9 +88,9 @@ export function Header60() {
       style={{ minHeight: "92vh", display: "flex", alignItems: "flex-end", background: "#0d0d20" }}
     >
       <video ref={v1Ref} style={{ ...videoStyle, opacity: 1 }}
-        src={VIDEO_SRC} muted playsInline preload="auto" aria-hidden="true" />
+        src={VIDEO_SRC} poster="/images/arcade-hero.jpg" muted playsInline preload="metadata" aria-hidden="true" />
       <video ref={v2Ref} style={{ ...videoStyle, opacity: 0 }}
-        src={VIDEO_SRC} muted playsInline preload="auto" aria-hidden="true" />
+        src={VIDEO_SRC} poster="/images/arcade-hero.jpg" muted playsInline preload="metadata" aria-hidden="true" />
 
       <div className="absolute inset-0 pointer-events-none" style={{
         zIndex: 2,
