@@ -141,9 +141,9 @@ export function Footer5() {
         <div className="flex flex-col gap-3 border-t border-white/20 pt-8 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
           <p>{t("copyright")}</p>
           <div className="flex gap-4">
-            <a href="https://bowlingzenia.com/politica-de-cookies-2/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">{t("legal")}</a>
-            <a href="https://bowlingzenia.com/politica-de-privacidad/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">{t("privacy")}</a>
-            <a href="https://bowlingzenia.com/politica-de-cookies/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">{t("cookies")}</a>
+            <a href="/aviso-legal" className="hover:text-white/70 transition-colors">{t("legal")}</a>
+            <a href="/politica-de-privacidad" className="hover:text-white/70 transition-colors">{t("privacy")}</a>
+            <a href="/politica-de-cookies" className="hover:text-white/70 transition-colors">{t("cookies")}</a>
           </div>
         </div>
       </div>

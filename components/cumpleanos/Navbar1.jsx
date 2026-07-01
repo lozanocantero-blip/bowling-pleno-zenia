@@ -67,7 +67,7 @@ export function Navbar1() {
 
         {/* CTAs fuera de la pill */}
         <a
-          href="tel:+34965355815"
+          href="/contacto"
           className="px-5 py-2 rounded-full border-2 border-white text-[#1A2744] text-sm font-bold uppercase tracking-wider hover:bg-[#1A2744] hover:text-white transition-all whitespace-nowrap"
           style={{ background: "white", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}
         >
@@ -118,7 +118,7 @@ export function Navbar1() {
             </a>
           ))}
           <div className="border-t border-[#E2E8F0] my-2" />
-          <a href="tel:+34965355815"
+          <a href="/contacto"
             className="py-2.5 px-4 rounded-full border-2 border-[#1A2744] text-[#1A2744] text-sm font-bold uppercase tracking-wider text-center hover:bg-[#1A2744] hover:text-white transition-colors">
             Contacto
           </a>

@@ -1,0 +1,578 @@
+{
+ "updated": {
+  "es": "Última actualización: julio de 2026",
+  "en": "Last updated: July 2026",
+  "de": "Letzte Aktualisierung: Juli 2026",
+  "ru": "Последнее обновление: июль 2026"
+ },
+ "data": {
+  "es": {
+   "aviso": {
+    "title": "Aviso Legal",
+    "blocks": [
+     {
+      "p": "En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se ponen a disposición de los usuarios los siguientes datos identificativos del titular del sitio web www.bowlingzenia.com:"
+     },
+     {
+      "ul": [
+       "Titular: BOWLING PLENO ZENIA, S.L.",
+       "NIF: B-73771008",
+       "Domicilio social: Calle Progreso, 21, 30500 Molina de Segura (Murcia)",
+       "Establecimiento: Calle Jade 2, CC Zenia Boulevard, Orihuela Costa (Alicante)",
+       "Correo electrónico: pleno@bowlingzenia.com",
+       "Teléfono: 965 35 58 15"
+      ]
+     },
+     {
+      "h": "Objeto",
+      "p": "El presente aviso legal regula el uso del sitio web www.bowlingzenia.com (en adelante, el Sitio Web), del que es titular BOWLING PLENO ZENIA, S.L. La navegación por el Sitio Web atribuye la condición de usuario e implica la aceptación plena de todas las cláusulas incluidas en este aviso legal."
+     },
+     {
+      "h": "Condiciones de uso",
+      "p": "El usuario se compromete a hacer un uso adecuado y lícito del Sitio Web y de sus contenidos, de conformidad con la legislación vigente, la moral, el orden público y las buenas costumbres. Queda prohibido utilizar el Sitio Web con fines ilícitos o lesivos, o que de cualquier forma puedan dañar, inutilizar o deteriorar el Sitio Web o impedir su normal utilización por otros usuarios."
+     },
+     {
+      "h": "Propiedad intelectual e industrial",
+      "p": "Todos los contenidos del Sitio Web (textos, fotografías, gráficos, imágenes, logotipos, marcas, diseño y software) son titularidad de BOWLING PLENO ZENIA, S.L. o de terceros que han autorizado su uso, y están protegidos por los derechos de propiedad intelectual e industrial. Queda prohibida su reproducción, distribución, comunicación pública o transformación sin la autorización expresa del titular."
+     },
+     {
+      "h": "Exención de responsabilidad",
+      "p": "BOWLING PLENO ZENIA, S.L. no se hace responsable de los daños y perjuicios que pudieran derivarse de interferencias, omisiones, interrupciones, virus informáticos, averías o desconexiones en el funcionamiento del sistema electrónico ajenas a su control. Tampoco garantiza la ausencia de errores en los contenidos ni la disponibilidad permanente del Sitio Web."
+     },
+     {
+      "h": "Enlaces",
+      "p": "El Sitio Web puede contener enlaces a sitios de terceros. BOWLING PLENO ZENIA, S.L. no asume responsabilidad alguna sobre los contenidos, políticas o servicios de dichos sitios, cuyo acceso se realiza bajo la exclusiva responsabilidad del usuario."
+     },
+     {
+      "h": "Modificaciones",
+      "p": "BOWLING PLENO ZENIA, S.L. se reserva el derecho de efectuar, sin previo aviso, las modificaciones que considere oportunas en el Sitio Web, pudiendo cambiar, suprimir o añadir tanto los contenidos como la forma en que estos se presenten."
+     },
+     {
+      "h": "Legislación aplicable y jurisdicción",
+      "p": "Las presentes condiciones se rigen por la legislación española. Para la resolución de cualquier controversia, las partes se someterán a los juzgados y tribunales que correspondan conforme a derecho."
+     }
+    ]
+   },
+   "privacidad": {
+    "title": "Política de Privacidad",
+    "blocks": [
+     {
+      "p": "Respetando lo establecido en la legislación vigente, www.bowlingzenia.com (en adelante, también el Sitio Web) se compromete a adoptar las medidas técnicas y organizativas necesarias, según el nivel de seguridad adecuado al riesgo de los datos recogidos."
+     },
+     {
+      "h": "Leyes que incorpora esta política de privacidad",
+      "p": "Esta política de privacidad está adaptada a la normativa española y europea vigente en materia de protección de datos personales. En concreto, respeta las siguientes normas: el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD); la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD); y la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE)."
+     },
+     {
+      "h": "Identidad del responsable del tratamiento",
+      "p": "El responsable del tratamiento de los datos personales recogidos en www.bowlingzenia.com es BOWLING PLENO ZENIA, S.L., provista de NIF B-73771008 (en adelante, el Responsable del tratamiento). Sus datos de contacto son los siguientes:"
+     },
+     {
+      "ul": [
+       "Dirección: Calle Progreso, 21, 30500 Molina de Segura (Murcia)",
+       "Correo electrónico: pleno@bowlingzenia.com"
+      ]
+     },
+     {
+      "h": "Principios aplicables al tratamiento de los datos personales",
+      "p": "El tratamiento de los datos personales del usuario se someterá a los principios recogidos en el artículo 5 del RGPD: licitud, lealtad y transparencia; limitación de la finalidad; minimización de datos; exactitud; limitación del plazo de conservación; integridad y confidencialidad; y responsabilidad proactiva."
+     },
+     {
+      "h": "Categorías de datos personales",
+      "p": "Las categorías de datos que se tratan en www.bowlingzenia.com son únicamente datos identificativos. En ningún caso se tratan categorías especiales de datos personales en el sentido del artículo 9 del RGPD."
+     },
+     {
+      "h": "Base legal para el tratamiento",
+      "p": "La base legal para el tratamiento de los datos es el consentimiento. www.bowlingzenia.com se compromete a recabar el consentimiento expreso y verificable del usuario para el tratamiento de sus datos personales para uno o varios fines específicos. El usuario tendrá derecho a retirar su consentimiento en cualquier momento, siendo tan fácil retirarlo como darlo."
+     },
+     {
+      "h": "Fines del tratamiento",
+      "p": "Los datos personales son recabados y gestionados con la finalidad de facilitar, agilizar y cumplir los compromisos establecidos entre el Sitio Web y el usuario, atender las solicitudes o consultas que este realice y, en su caso, gestionar tareas de comunicación, personalización y mejora de los servicios ofrecidos."
+     },
+     {
+      "h": "Períodos de retención",
+      "p": "Los datos personales solo serán retenidos durante el tiempo mínimo necesario para los fines de su tratamiento y, en todo caso, únicamente durante el tiempo necesario para cumplir con las actividades contratadas o hasta que el usuario solicite su supresión."
+     },
+     {
+      "h": "Destinatarios de los datos",
+      "p": "Los datos personales del usuario no serán comunicados a terceros, salvo obligación legal. Los proveedores de servicios que, en su caso, accedan a los datos para prestar servicios al Responsable lo harán en calidad de encargados del tratamiento, con las debidas garantías contractuales."
+     },
+     {
+      "h": "Datos de menores",
+      "p": "Solo podrán facilitar datos personales a través del Sitio Web los mayores de 14 años. Si se trata de un menor de esa edad, se requerirá el consentimiento de los padres o tutores."
+     },
+     {
+      "h": "Secreto y seguridad de los datos",
+      "p": "El Responsable se compromete a adoptar las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos personales y evitar su alteración, pérdida y tratamiento o acceso no autorizado, habida cuenta del estado de la tecnología, la naturaleza de los datos y los riesgos a que están expuestos."
+     },
+     {
+      "h": "Derechos del usuario",
+      "p": "El usuario puede ejercer en cualquier momento sus derechos de acceso, rectificación, supresión, oposición, portabilidad y limitación del tratamiento de sus datos, dirigiéndose por escrito a pleno@bowlingzenia.com. Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es) si considera que el tratamiento no se ajusta a la normativa vigente."
+     },
+     {
+      "h": "Cambios en la política de privacidad",
+      "p": "El Responsable se reserva el derecho de modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales. Se recomienda al usuario revisarla periódicamente."
+     }
+    ]
+   },
+   "cookies": {
+    "title": "Política de Cookies",
+    "blocks": [
+     {
+      "p": "El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada usuario para que el servidor recuerde cierta información que posteriormente pueda utilizarse. Esta información permite identificar al usuario como un usuario concreto y guardar sus preferencias personales, así como información técnica."
+     },
+     {
+      "h": "Consentimiento",
+      "p": "Al acceder a este Sitio Web se le informa de la utilización de cookies mediante un aviso. El usuario puede aceptar, rechazar o configurar las cookies a través del panel de configuración. Las cookies técnicas o necesarias se utilizan por ser imprescindibles para el funcionamiento del Sitio Web; el resto de cookies solo se instalarán con el consentimiento del usuario."
+     },
+     {
+      "h": "Tipos de cookies",
+      "p": "Según quién las gestione: cookies propias (gestionadas por el titular) y cookies de terceros. Según su finalidad: cookies técnicas o necesarias, cookies de preferencias o personalización, cookies de análisis o medición y cookies de marketing o publicidad. Según su duración: cookies de sesión (se eliminan al cerrar el navegador) y cookies persistentes (permanecen durante un plazo determinado)."
+     },
+     {
+      "h": "Cookies utilizadas en este Sitio Web",
+      "p": "Este Sitio Web utiliza cookies técnicas necesarias para su correcto funcionamiento y para recordar las preferencias de consentimiento del usuario. En su caso, puede utilizar cookies de análisis para elaborar estadísticas de uso de forma anónima o agregada. El detalle actualizado de las cookies puede consultarse en el panel de configuración de cookies del Sitio Web."
+     },
+     {
+      "h": "Cómo gestionar o desactivar las cookies",
+      "p": "El usuario puede permitir, bloquear o eliminar las cookies instaladas en su equipo configurando las opciones del navegador. Puede encontrar información sobre cómo hacerlo en las páginas de ayuda de Google Chrome, Mozilla Firefox, Microsoft Edge, Safari y Opera. La desactivación de las cookies técnicas puede impedir el correcto funcionamiento de algunas partes del Sitio Web."
+     },
+     {
+      "h": "Cambios en la política de cookies",
+      "p": "El Sitio Web puede modificar esta política de cookies en función de nuevas exigencias legislativas, reglamentarias o con la finalidad de adaptar dicha política a las instrucciones dictadas por la Agencia Española de Protección de Datos. Se recomienda revisarla cada vez que acceda al Sitio Web."
+     },
+     {
+      "h": "Contacto",
+      "p": "Para cualquier duda o consulta sobre esta política de cookies, puede contactar en pleno@bowlingzenia.com."
+     }
+    ]
+   }
+  },
+  "en": {
+   "aviso": {
+    "title": "Legal Notice",
+    "blocks": [
+     {
+      "p": "In compliance with Article 10 of Spanish Law 34/2002 of 11 July on Information Society Services and Electronic Commerce (LSSI-CE), the following identifying details of the owner of the website www.bowlingzenia.com are made available to users:"
+     },
+     {
+      "ul": [
+       "Owner: BOWLING PLENO ZENIA, S.L.",
+       "Tax ID (NIF): B-73771008",
+       "Registered office: Calle Progreso, 21, 30500 Molina de Segura (Murcia, Spain)",
+       "Premises: Calle Jade 2, CC Zenia Boulevard, Orihuela Costa (Alicante, Spain)",
+       "Email: pleno@bowlingzenia.com",
+       "Phone: +34 965 35 58 15"
+      ]
+     },
+     {
+      "h": "Purpose",
+      "p": "This legal notice governs the use of the website www.bowlingzenia.com (the Website), owned by BOWLING PLENO ZENIA, S.L. Browsing the Website grants the condition of user and implies full acceptance of all the clauses set out in this legal notice."
+     },
+     {
+      "h": "Terms of use",
+      "p": "The user undertakes to make appropriate and lawful use of the Website and its contents, in accordance with applicable law, morality, public order and good customs. Using the Website for unlawful or harmful purposes, or in any way that may damage, disable or impair it or prevent its normal use by other users, is prohibited."
+     },
+     {
+      "h": "Intellectual and industrial property",
+      "p": "All contents of the Website (texts, photographs, graphics, images, logos, trademarks, design and software) are the property of BOWLING PLENO ZENIA, S.L. or of third parties who have authorised their use, and are protected by intellectual and industrial property rights. Their reproduction, distribution, public communication or transformation without the express authorisation of the owner is prohibited."
+     },
+     {
+      "h": "Disclaimer of liability",
+      "p": "BOWLING PLENO ZENIA, S.L. shall not be liable for any damages arising from interferences, omissions, interruptions, computer viruses, breakdowns or disconnections in the operation of the electronic system beyond its control. Nor does it guarantee the absence of errors in the contents or the permanent availability of the Website."
+     },
+     {
+      "h": "Links",
+      "p": "The Website may contain links to third-party sites. BOWLING PLENO ZENIA, S.L. assumes no responsibility for the contents, policies or services of such sites, access to which is made at the user's sole responsibility."
+     },
+     {
+      "h": "Modifications",
+      "p": "BOWLING PLENO ZENIA, S.L. reserves the right to make, without prior notice, any modifications it deems appropriate to the Website, and may change, delete or add both the contents and the way in which they are presented."
+     },
+     {
+      "h": "Applicable law and jurisdiction",
+      "p": "These terms are governed by Spanish law. For the resolution of any dispute, the parties shall submit to the courts and tribunals that correspond under applicable law."
+     }
+    ]
+   },
+   "privacidad": {
+    "title": "Privacy Policy",
+    "blocks": [
+     {
+      "p": "In compliance with applicable legislation, www.bowlingzenia.com (also referred to as the Website) undertakes to adopt the technical and organisational measures necessary in accordance with the security level appropriate to the risk of the data collected."
+     },
+     {
+      "h": "Legislation incorporated into this policy",
+      "p": "This privacy policy is adapted to current Spanish and European data protection regulations. Specifically, it complies with Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR); Spanish Organic Law 3/2018 of 5 December on the Protection of Personal Data and guarantee of digital rights (LOPDGDD); and Law 34/2002 of 11 July on Information Society Services and Electronic Commerce (LSSI-CE)."
+     },
+     {
+      "h": "Identity of the data controller",
+      "p": "The controller of the personal data collected on www.bowlingzenia.com is BOWLING PLENO ZENIA, S.L., Tax ID B-73771008 (the Controller). Contact details:"
+     },
+     {
+      "ul": [
+       "Address: Calle Progreso, 21, 30500 Molina de Segura (Murcia, Spain)",
+       "Email: pleno@bowlingzenia.com"
+      ]
+     },
+     {
+      "h": "Principles applicable to data processing",
+      "p": "The processing of the user's personal data is subject to the principles set out in Article 5 of the GDPR: lawfulness, fairness and transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity and confidentiality; and accountability."
+     },
+     {
+      "h": "Categories of personal data",
+      "p": "The categories of data processed on www.bowlingzenia.com are solely identifying data. Special categories of personal data within the meaning of Article 9 of the GDPR are never processed."
+     },
+     {
+      "h": "Legal basis for processing",
+      "p": "The legal basis for processing is consent. www.bowlingzenia.com undertakes to obtain the user's express and verifiable consent for the processing of their personal data for one or more specific purposes. The user has the right to withdraw consent at any time, it being as easy to withdraw as to give it."
+     },
+     {
+      "h": "Purposes of processing",
+      "p": "Personal data is collected and managed in order to facilitate, expedite and fulfil the commitments established between the Website and the user, to respond to the requests or enquiries made and, where applicable, to manage communication, personalisation and improvement of the services offered."
+     },
+     {
+      "h": "Retention periods",
+      "p": "Personal data will only be retained for the minimum time necessary for the purposes of its processing and, in any case, only for as long as necessary to fulfil the contracted activities or until the user requests its deletion."
+     },
+     {
+      "h": "Recipients of the data",
+      "p": "The user's personal data will not be disclosed to third parties, except where legally required. Service providers who may access the data to provide services to the Controller do so as data processors, with the appropriate contractual guarantees."
+     },
+     {
+      "h": "Data of minors",
+      "p": "Only persons over 14 years of age may provide personal data through the Website. For minors under that age, the consent of parents or guardians is required."
+     },
+     {
+      "h": "Confidentiality and security of data",
+      "p": "The Controller undertakes to adopt the technical and organisational measures necessary to guarantee the security of personal data and prevent its alteration, loss, unauthorised processing or access, taking into account the state of technology, the nature of the data and the risks to which it is exposed."
+     },
+     {
+      "h": "User rights",
+      "p": "The user may exercise at any time their rights of access, rectification, erasure, objection, portability and restriction of processing by writing to pleno@bowlingzenia.com. They also have the right to lodge a complaint with the Spanish Data Protection Agency (www.aepd.es) if they consider that the processing does not comply with current regulations."
+     },
+     {
+      "h": "Changes to the privacy policy",
+      "p": "The Controller reserves the right to modify this policy to adapt it to legislative or case-law developments. Users are advised to review it periodically."
+     }
+    ]
+   },
+   "cookies": {
+    "title": "Cookie Policy",
+    "blocks": [
+     {
+      "p": "Access to this Website may involve the use of cookies. Cookies are small amounts of information stored in the browser used by each user so that the server can remember certain information that may later be used. This information makes it possible to identify the user and store their personal preferences as well as technical information."
+     },
+     {
+      "h": "Consent",
+      "p": "When you access this Website, you are informed of the use of cookies by means of a notice. The user may accept, reject or configure cookies through the settings panel. Technical or necessary cookies are used because they are essential for the operation of the Website; all other cookies will only be installed with the user's consent."
+     },
+     {
+      "h": "Types of cookies",
+      "p": "According to who manages them: first-party cookies (managed by the owner) and third-party cookies. According to their purpose: technical or necessary cookies, preference or personalisation cookies, analysis or measurement cookies, and marketing or advertising cookies. According to their duration: session cookies (deleted when the browser is closed) and persistent cookies (which remain for a set period)."
+     },
+     {
+      "h": "Cookies used on this Website",
+      "p": "This Website uses technical cookies necessary for its correct operation and to remember the user's consent preferences. Where applicable, it may use analytics cookies to compile usage statistics on an anonymous or aggregated basis. Up-to-date details of the cookies can be consulted in the Website's cookie settings panel."
+     },
+     {
+      "h": "How to manage or disable cookies",
+      "p": "The user can allow, block or delete the cookies installed on their device by configuring their browser options. Information on how to do this can be found in the help pages of Google Chrome, Mozilla Firefox, Microsoft Edge, Safari and Opera. Disabling technical cookies may prevent some parts of the Website from working correctly."
+     },
+     {
+      "h": "Changes to the cookie policy",
+      "p": "The Website may modify this cookie policy in response to new legislative or regulatory requirements, or in order to adapt it to the instructions issued by the Spanish Data Protection Agency. We recommend reviewing it each time you access the Website."
+     },
+     {
+      "h": "Contact",
+      "p": "For any questions about this cookie policy, you can contact us at pleno@bowlingzenia.com."
+     }
+    ]
+   }
+  },
+  "de": {
+   "aviso": {
+    "title": "Impressum",
+    "blocks": [
+     {
+      "p": "In Übereinstimmung mit Artikel 10 des spanischen Gesetzes 34/2002 vom 11. Juli über Dienste der Informationsgesellschaft und den elektronischen Geschäftsverkehr (LSSI-CE) werden den Nutzern folgende Angaben zum Inhaber der Website www.bowlingzenia.com zur Verfügung gestellt:"
+     },
+     {
+      "ul": [
+       "Inhaber: BOWLING PLENO ZENIA, S.L.",
+       "Steuernummer (NIF): B-73771008",
+       "Sitz: Calle Progreso, 21, 30500 Molina de Segura (Murcia, Spanien)",
+       "Betriebsstätte: Calle Jade 2, CC Zenia Boulevard, Orihuela Costa (Alicante, Spanien)",
+       "E-Mail: pleno@bowlingzenia.com",
+       "Telefon: +34 965 35 58 15"
+      ]
+     },
+     {
+      "h": "Gegenstand",
+      "p": "Dieses Impressum regelt die Nutzung der Website www.bowlingzenia.com (die Website), deren Inhaber BOWLING PLENO ZENIA, S.L. ist. Das Navigieren auf der Website verleiht die Eigenschaft eines Nutzers und bedeutet die vollständige Annahme aller in diesem Impressum enthaltenen Klauseln."
+     },
+     {
+      "h": "Nutzungsbedingungen",
+      "p": "Der Nutzer verpflichtet sich, die Website und ihre Inhalte in angemessener und rechtmäßiger Weise gemäß den geltenden Gesetzen, der Moral, der öffentlichen Ordnung und den guten Sitten zu nutzen. Es ist untersagt, die Website zu rechtswidrigen oder schädlichen Zwecken zu nutzen oder sie in irgendeiner Weise zu beschädigen, unbrauchbar zu machen oder ihre normale Nutzung durch andere Nutzer zu verhindern."
+     },
+     {
+      "h": "Geistiges und gewerbliches Eigentum",
+      "p": "Alle Inhalte der Website (Texte, Fotografien, Grafiken, Bilder, Logos, Marken, Design und Software) sind Eigentum von BOWLING PLENO ZENIA, S.L. oder von Dritten, die deren Nutzung genehmigt haben, und sind durch Rechte des geistigen und gewerblichen Eigentums geschützt. Ihre Vervielfältigung, Verbreitung, öffentliche Wiedergabe oder Umgestaltung ohne ausdrückliche Genehmigung des Inhabers ist untersagt."
+     },
+     {
+      "h": "Haftungsausschluss",
+      "p": "BOWLING PLENO ZENIA, S.L. haftet nicht für Schäden, die sich aus Störungen, Auslassungen, Unterbrechungen, Computerviren, Ausfällen oder Trennungen im Betrieb des elektronischen Systems ergeben, die außerhalb ihrer Kontrolle liegen. Ebenso wenig wird die Fehlerfreiheit der Inhalte oder die ständige Verfügbarkeit der Website garantiert."
+     },
+     {
+      "h": "Links",
+      "p": "Die Website kann Links zu Websites Dritter enthalten. BOWLING PLENO ZENIA, S.L. übernimmt keine Verantwortung für die Inhalte, Richtlinien oder Dienste dieser Websites, deren Zugriff in der alleinigen Verantwortung des Nutzers erfolgt."
+     },
+     {
+      "h": "Änderungen",
+      "p": "BOWLING PLENO ZENIA, S.L. behält sich das Recht vor, ohne vorherige Ankündigung die für angemessen erachteten Änderungen an der Website vorzunehmen und sowohl die Inhalte als auch die Art ihrer Darstellung zu ändern, zu löschen oder zu ergänzen."
+     },
+     {
+      "h": "Anwendbares Recht und Gerichtsstand",
+      "p": "Diese Bedingungen unterliegen dem spanischen Recht. Für die Beilegung von Streitigkeiten unterwerfen sich die Parteien den nach geltendem Recht zuständigen Gerichten."
+     }
+    ]
+   },
+   "privacidad": {
+    "title": "Datenschutzerklärung",
+    "blocks": [
+     {
+      "p": "In Übereinstimmung mit den geltenden Rechtsvorschriften verpflichtet sich www.bowlingzenia.com (auch die Website genannt), die erforderlichen technischen und organisatorischen Maßnahmen entsprechend dem für das Risiko der erhobenen Daten angemessenen Sicherheitsniveau zu treffen."
+     },
+     {
+      "h": "In diese Erklärung einbezogene Rechtsvorschriften",
+      "p": "Diese Datenschutzerklärung ist an die geltenden spanischen und europäischen Datenschutzvorschriften angepasst. Insbesondere entspricht sie der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates (DSGVO), dem spanischen Organgesetz 3/2018 vom 5. Dezember zum Schutz personenbezogener Daten und zur Gewährleistung digitaler Rechte (LOPDGDD) sowie dem Gesetz 34/2002 vom 11. Juli (LSSI-CE)."
+     },
+     {
+      "h": "Identität des Verantwortlichen",
+      "p": "Verantwortlicher für die Verarbeitung der auf www.bowlingzenia.com erhobenen personenbezogenen Daten ist BOWLING PLENO ZENIA, S.L., Steuernummer B-73771008 (der Verantwortliche). Kontaktdaten:"
+     },
+     {
+      "ul": [
+       "Adresse: Calle Progreso, 21, 30500 Molina de Segura (Murcia, Spanien)",
+       "E-Mail: pleno@bowlingzenia.com"
+      ]
+     },
+     {
+      "h": "Grundsätze der Datenverarbeitung",
+      "p": "Die Verarbeitung der personenbezogenen Daten des Nutzers unterliegt den in Artikel 5 der DSGVO festgelegten Grundsätzen: Rechtmäßigkeit, Treu und Glauben und Transparenz; Zweckbindung; Datenminimierung; Richtigkeit; Speicherbegrenzung; Integrität und Vertraulichkeit sowie Rechenschaftspflicht."
+     },
+     {
+      "h": "Kategorien personenbezogener Daten",
+      "p": "Auf www.bowlingzenia.com werden ausschließlich Identifikationsdaten verarbeitet. Besondere Kategorien personenbezogener Daten im Sinne von Artikel 9 der DSGVO werden in keinem Fall verarbeitet."
+     },
+     {
+      "h": "Rechtsgrundlage der Verarbeitung",
+      "p": "Rechtsgrundlage der Verarbeitung ist die Einwilligung. www.bowlingzenia.com verpflichtet sich, die ausdrückliche und überprüfbare Einwilligung des Nutzers für die Verarbeitung seiner personenbezogenen Daten für einen oder mehrere bestimmte Zwecke einzuholen. Der Nutzer hat das Recht, seine Einwilligung jederzeit zu widerrufen, wobei der Widerruf ebenso einfach sein muss wie die Erteilung."
+     },
+     {
+      "h": "Zwecke der Verarbeitung",
+      "p": "Die personenbezogenen Daten werden erhoben und verwaltet, um die zwischen der Website und dem Nutzer eingegangenen Verpflichtungen zu erleichtern, zu beschleunigen und zu erfüllen, um Anfragen zu beantworten und gegebenenfalls die Kommunikation, Personalisierung und Verbesserung der angebotenen Dienste zu verwalten."
+     },
+     {
+      "h": "Aufbewahrungsfristen",
+      "p": "Personenbezogene Daten werden nur für die für die Zwecke der Verarbeitung erforderliche Mindestdauer aufbewahrt und in jedem Fall nur so lange, wie es zur Erfüllung der beauftragten Tätigkeiten erforderlich ist oder bis der Nutzer ihre Löschung verlangt."
+     },
+     {
+      "h": "Empfänger der Daten",
+      "p": "Die personenbezogenen Daten des Nutzers werden nicht an Dritte weitergegeben, außer bei gesetzlicher Verpflichtung. Dienstleister, die zur Erbringung von Leistungen für den Verantwortlichen auf die Daten zugreifen, tun dies als Auftragsverarbeiter mit den entsprechenden vertraglichen Garantien."
+     },
+     {
+      "h": "Daten von Minderjährigen",
+      "p": "Nur Personen über 14 Jahre dürfen über die Website personenbezogene Daten bereitstellen. Bei Minderjährigen unter diesem Alter ist die Einwilligung der Eltern oder Erziehungsberechtigten erforderlich."
+     },
+     {
+      "h": "Vertraulichkeit und Sicherheit der Daten",
+      "p": "Der Verantwortliche verpflichtet sich, die erforderlichen technischen und organisatorischen Maßnahmen zu treffen, um die Sicherheit der personenbezogenen Daten zu gewährleisten und ihre Veränderung, ihren Verlust sowie ihre unbefugte Verarbeitung oder ihren unbefugten Zugriff zu verhindern, unter Berücksichtigung des Stands der Technik, der Art der Daten und der Risiken, denen sie ausgesetzt sind."
+     },
+     {
+      "h": "Rechte des Nutzers",
+      "p": "Der Nutzer kann jederzeit seine Rechte auf Auskunft, Berichtigung, Löschung, Widerspruch, Übertragbarkeit und Einschränkung der Verarbeitung ausüben, indem er schriftlich an pleno@bowlingzenia.com schreibt. Er hat außerdem das Recht, eine Beschwerde bei der spanischen Datenschutzbehörde (www.aepd.es) einzureichen, wenn er der Ansicht ist, dass die Verarbeitung nicht den geltenden Vorschriften entspricht."
+     },
+     {
+      "h": "Änderungen der Datenschutzerklärung",
+      "p": "Der Verantwortliche behält sich das Recht vor, diese Erklärung zu ändern, um sie an gesetzliche oder rechtsprechungsbezogene Entwicklungen anzupassen. Dem Nutzer wird empfohlen, sie regelmäßig zu überprüfen."
+     }
+    ]
+   },
+   "cookies": {
+    "title": "Cookie-Richtlinie",
+    "blocks": [
+     {
+      "p": "Der Zugriff auf diese Website kann die Verwendung von Cookies beinhalten. Cookies sind kleine Informationsmengen, die im Browser des jeweiligen Nutzers gespeichert werden, damit der Server sich an bestimmte Informationen erinnern kann, die später verwendet werden können. Diese Informationen ermöglichen es, den Nutzer zu identifizieren und seine persönlichen Einstellungen sowie technische Informationen zu speichern."
+     },
+     {
+      "h": "Einwilligung",
+      "p": "Beim Zugriff auf diese Website werden Sie durch einen Hinweis über die Verwendung von Cookies informiert. Der Nutzer kann Cookies über das Einstellungsfeld akzeptieren, ablehnen oder konfigurieren. Technische oder notwendige Cookies werden verwendet, weil sie für den Betrieb der Website unerlässlich sind; alle anderen Cookies werden nur mit Einwilligung des Nutzers gesetzt."
+     },
+     {
+      "h": "Arten von Cookies",
+      "p": "Je nach Verwalter: eigene Cookies (vom Inhaber verwaltet) und Cookies von Drittanbietern. Je nach Zweck: technische oder notwendige Cookies, Präferenz- oder Personalisierungs-Cookies, Analyse- oder Mess-Cookies sowie Marketing- oder Werbe-Cookies. Je nach Dauer: Sitzungs-Cookies (werden beim Schließen des Browsers gelöscht) und dauerhafte Cookies (bleiben für einen bestimmten Zeitraum)."
+     },
+     {
+      "h": "Auf dieser Website verwendete Cookies",
+      "p": "Diese Website verwendet technische Cookies, die für ihren korrekten Betrieb und zum Speichern der Einwilligungspräferenzen des Nutzers erforderlich sind. Gegebenenfalls können Analyse-Cookies verwendet werden, um anonyme oder aggregierte Nutzungsstatistiken zu erstellen. Aktuelle Angaben zu den Cookies können im Cookie-Einstellungsfeld der Website eingesehen werden."
+     },
+     {
+      "h": "Verwaltung oder Deaktivierung von Cookies",
+      "p": "Der Nutzer kann die auf seinem Gerät installierten Cookies über die Browsereinstellungen zulassen, blockieren oder löschen. Informationen dazu finden Sie auf den Hilfeseiten von Google Chrome, Mozilla Firefox, Microsoft Edge, Safari und Opera. Die Deaktivierung technischer Cookies kann den korrekten Betrieb einiger Teile der Website verhindern."
+     },
+     {
+      "h": "Änderungen der Cookie-Richtlinie",
+      "p": "Die Website kann diese Cookie-Richtlinie aufgrund neuer gesetzlicher oder regulatorischer Anforderungen oder zur Anpassung an die Anweisungen der spanischen Datenschutzbehörde ändern. Wir empfehlen, sie bei jedem Zugriff auf die Website zu überprüfen."
+     },
+     {
+      "h": "Kontakt",
+      "p": "Bei Fragen zu dieser Cookie-Richtlinie können Sie uns unter pleno@bowlingzenia.com kontaktieren."
+     }
+    ]
+   }
+  },
+  "ru": {
+   "aviso": {
+    "title": "Правовая информация",
+    "blocks": [
+     {
+      "p": "В соответствии со статьёй 10 Закона Испании 34/2002 от 11 июля об услугах информационного общества и электронной коммерции (LSSI-CE) пользователям предоставляются следующие идентификационные данные владельца сайта www.bowlingzenia.com:"
+     },
+     {
+      "ul": [
+       "Владелец: BOWLING PLENO ZENIA, S.L.",
+       "Налоговый номер (NIF): B-73771008",
+       "Юридический адрес: Calle Progreso, 21, 30500 Molina de Segura (Мурсия, Испания)",
+       "Помещение: Calle Jade 2, ТЦ Zenia Boulevard, Orihuela Costa (Аликанте, Испания)",
+       "Эл. почта: pleno@bowlingzenia.com",
+       "Телефон: +34 965 35 58 15"
+      ]
+     },
+     {
+      "h": "Предмет",
+      "p": "Настоящая правовая информация регулирует использование сайта www.bowlingzenia.com (далее — Сайт), владельцем которого является BOWLING PLENO ZENIA, S.L. Использование Сайта придаёт статус пользователя и означает полное принятие всех положений настоящего документа."
+     },
+     {
+      "h": "Условия использования",
+      "p": "Пользователь обязуется использовать Сайт и его содержимое надлежащим и законным образом в соответствии с действующим законодательством, нормами морали, общественным порядком и добрыми обычаями. Запрещается использовать Сайт в незаконных или вредоносных целях, а также любым образом повреждать его, выводить из строя или препятствовать его нормальному использованию другими пользователями."
+     },
+     {
+      "h": "Интеллектуальная и промышленная собственность",
+      "p": "Всё содержимое Сайта (тексты, фотографии, графика, изображения, логотипы, товарные знаки, дизайн и программное обеспечение) принадлежит BOWLING PLENO ZENIA, S.L. или третьим лицам, разрешившим его использование, и защищено правами интеллектуальной и промышленной собственности. Его воспроизведение, распространение, публичное сообщение или изменение без явного разрешения владельца запрещено."
+     },
+     {
+      "h": "Ограничение ответственности",
+      "p": "BOWLING PLENO ZENIA, S.L. не несёт ответственности за ущерб, возникший вследствие помех, упущений, перебоев, компьютерных вирусов, сбоев или отключений в работе электронной системы, находящихся вне её контроля. Компания также не гарантирует отсутствие ошибок в содержимом и постоянную доступность Сайта."
+     },
+     {
+      "h": "Ссылки",
+      "p": "Сайт может содержать ссылки на сторонние ресурсы. BOWLING PLENO ZENIA, S.L. не несёт ответственности за содержимое, политику или услуги таких ресурсов, доступ к которым осуществляется под исключительную ответственность пользователя."
+     },
+     {
+      "h": "Изменения",
+      "p": "BOWLING PLENO ZENIA, S.L. оставляет за собой право без предварительного уведомления вносить изменения, которые сочтёт необходимыми, а также изменять, удалять или добавлять как содержимое, так и способ его представления."
+     },
+     {
+      "h": "Применимое право и юрисдикция",
+      "p": "Настоящие условия регулируются законодательством Испании. Для разрешения любых споров стороны обращаются в компетентные суды в соответствии с действующим правом."
+     }
+    ]
+   },
+   "privacidad": {
+    "title": "Политика конфиденциальности",
+    "blocks": [
+     {
+      "p": "В соответствии с действующим законодательством www.bowlingzenia.com (также именуемый Сайт) обязуется принимать необходимые технические и организационные меры согласно уровню безопасности, соответствующему риску собираемых данных."
+     },
+     {
+      "h": "Законодательство, учтённое в политике",
+      "p": "Настоящая политика конфиденциальности приведена в соответствие с действующими нормами Испании и ЕС в области защиты персональных данных. В частности, она соответствует Регламенту (ЕС) 2016/679 Европейского парламента и Совета (GDPR); Органическому закону Испании 3/2018 от 5 декабря о защите персональных данных и гарантии цифровых прав (LOPDGDD); и Закону 34/2002 от 11 июля (LSSI-CE)."
+     },
+     {
+      "h": "Ответственный за обработку данных",
+      "p": "Ответственным за обработку персональных данных, собираемых на www.bowlingzenia.com, является BOWLING PLENO ZENIA, S.L., налоговый номер B-73771008 (далее — Ответственный). Контактные данные:"
+     },
+     {
+      "ul": [
+       "Адрес: Calle Progreso, 21, 30500 Molina de Segura (Мурсия, Испания)",
+       "Эл. почта: pleno@bowlingzenia.com"
+      ]
+     },
+     {
+      "h": "Принципы обработки данных",
+      "p": "Обработка персональных данных пользователя осуществляется в соответствии с принципами, изложенными в статье 5 GDPR: законность, добросовестность и прозрачность; ограничение цели; минимизация данных; точность; ограничение срока хранения; целостность и конфиденциальность; а также подотчётность."
+     },
+     {
+      "h": "Категории персональных данных",
+      "p": "На www.bowlingzenia.com обрабатываются исключительно идентификационные данные. Особые категории персональных данных в значении статьи 9 GDPR не обрабатываются ни при каких обстоятельствах."
+     },
+     {
+      "h": "Правовое основание обработки",
+      "p": "Правовым основанием обработки является согласие. www.bowlingzenia.com обязуется получать явное и проверяемое согласие пользователя на обработку его персональных данных для одной или нескольких конкретных целей. Пользователь вправе отозвать согласие в любой момент, при этом отзыв должен быть таким же простым, как и его предоставление."
+     },
+     {
+      "h": "Цели обработки",
+      "p": "Персональные данные собираются и обрабатываются для того, чтобы облегчать, ускорять и выполнять обязательства между Сайтом и пользователем, отвечать на запросы, а также при необходимости управлять коммуникацией, персонализацией и улучшением предлагаемых услуг."
+     },
+     {
+      "h": "Сроки хранения",
+      "p": "Персональные данные хранятся только в течение минимально необходимого для целей обработки времени и в любом случае лишь столько, сколько необходимо для выполнения оговорённых действий или до момента, когда пользователь потребует их удаления."
+     },
+     {
+      "h": "Получатели данных",
+      "p": "Персональные данные пользователя не передаются третьим лицам, за исключением случаев, предусмотренных законом. Поставщики услуг, которым может потребоваться доступ к данным для оказания услуг Ответственному, действуют в качестве обработчиков данных с соответствующими договорными гарантиями."
+     },
+     {
+      "h": "Данные несовершеннолетних",
+      "p": "Предоставлять персональные данные через Сайт могут только лица старше 14 лет. Для несовершеннолетних младше этого возраста требуется согласие родителей или опекунов."
+     },
+     {
+      "h": "Конфиденциальность и безопасность данных",
+      "p": "Ответственный обязуется принимать необходимые технические и организационные меры для обеспечения безопасности персональных данных и предотвращения их изменения, потери, несанкционированной обработки или доступа, учитывая уровень развития технологий, характер данных и риски, которым они подвержены."
+     },
+     {
+      "h": "Права пользователя",
+      "p": "Пользователь может в любой момент реализовать свои права на доступ, исправление, удаление, возражение, переносимость и ограничение обработки, направив письменный запрос на pleno@bowlingzenia.com. Он также вправе подать жалобу в Испанское агентство по защите данных (www.aepd.es), если считает, что обработка не соответствует действующим нормам."
+     },
+     {
+      "h": "Изменения политики конфиденциальности",
+      "p": "Ответственный оставляет за собой право изменять настоящую политику для приведения её в соответствие с изменениями законодательства или судебной практики. Пользователю рекомендуется периодически с ней знакомиться."
+     }
+    ]
+   },
+   "cookies": {
+    "title": "Политика в отношении файлов cookie",
+    "blocks": [
+     {
+      "p": "Доступ к этому Сайту может предполагать использование файлов cookie. Cookie — это небольшие объёмы информации, сохраняемые в браузере каждого пользователя, чтобы сервер мог запомнить определённые сведения для последующего использования. Эта информация позволяет идентифицировать пользователя и сохранять его личные настройки, а также техническую информацию."
+     },
+     {
+      "h": "Согласие",
+      "p": "При доступе к Сайту вы информируетесь об использовании файлов cookie посредством уведомления. Пользователь может принять, отклонить или настроить cookie через панель настроек. Технические или необходимые cookie используются, поскольку они необходимы для работы Сайта; все остальные cookie устанавливаются только с согласия пользователя."
+     },
+     {
+      "h": "Типы файлов cookie",
+      "p": "По управлению: собственные cookie (управляемые владельцем) и cookie третьих лиц. По назначению: технические или необходимые, cookie предпочтений или персонализации, аналитические или измерительные, а также маркетинговые или рекламные. По сроку действия: сеансовые cookie (удаляются при закрытии браузера) и постоянные cookie (сохраняются в течение определённого срока)."
+     },
+     {
+      "h": "Файлы cookie, используемые на этом Сайте",
+      "p": "Этот Сайт использует технические cookie, необходимые для его корректной работы и для запоминания настроек согласия пользователя. При необходимости могут использоваться аналитические cookie для составления анонимной или агрегированной статистики использования. Актуальные сведения о cookie можно посмотреть в панели настроек cookie на Сайте."
+     },
+     {
+      "h": "Как управлять файлами cookie или отключить их",
+      "p": "Пользователь может разрешать, блокировать или удалять установленные на его устройстве cookie, настроив параметры браузера. Информацию о том, как это сделать, можно найти на страницах справки Google Chrome, Mozilla Firefox, Microsoft Edge, Safari и Opera. Отключение технических cookie может привести к некорректной работе некоторых частей Сайта."
+     },
+     {
+      "h": "Изменения политики в отношении cookie",
+      "p": "Сайт может изменять настоящую политику в связи с новыми законодательными или нормативными требованиями либо для приведения её в соответствие с указаниями Испанского агентства по защите данных. Рекомендуем знакомиться с ней при каждом посещении Сайта."
+     },
+     {
+      "h": "Контакты",
+      "p": "По любым вопросам, касающимся настоящей политики cookie, вы можете связаться с нами по адресу pleno@bowlingzenia.com."
+     }
+    ]
+   }
+  }
+ }
+}
