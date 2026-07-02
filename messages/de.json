@@ -222,7 +222,6 @@
       "labelSummer": "Jul — Aug · Täglich",
       "features": [
         "Ein komplettes Spiel",
-        "Bis zu 6 Spieler pro Bahn",
         "Bälle aller Gewichte",
         "Bumper für Kinder",
         "Keine Spezialschuhe nötig"
@@ -257,13 +256,6 @@
         }
       ]
     },
-    "cta": {
-      "label": "Große Gruppen",
-      "h2": "Mehr als sechs Personen?",
-      "body": "Für größere Gruppen haben wir bessere Optionen. Schreiben Sie uns und wir regeln alles.",
-      "btn1": "Schreiben Sie uns",
-      "btn2": "Anrufen"
-    },
     "reviews": {
       "label": "Bewertungen",
       "h2": "Was die Leute sagen",
@@ -290,6 +282,37 @@
       "label": "Galerie",
       "h2": "Unsere Bahnen",
       "sub": "10 professionelle Bowlingbahnen bei Bowling Pleno Zenia — Orihuela Costa"
+    },
+    "faq": {
+      "label": "FAQ",
+      "h2": "Fragen vor dem Besuch?",
+      "sub": "Alles, was du vor deinem Besuch wissen musst",
+      "items": [
+        {
+          "q": "Muss ich eine Bahn im Voraus reservieren?",
+          "a": "Nein, du brauchst keine Reservierung — komm einfach ins Zenia Boulevard und spiel."
+        },
+        {
+          "q": "Was kostet eine Partie Bowling?",
+          "a": "Ab 4,50€ pro Person und Partie von Montag bis Freitag in der Nebensaison, 6,00€ am Wochenende, an Feiertagen und im Sommer (Juli und August)."
+        },
+        {
+          "q": "Brauche ich spezielle Schuhe?",
+          "a": "Nein. Im Bowling Pleno Zenia spielst du mit deinen eigenen Schuhen — keine Leihschuhe nötig."
+        },
+        {
+          "q": "Können Kinder mitspielen?",
+          "a": "Ja. Wir haben Bumper (Banden), damit die Kleinen immer die Pins erreichen, leichte Bälle und Abwurframpen für die Jüngsten."
+        },
+        {
+          "q": "Wie sind die Öffnungszeiten?",
+          "a": "Wir haben 365 Tage im Jahr geöffnet. Januar bis Juni: Montag bis Freitag 14:00–23:30, Wochenende und Feiertage 12:00–00:00. Im Juli und August täglich von 11:00 bis 01:00."
+        },
+        {
+          "q": "Wo ist die Bowlingbahn und gibt es Parkplätze?",
+          "a": "Du findest uns in der Calle Jade 2 im Einkaufszentrum Zenia Boulevard (Orihuela Costa, Alicante) — mit den kostenlosen Parkplätzen des Centers."
+        }
+      ]
     }
   },
   "arcade_page": {

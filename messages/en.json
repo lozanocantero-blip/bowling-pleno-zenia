@@ -222,7 +222,6 @@
       "labelSummer": "Jul — Aug · Every day",
       "features": [
         "One full game",
-        "Up to 6 players per lane",
         "Balls of all weights",
         "Bumpers for children",
         "No special shoes needed"
@@ -257,13 +256,6 @@
         }
       ]
     },
-    "cta": {
-      "label": "Large groups",
-      "h2": "More than six people?",
-      "body": "If you're coming as a larger group, we have better options for you. Message us and we'll sort everything out.",
-      "btn1": "Message us",
-      "btn2": "Call us"
-    },
     "reviews": {
       "label": "Reviews",
       "h2": "What people say",
@@ -290,6 +282,37 @@
       "label": "Gallery",
       "h2": "Our Lanes",
       "sub": "10 professional bowling lanes at Bowling Pleno Zenia — Orihuela Costa"
+    },
+    "faq": {
+      "label": "FAQ",
+      "h2": "Questions before you visit?",
+      "sub": "Everything you need to know before coming to play",
+      "items": [
+        {
+          "q": "Do I need to book a lane in advance?",
+          "a": "No booking needed — just come to Zenia Boulevard and play."
+        },
+        {
+          "q": "How much does a game of bowling cost?",
+          "a": "From €4.50 per person per game Monday to Friday in low season, and €6.00 at weekends, on bank holidays and in summer (July and August)."
+        },
+        {
+          "q": "Do I need special shoes to play?",
+          "a": "No. At Bowling Pleno Zenia you play in your own shoes — no need to rent special footwear."
+        },
+        {
+          "q": "Can children play?",
+          "a": "Yes. We have bumpers so the little ones always reach the pins, light balls and launch ramps for the youngest players."
+        },
+        {
+          "q": "What are the opening hours?",
+          "a": "We're open 365 days a year. January to June: Monday to Friday 14:00–23:30, weekends and bank holidays 12:00–00:00. In July and August, every day from 11:00 to 01:00."
+        },
+        {
+          "q": "Where is the bowling alley and is there parking?",
+          "a": "We're at Calle Jade 2, inside the Zenia Boulevard shopping centre (Orihuela Costa, Alicante), with the centre's free parking."
+        }
+      ]
     }
   },
   "arcade_page": {
