@@ -10,7 +10,7 @@ export function Contact25() {
     <section id="ubicacion" aria-label={t("howToGet") + " — Bowling Pleno Zenia"} className="px-[5%] py-16 md:py-24 lg:py-28 bg-white">
       <div className="container">
         <div className="mb-12 text-center md:mb-16">
-          <p className="label-red mb-3">Ubicación</p>
+          <p className="label-red mb-3">{t("label")}</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl uppercase leading-none">
             {t("title")}<br />{t("titleBold")}{" "}<span className="text-brand-red">{t("titleRed")}</span>
           </h2>
