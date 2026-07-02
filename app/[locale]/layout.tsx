@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
     keywords: [
       'bolera en Orihuela Costa', 'bowling Orihuela Costa',
       'Bowling Pleno Zenia', 'bolera Zenia Boulevard',
-      'pub irlandés Orihuela Costa',
+      'bolera cerca de Torrevieja', 'pub irlandés Orihuela Costa',
       'ocio familiar Orihuela Costa', 'arcade Orihuela Costa',
     ],
     alternates: buildAlternates(locale, ''),

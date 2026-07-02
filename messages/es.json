@@ -122,7 +122,7 @@
     "title": "Visítanos en",
     "titleBold": "Zenia Boulevard,",
     "titleRed": "Orihuela Costa",
-    "subtitle": "Planta baja del centro comercial. Parking gratuito para todos los visitantes.",
+    "subtitle": "Planta baja del centro comercial, a 10 minutos de Torrevieja. Parking gratuito para todos los visitantes.",
     "howToGet": "Cómo llegar",
     "address": "Calle Jade 2, planta baja, CC Zenia Boulevard, Orihuela Costa (Alicante)",
     "openMaps": "Abrir en Google Maps",
@@ -230,7 +230,7 @@
     "features": {
       "label": "Lo que ofrecemos",
       "h2": "¿Qué incluye una pista?",
-      "body": "Nuestras pistas de bowling en Orihuela Costa están totalmente equipadas para que disfrutes desde el primer lanzamiento. Incluyen bolas de diferentes pesos, bumpers para niños y todo lo necesario para jugar cómodamente en familia o con amigos. Ven cuando quieras a Zenia Boulevard y juega sin reserva previa, de forma rápida y sencilla.",
+      "body": "Nuestras pistas de bowling en Orihuela Costa están totalmente equipadas para que disfrutes desde el primer lanzamiento. Incluyen bolas de diferentes pesos, bumpers para niños y todo lo necesario para jugar cómodamente en familia o con amigos. Ven cuando quieras a Zenia Boulevard, a 10 minutos de Torrevieja, y juega sin reserva previa, de forma rápida y sencilla.",
       "btn1": "Ver tarifas",
       "btn2": "Contacto",
       "items": [
@@ -311,6 +311,10 @@
         {
           "q": "¿Dónde está la bolera y hay parking?",
           "a": "Estamos en la Calle Jade 2, en el centro comercial Zenia Boulevard (Orihuela Costa, Alicante), con el parking gratuito del propio centro comercial."
+        },
+        {
+          "q": "¿Está nuestra bolera cerca de Torrevieja?",
+          "a": "Sí: Bowling Pleno Zenia está a unos 10 minutos en coche de Torrevieja, en el centro comercial Zenia Boulevard (Orihuela Costa). Bolera de 10 pistas, sala arcade y pub irlandés, abiertos los 365 días."
         }
       ]
     }

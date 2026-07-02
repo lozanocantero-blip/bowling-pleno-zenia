@@ -66,6 +66,13 @@ export function SchemaOrg() {
           { "@type": "LocationFeatureSpecification", "name": "Irish Pub", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true }
         ],
+        "areaServed": [
+          { "@type": "Place", "name": "Orihuela Costa" },
+          { "@type": "Place", "name": "La Zenia" },
+          { "@type": "Place", "name": "Torrevieja" },
+          { "@type": "Place", "name": "Playa Flamenca" },
+          { "@type": "Place", "name": "Cabo Roig" }
+        ],
         "sameAs": [
           "https://www.google.com/maps/place/Bowling+Pleno+Zenia"
         ]

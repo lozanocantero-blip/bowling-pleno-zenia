@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
     ru: 'Боулинг в Орихуэла-Коста — 10 дорожек без брони',
   }
   const descriptions: Record<string, string> = {
-    es: 'Juega al bowling en Orihuela Costa sin reserva. 10 pistas para todas las edades, bumpers para niños. Desde 4,50€. Zenia Boulevard, abiertos 365 días.',
-    en: 'Play bowling in Orihuela Costa with no reservation needed. 10 lanes for all ages, bumpers for kids. From €4.50. Zenia Boulevard, open 365 days a year.',
-    de: 'Bowling in Orihuela Costa ohne Voranmeldung. 10 Bahnen für jedes Alter, Bumper für Kinder. Ab 4,50€. Zenia Boulevard, 365 Tage geöffnet.',
-    ru: 'Боулинг в Орихуэла-Коста без предварительной записи. 10 дорожек для всех возрастов, бамперы для детей. От 4,50€. Zenia Boulevard, открыто 365 дней.',
+    es: 'Juega al bowling en Orihuela Costa, a 10 minutos de Torrevieja. 10 pistas sin reserva, bumpers para niños. Desde 4,50€. Zenia Boulevard, 365 días.',
+    en: 'Play bowling in Orihuela Costa, 10 minutes from Torrevieja. 10 lanes, no booking needed, bumpers for kids. From €4.50. Zenia Boulevard, open 365 days.',
+    de: 'Bowling in Orihuela Costa, 10 Minuten von Torrevieja. 10 Bahnen ohne Voranmeldung, Bumper für Kinder. Ab 4,50€. Zenia Boulevard, 365 Tage geöffnet.',
+    ru: 'Боулинг в Орихуэла-Коста, в 10 минутах от Торревьехи. 10 дорожек без записи, бамперы для детей. От 4,50€. Zenia Boulevard, открыто 365 дней.',
   }
   return {
     title: titles[locale] ?? titles.es,

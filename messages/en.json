@@ -122,7 +122,7 @@
     "title": "Find us at",
     "titleBold": "Zenia Boulevard,",
     "titleRed": "Orihuela Costa",
-    "subtitle": "Ground floor of the shopping centre. Free parking for all visitors.",
+    "subtitle": "Ground floor of the shopping centre, 10 minutes from Torrevieja. Free parking for all visitors.",
     "howToGet": "How to get here",
     "address": "Calle Jade 2, ground floor, CC Zenia Boulevard, Orihuela Costa (Alicante)",
     "openMaps": "Open in Google Maps",
@@ -230,7 +230,7 @@
     "features": {
       "label": "What we offer",
       "h2": "What's included?",
-      "body": "Our bowling lanes in Orihuela Costa are fully equipped so you can enjoy from the very first throw. They include balls of different weights, bumpers for kids and everything needed to play comfortably with family or friends. Come anytime to Zenia Boulevard and play without prior booking.",
+      "body": "Our bowling lanes in Orihuela Costa are fully equipped so you can enjoy from the very first throw. They include balls of different weights, bumpers for kids and everything needed to play comfortably with family or friends. Come anytime to Zenia Boulevard, 10 minutes from Torrevieja, and play without prior booking.",
       "btn1": "See prices",
       "btn2": "Contact",
       "items": [
@@ -311,6 +311,10 @@
         {
           "q": "Where is the bowling alley and is there parking?",
           "a": "We're at Calle Jade 2, inside the Zenia Boulevard shopping centre (Orihuela Costa, Alicante), with the centre's free parking."
+        },
+        {
+          "q": "Is our bowling alley near Torrevieja?",
+          "a": "Yes — Bowling Pleno Zenia is about 10 minutes by car from Torrevieja, at the Zenia Boulevard shopping centre (Orihuela Costa). 10-lane bowling alley, arcade room and Irish pub, open 365 days a year."
         }
       ]
     }
