@@ -411,5 +411,19 @@
       "h2": "Das Dublin House",
       "sub": "So ist der Irish Pub in Bowling Pleno Zenia — Orihuela Costa"
     }
+  },
+  "contact_page": {
+    "label": "Kontakt",
+    "title": "Schreib uns",
+    "intro": "Füll das Formular aus und wir melden uns so schnell wie möglich. Du kannst uns auch direkt schreiben an",
+    "sentTitle": "Nachricht gesendet!",
+    "sentBody": "Danke für deine Nachricht. Wir melden uns so schnell wie möglich.",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon (optional)",
+    "message": "Nachricht",
+    "error": "Beim Senden ist ein Problem aufgetreten. Versuch es erneut oder schreib uns an",
+    "sending": "Wird gesendet...",
+    "submit": "Nachricht senden"
   }
 }
