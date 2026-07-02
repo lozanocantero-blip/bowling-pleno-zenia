@@ -16,15 +16,15 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   const locale = toLocale((await params).locale)
   setRequestLocale(locale)
   const titles: Record<string, string> = {
-    es: 'Dublin House — Pub Irlandés en Orihuela Costa · Único en la zona',
-    en: 'Dublin House — Irish Pub in Orihuela Costa · Unique in the area',
-    de: 'Dublin House — Irish Pub in Orihuela Costa · Einzigartig in der Region',
-    ru: 'Dublin House — ирландский паб в Орихуэла-Коста · Единственный в районе',
+    es: 'Dublin House — Pub Irlandés en Orihuela Costa',
+    en: 'Dublin House — Irish Pub in Orihuela Costa',
+    de: 'Dublin House — Irish Pub in Orihuela Costa',
+    ru: 'Dublin House — ирландский паб в Орихуэла-Коста',
   }
   const descriptions: Record<string, string> = {
-    es: 'El único pub irlandés de Orihuela Costa, dentro de Bowling Pleno Zenia en Zenia Boulevard. Guinness, Heineken y Cruzcampo de barril, dardos electrónicos, cócteles y ambiente auténtico.',
-    en: 'The only Irish pub in Orihuela Costa, inside Bowling Pleno Zenia at Zenia Boulevard. Guinness, Heineken on draught, electronic darts, cocktails and authentic atmosphere.',
-    de: 'Der einzige Irish Pub in Orihuela Costa, im Bowling Pleno Zenia am Zenia Boulevard. Guinness, Heineken vom Fass, elektronische Darts, Cocktails und authentische Atmosphäre.',
+    es: 'El único pub irlandés de Orihuela Costa, en Zenia Boulevard. Guinness, Heineken y Cruzcampo de barril, dardos electrónicos y ambiente auténtico.',
+    en: 'The only Irish pub in Orihuela Costa, at Zenia Boulevard. Guinness and Heineken on draught, electronic darts, cocktails and authentic atmosphere.',
+    de: 'Der einzige Irish Pub in Orihuela Costa, am Zenia Boulevard. Guinness und Heineken vom Fass, Darts, Cocktails und authentische Atmosphäre.',
     ru: 'Единственный ирландский паб в Орихуэла-Коста, внутри Bowling Pleno Zenia в Zenia Boulevard. Guinness, Heineken на разлив, электронные дартс, коктейли.',
   }
   return {

@@ -16,13 +16,13 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   const locale = toLocale((await params).locale)
   setRequestLocale(locale)
   const titles: Record<string, string> = {
-    es: 'Bolera en Orihuela Costa — 10 Pistas sin Reserva · Bowling Pleno Zenia',
-    en: 'Bowling in Orihuela Costa — 10 Lanes, No Reservation · Bowling Pleno Zenia',
-    de: 'Bowling in Orihuela Costa — 10 Bahnen ohne Reservierung · Bowling Pleno Zenia',
-    ru: 'Боулинг в Орихуэла-Коста — 10 дорожек без брони · Bowling Pleno Zenia',
+    es: 'Bolera en Orihuela Costa — 10 Pistas sin Reserva',
+    en: 'Bowling in Orihuela Costa — 10 Lanes, No Reservation',
+    de: 'Bowling in Orihuela Costa — 10 Bahnen ohne Reservierung',
+    ru: 'Боулинг в Орихуэла-Коста — 10 дорожек без брони',
   }
   const descriptions: Record<string, string> = {
-    es: 'Juega al bowling en Orihuela Costa sin reserva previa. 10 pistas para todas las edades, bumpers para niños y bolas de todos los pesos. Desde 4,50€. Zenia Boulevard, abiertos 365 días.',
+    es: 'Juega al bowling en Orihuela Costa sin reserva. 10 pistas para todas las edades, bumpers para niños. Desde 4,50€. Zenia Boulevard, abiertos 365 días.',
     en: 'Play bowling in Orihuela Costa with no reservation needed. 10 lanes for all ages, bumpers for kids. From €4.50. Zenia Boulevard, open 365 days a year.',
     de: 'Bowling in Orihuela Costa ohne Voranmeldung. 10 Bahnen für jedes Alter, Bumper für Kinder. Ab 4,50€. Zenia Boulevard, 365 Tage geöffnet.',
     ru: 'Боулинг в Орихуэла-Коста без предварительной записи. 10 дорожек для всех возрастов, бамперы для детей. От 4,50€. Zenia Boulevard, открыто 365 дней.',
