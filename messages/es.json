@@ -290,6 +290,37 @@
       "label": "Galería",
       "h2": "Nuestras Pistas",
       "sub": "10 pistas de bowling profesionales en Bowling Pleno Zenia — Orihuela Costa"
+    },
+    "faq": {
+      "label": "Preguntas frecuentes",
+      "h2": "¿Dudas antes de venir?",
+      "sub": "Todo lo que necesitas saber antes de venir a jugar a la bolera",
+      "items": [
+        {
+          "q": "¿Hace falta reservar para jugar a los bolos?",
+          "a": "No, no necesitas reserva previa: ven a Zenia Boulevard y juega."
+        },
+        {
+          "q": "¿Cuánto cuesta una partida de bowling?",
+          "a": "Desde 4,50€ por persona y partida de lunes a viernes en temporada baja, y 6,00€ los fines de semana, festivos y en verano (julio y agosto)."
+        },
+        {
+          "q": "¿Necesito calzado especial para jugar?",
+          "a": "No. En Bowling Pleno Zenia juegas con tu propio calzado, sin alquilar zapatos especiales."
+        },
+        {
+          "q": "¿Pueden jugar los niños?",
+          "a": "Sí. Tenemos bumpers (barreras) para que los peques siempre lleguen a los bolos, bolas ligeras y rampas de lanzamiento para los más pequeños."
+        },
+        {
+          "q": "¿Qué horario tiene la bolera?",
+          "a": "Abrimos los 365 días del año. De enero a junio: lunes a viernes de 14:00 a 23:30, y fines de semana y festivos de 12:00 a 00:00. En julio y agosto, todos los días de 11:00 a 01:00."
+        },
+        {
+          "q": "¿Dónde está la bolera y hay parking?",
+          "a": "Estamos en la Calle Jade 2, en el centro comercial Zenia Boulevard (Orihuela Costa, Alicante), con el parking gratuito del propio centro comercial."
+        }
+      ]
     }
   },
   "arcade_page": {
