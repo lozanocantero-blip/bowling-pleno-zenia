@@ -16,13 +16,13 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   const locale = toLocale((await params).locale)
   setRequestLocale(locale)
   const titles: Record<string, string> = {
-    es: 'Sala Arcade en Orihuela Costa — Simuladores, Tickets y Premios · Bowling Pleno Zenia',
-    en: 'Arcade Room in Orihuela Costa — Simulators, Tickets & Prizes · Bowling Pleno Zenia',
-    de: 'Arcade-Halle in Orihuela Costa — Simulatoren, Tickets & Preise · Bowling Pleno Zenia',
-    ru: 'Аркадный зал в Орихуэла-Коста — симуляторы, билеты и призы · Bowling Pleno Zenia',
+    es: 'Sala Arcade en Orihuela Costa — Simuladores, Tickets y Premios',
+    en: 'Arcade Room in Orihuela Costa — Simulators, Tickets & Prizes',
+    de: 'Arcade-Halle in Orihuela Costa — Simulatoren, Tickets & Preise',
+    ru: 'Аркадный зал в Орихуэла-Коста — симуляторы, билеты и призы',
   }
   const descriptions: Record<string, string> = {
-    es: 'La mejor sala arcade en Orihuela Costa. Más de 30 máquinas recreativas: simuladores, redemption con tickets canjeables por premios, billar y futbolín. Zenia Boulevard, abiertos 365 días.',
+    es: 'La mejor sala arcade en Orihuela Costa: más de 30 máquinas, simuladores, tickets canjeables por premios, billar y futbolín. Zenia Boulevard, 365 días.',
     en: 'The best arcade room in Orihuela Costa. Over 30 machines: simulators, redemption with prizes, pool and foosball. Zenia Boulevard, open 365 days.',
     de: 'Die beste Arcade-Halle in Orihuela Costa. Über 30 Maschinen: Simulatoren, Redemption mit einlösbaren Tickets, Billard und Tischfußball. Zenia Boulevard.',
     ru: 'Лучший аркадный зал в Орихуэла-Коста. Более 30 автоматов: симуляторы, redemption с призами, бильярд и настольный футбол. Zenia Boulevard.',

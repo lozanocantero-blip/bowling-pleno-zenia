@@ -12,7 +12,7 @@ export function SchemaOrg() {
         "@id": `${SITE_URL}/#business`,
         "name": "Bowling Pleno Zenia",
         "alternateName": ["Bolera Orihuela Costa", "Bowling Zenia Boulevard"],
-        "description": "Bolera con 10 pistas, sala arcade, pub irlandés Dublin House y celebraciones de cumpleaños en Orihuela Costa. Abiertos 365 días en Zenia Boulevard.",
+        "description": "Bolera con 10 pistas, sala arcade y pub irlandés Dublin House en Orihuela Costa. Abiertos 365 días en Zenia Boulevard.",
         "url": SITE_URL,
         "telephone": "+34965355815",
         "email": "pleno@bowlingzenia.com",
@@ -64,8 +64,7 @@ export function SchemaOrg() {
           { "@type": "LocationFeatureSpecification", "name": "Bowling Lanes", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Arcade Games", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Irish Pub", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Birthday Parties", "value": true }
+          { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true }
         ],
         "sameAs": [
           "https://www.google.com/maps/place/Bowling+Pleno+Zenia"
