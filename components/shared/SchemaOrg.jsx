@@ -15,7 +15,7 @@ export function SchemaOrg() {
         "description": "Bolera con 10 pistas, sala arcade, pub irlandés Dublin House y celebraciones de cumpleaños en Orihuela Costa. Abiertos 365 días en Zenia Boulevard.",
         "url": SITE_URL,
         "telephone": "+34965355815",
-        "email": "info@bowlingplenozenia.com",
+        "email": "pleno@bowlingzenia.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Calle Jade 2, planta baja, CC Zenia Boulevard",
