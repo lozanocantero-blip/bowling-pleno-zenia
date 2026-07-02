@@ -34,16 +34,16 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   setRequestLocale(locale)
 
   const titles: Record<string, string> = {
-    es: 'Bolera en Orihuela Costa · Arcade, Pub y Cumpleaños',
-    en: 'Bowling in Orihuela Costa · Arcade, Pub & Birthdays',
-    de: 'Bowling in Orihuela Costa · Arcade, Pub & Geburtstage',
-    ru: 'Боулинг в Орихуэла-Коста · Аркада, Паб и Дни рождения',
+    es: 'Bolera en Orihuela Costa · Arcade y Pub Irlandés',
+    en: 'Bowling in Orihuela Costa · Arcade & Irish Pub',
+    de: 'Bowling in Orihuela Costa · Arcade & Irish Pub',
+    ru: 'Боулинг в Орихуэла-Коста · Аркада и ирландский паб',
   }
   const descriptions: Record<string, string> = {
-    es: 'Bowling Pleno Zenia, la bolera en Orihuela Costa con 10 pistas, arcade, pub irlandés y fiestas de cumpleaños. Abiertos 365 días. ¡Reserva hoy!',
-    en: 'Bowling Pleno Zenia, the bowling alley in Orihuela Costa with 10 lanes, arcade, Irish pub and birthday parties. Open 365 days. Book today!',
-    de: 'Bowling Pleno Zenia, die Bowlingbahn in Orihuela Costa mit 10 Bahnen, Arcade, Irish Pub und Geburtstagspartys. 365 Tage geöffnet. Jetzt buchen!',
-    ru: 'Bowling Pleno Zenia — боулинг-клуб в Орихуэла-Коста: 10 дорожек, аркада, ирландский паб и дни рождения. Открыто 365 дней. Бронируйте сейчас!',
+    es: 'Bowling Pleno Zenia, la bolera en Orihuela Costa con 10 pistas, sala arcade y pub irlandés Dublin House. Sin reserva, abiertos 365 días. ¡Ven a jugar!',
+    en: 'Bowling Pleno Zenia, the bowling alley in Orihuela Costa with 10 lanes, arcade room and Dublin House Irish pub. No booking needed, open 365 days.',
+    de: 'Bowling Pleno Zenia, die Bowlingbahn in Orihuela Costa mit 10 Bahnen, Arcade und Irish Pub Dublin House. Ohne Reservierung, 365 Tage geöffnet.',
+    ru: 'Bowling Pleno Zenia — боулинг-клуб в Орихуэла-Коста: 10 дорожек, аркада и ирландский паб Dublin House. Без записи, открыто 365 дней.',
   }
 
   return {
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
     keywords: [
       'bolera en Orihuela Costa', 'bowling Orihuela Costa',
       'Bowling Pleno Zenia', 'bolera Zenia Boulevard',
-      'cumpleaños infantiles Orihuela Costa', 'pub irlandés Orihuela Costa',
+      'pub irlandés Orihuela Costa',
       'ocio familiar Orihuela Costa', 'arcade Orihuela Costa',
     ],
     alternates: buildAlternates(locale, ''),

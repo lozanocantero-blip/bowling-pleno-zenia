@@ -276,7 +276,7 @@ export function Layout370() {
   const seoOpacities = [seoOp0, seoOp1, seoOp2, seoOp3];
 
   return (
-    <section aria-label="Servicios de Bowling Pleno Zenia — bolera, arcade, pub y cumpleaños en Orihuela Costa">
+    <section aria-label="Servicios de Bowling Pleno Zenia — bolera, arcade y pub irlandés en Orihuela Costa">
 
       <div ref={containerRef} style={{ height: `${N * 100}vh`, position: "relative" }}>
         <div style={{ position: "sticky", top: 0, height: "100vh", overflow: "hidden", background: "#f5f4f0" }}>

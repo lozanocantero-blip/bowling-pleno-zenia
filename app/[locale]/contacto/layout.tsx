@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
     ru: 'Контакты и как добраться — Орихуэла-Коста',
   }
   const descriptions: Record<string, string> = {
-    es: 'Contacta con Bowling Pleno Zenia en Zenia Boulevard, Orihuela Costa (Calle Jade 2). Escríbenos para cumpleaños, grupos y reservas. Abiertos 365 días.',
-    en: 'Contact Bowling Pleno Zenia at Zenia Boulevard, Orihuela Costa (Calle Jade 2). Get in touch for birthdays, groups and bookings. Open 365 days a year.',
-    de: 'Kontaktiere Bowling Pleno Zenia am Zenia Boulevard, Orihuela Costa (Calle Jade 2). Für Geburtstage, Gruppen und Reservierungen. 365 Tage im Jahr geöffnet.',
-    ru: 'Свяжитесь с Bowling Pleno Zenia в Zenia Boulevard, Орихуэла-Коста (Calle Jade 2). Дни рождения, группы и бронирование. Открыто 365 дней в году.',
+    es: 'Contacta con Bowling Pleno Zenia en Zenia Boulevard, Orihuela Costa (Calle Jade 2). Escríbenos para grupos, eventos y reservas. Abiertos 365 días.',
+    en: 'Contact Bowling Pleno Zenia at Zenia Boulevard, Orihuela Costa (Calle Jade 2). Get in touch for groups, events and bookings. Open 365 days a year.',
+    de: 'Kontaktiere Bowling Pleno Zenia am Zenia Boulevard, Orihuela Costa (Calle Jade 2). Für Gruppen, Events und Reservierungen. 365 Tage im Jahr geöffnet.',
+    ru: 'Свяжитесь с Bowling Pleno Zenia в Zenia Boulevard, Орихуэла-Коста (Calle Jade 2). Группы, мероприятия и бронирование. Открыто 365 дней в году.',
   }
   return {
     title: titles[locale] ?? titles.es,
