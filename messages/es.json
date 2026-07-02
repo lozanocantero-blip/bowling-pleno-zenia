@@ -222,7 +222,6 @@
       "labelSummer": "Jul — Ago · Todos los días",
       "features": [
         "Una partida completa",
-        "Hasta 6 jugadores por pista",
         "Bolas de todos los pesos",
         "Bumpers para niños",
         "Sin calzado especial"
@@ -256,13 +255,6 @@
           "desc": "Disponemos de rampas de lanzamiento para los más pequeños y para cualquier jugador que quiera una ayuda extra."
         }
       ]
-    },
-    "cta": {
-      "label": "Grupos grandes",
-      "h2": "¿Más de seis personas?",
-      "body": "Si vienen más de seis, hay opciones mejores para vosotros. Escríbenos y lo organizamos todo.",
-      "btn1": "Escríbenos",
-      "btn2": "Llamar"
     },
     "reviews": {
       "label": "Reseñas",

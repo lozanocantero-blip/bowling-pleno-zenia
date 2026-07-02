@@ -222,7 +222,6 @@
       "labelSummer": "Jul — Aug · Täglich",
       "features": [
         "Ein komplettes Spiel",
-        "Bis zu 6 Spieler pro Bahn",
         "Bälle aller Gewichte",
         "Bumper für Kinder",
         "Keine Spezialschuhe nötig"
@@ -256,13 +255,6 @@
           "desc": "Abwurframpen für die Jüngsten und alle, die etwas Unterstützung beim Werfen möchten."
         }
       ]
-    },
-    "cta": {
-      "label": "Große Gruppen",
-      "h2": "Mehr als sechs Personen?",
-      "body": "Für größere Gruppen haben wir bessere Optionen. Schreiben Sie uns und wir regeln alles.",
-      "btn1": "Schreiben Sie uns",
-      "btn2": "Anrufen"
     },
     "reviews": {
       "label": "Bewertungen",

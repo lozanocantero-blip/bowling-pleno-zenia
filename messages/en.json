@@ -222,7 +222,6 @@
       "labelSummer": "Jul — Aug · Every day",
       "features": [
         "One full game",
-        "Up to 6 players per lane",
         "Balls of all weights",
         "Bumpers for children",
         "No special shoes needed"
@@ -256,13 +255,6 @@
           "desc": "We have launching ramps for the youngest and any player who wants a little extra help with their throws."
         }
       ]
-    },
-    "cta": {
-      "label": "Large groups",
-      "h2": "More than six people?",
-      "body": "If you're coming as a larger group, we have better options for you. Message us and we'll sort everything out.",
-      "btn1": "Message us",
-      "btn2": "Call us"
     },
     "reviews": {
       "label": "Reviews",
