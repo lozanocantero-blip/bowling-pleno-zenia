@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const DESTINO = "plenozenia@gmail.com";
 
 export function ContactForm() {
+  const t = useTranslations("contact_page");
   const [status, setStatus] = useState("idle"); // idle | sending | ok | error
 
   const handleSubmit = async (e) => {
@@ -39,13 +41,12 @@ export function ContactForm() {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container mx-auto max-w-xl">
         <div className="mb-8 text-center md:mb-12">
-          <p className="label-red mb-3">Contacto</p>
+          <p className="label-red mb-3">{t("label")}</p>
           <h1 className="text-brand-navy text-5xl md:text-7xl uppercase leading-none mb-5">
-            Escríbenos
+            {t("title")}
           </h1>
           <p className="text-brand-navy/70 md:text-md">
-            Rellena el formulario y te responderemos lo antes posible. También
-            puedes escribirnos directamente a{" "}
+            {t("intro")}{" "}
             <a href={`mailto:${DESTINO}`} className="font-bold text-brand-red underline">
               {DESTINO}
             </a>
@@ -55,9 +56,9 @@ export function ContactForm() {
 
         {status === "ok" ? (
           <div className="border-2 border-brand-navy/20 p-8 text-center">
-            <h2 className="text-brand-navy text-3xl uppercase mb-3">¡Mensaje enviado!</h2>
+            <h2 className="text-brand-navy text-3xl uppercase mb-3">{t("sentTitle")}</h2>
             <p className="text-brand-navy/70">
-              Gracias por escribirnos. Te responderemos lo antes posible.
+              {t("sentBody")}
             </p>
           </div>
         ) : (
@@ -65,28 +66,28 @@ export function ContactForm() {
             <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
             <div className="grid grid-cols-1 gap-2">
-              <label htmlFor="nombre" className="text-sm font-bold uppercase tracking-wider text-brand-navy">Nombre</label>
+              <label htmlFor="nombre" className="text-sm font-bold uppercase tracking-wider text-brand-navy">{t("name")}</label>
               <input id="nombre" name="Nombre" type="text" required className={inputCls} />
             </div>
 
             <div className="grid grid-cols-1 gap-2">
-              <label htmlFor="email" className="text-sm font-bold uppercase tracking-wider text-brand-navy">Email</label>
+              <label htmlFor="email" className="text-sm font-bold uppercase tracking-wider text-brand-navy">{t("email")}</label>
               <input id="email" name="Email" type="email" required className={inputCls} />
             </div>
 
             <div className="grid grid-cols-1 gap-2">
-              <label htmlFor="telefono" className="text-sm font-bold uppercase tracking-wider text-brand-navy">Teléfono (opcional)</label>
+              <label htmlFor="telefono" className="text-sm font-bold uppercase tracking-wider text-brand-navy">{t("phone")}</label>
               <input id="telefono" name="Telefono" type="tel" className={inputCls} />
             </div>
 
             <div className="grid grid-cols-1 gap-2">
-              <label htmlFor="mensaje" className="text-sm font-bold uppercase tracking-wider text-brand-navy">Mensaje</label>
+              <label htmlFor="mensaje" className="text-sm font-bold uppercase tracking-wider text-brand-navy">{t("message")}</label>
               <textarea id="mensaje" name="Mensaje" required rows={5} className={inputCls} />
             </div>
 
             {status === "error" && (
               <p className="text-sm text-brand-red font-bold">
-                Hubo un problema al enviar el mensaje. Inténtalo de nuevo o escríbenos a {DESTINO}.
+                {t("error")} {DESTINO}.
               </p>
             )}
 
@@ -95,7 +96,7 @@ export function ContactForm() {
               disabled={status === "sending"}
               className="rounded-full bg-brand-red text-white px-8 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-red-700 transition-colors disabled:opacity-60"
             >
-              {status === "sending" ? "Enviando..." : "Enviar mensaje"}
+              {status === "sending" ? t("sending") : t("submit")}
             </button>
           </form>
         )}
