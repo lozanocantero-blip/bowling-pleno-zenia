@@ -49,6 +49,18 @@ const nextConfig: NextConfig = {
       { source: '/fiestas', destination: '/contacto', permanent: true },
       { source: '/celebraciones', destination: '/contacto', permanent: true },
       { source: '/contact', destination: '/contacto', permanent: true },
+
+      // --- URLs reales del WordPress viejo (recuperadas de Wayback Machine) ---
+      { source: '/home-2', destination: '/', permanent: true },
+      { source: '/en/home-2', destination: '/en', permanent: true },
+      { source: '/en/contact', destination: '/en/contacto', permanent: true },
+      { source: '/centros', destination: '/', permanent: true },
+      { source: '/que-ver-en-torrevieja', destination: '/', permanent: true },
+      { source: '/protecciondedatosemail', destination: '/politica-de-privacidad', permanent: true },
+      { source: '/politica-de-cookies-2', destination: '/politica-de-cookies', permanent: true },
+      // Archivos de autor y categoría de WordPress (sin equivalente) → home.
+      { source: '/author/:slug*', destination: '/', permanent: true },
+      { source: '/category/:slug*', destination: '/', permanent: true },
     ]
   },
 }
