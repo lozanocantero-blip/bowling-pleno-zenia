@@ -16,16 +16,16 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   const locale = toLocale((await params).locale)
   setRequestLocale(locale)
   const titles: Record<string, string> = {
-    es: 'Bolera en Orihuela Costa — 10 Pistas sin Reserva',
-    en: 'Bowling in Orihuela Costa — 10 Lanes, No Reservation',
-    de: 'Bowling in Orihuela Costa — 10 Bahnen ohne Reservierung',
-    ru: 'Боулинг в Орихуэла-Коста — 10 дорожек без брони',
+    es: 'Bolera en Orihuela Costa — Desde 4,50 €, sin Alquiler de Calzado',
+    en: 'Bowling in Orihuela Costa — From €4.50, No Shoe Rental',
+    de: 'Bowling in Orihuela Costa — Ab 4,50 €, ohne Schuhverleih',
+    ru: 'Боулинг в Орихуэла-Коста — от 4,50 €, без аренды обуви',
   }
   const descriptions: Record<string, string> = {
-    es: 'Juega al bowling en Orihuela Costa, a 10 minutos de Torrevieja. 10 pistas sin reserva, bumpers para niños. Desde 4,50€. Zenia Boulevard, 365 días.',
-    en: 'Play bowling in Orihuela Costa, 10 minutes from Torrevieja. 10 lanes, no booking needed, bumpers for kids. From €4.50. Zenia Boulevard, open 365 days.',
-    de: 'Bowling in Orihuela Costa, 10 Minuten von Torrevieja. 10 Bahnen ohne Voranmeldung, Bumper für Kinder. Ab 4,50€. Zenia Boulevard, 365 Tage geöffnet.',
-    ru: 'Боулинг в Орихуэла-Коста, в 10 минутах от Торревьехи. 10 дорожек без записи, бамперы для детей. От 4,50€. Zenia Boulevard, открыто 365 дней.',
+    es: '10 pistas en Zenia Boulevard, a 10 min de Torrevieja. Desde 4,50 €, sin reserva y sin alquilar calzado. Bumpers para niños. Abierto 365 días.',
+    en: '10 lanes at Zenia Boulevard, 10 min from Torrevieja. From €4.50, no booking and no shoe rental. Bumpers for kids. Open 365 days.',
+    de: '10 Bahnen im Zenia Boulevard, 10 Min. von Torrevieja. Ab 4,50 €, ohne Reservierung und ohne Schuhverleih. Bumper für Kinder. 365 Tage geöffnet.',
+    ru: '10 дорожек в Zenia Boulevard, 10 минут от Торревьехи. От 4,50 €, без брони и без аренды обуви. Бамперы для детей. Открыто 365 дней.',
   }
   return {
     title: titles[locale] ?? titles.es,
