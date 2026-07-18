@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -24,8 +25,8 @@ export function Layout369() {
             const { img, imgAlt, wide } = cardImgs[i];
             return (
               <div key={i} className={`bg-white border-2 border-brand-navy/10 hover:border-brand-navy transition-colors overflow-hidden ${wide ? "sm:col-span-2 flex flex-col sm:flex-row" : ""}`}>
-                <div className={`${wide ? "sm:w-1/2" : "w-full"} overflow-hidden bg-brand-blue-light aspect-video`}>
-                  <img src={img} alt={imgAlt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <div className={`${wide ? "sm:w-1/2" : "w-full"} relative overflow-hidden bg-brand-blue-light aspect-video`}>
+                  <Image src={img} alt={imgAlt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 flex flex-col justify-center">
                   <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-1">{c.tag}</p>

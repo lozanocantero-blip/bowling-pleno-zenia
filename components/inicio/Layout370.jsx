@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
@@ -63,10 +64,12 @@ function ServiceCard({ service, index, scrollYProgress }) {
       >
         {service.img ? (
           <div className="absolute inset-0" style={{ borderRadius: "28px", overflow: "hidden" }}>
-            <img
+            <Image
               src={service.img}
               alt={service.seoTitle}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover"
               style={{ opacity: 0.3 }}
             />
           </div>

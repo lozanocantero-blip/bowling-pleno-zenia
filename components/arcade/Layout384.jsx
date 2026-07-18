@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -14,8 +15,8 @@ export function Layout384() {
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           <div className="bg-white border-2 border-brand-navy/10 hover:border-brand-navy transition-colors overflow-hidden flex flex-col">
-            <div className="overflow-hidden aspect-video">
-              <img src="/images/arcade-tickets.jpg" alt="Máquina contadora de tickets en el arcade de Bowling Pleno Zenia — Orihuela Costa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="relative overflow-hidden aspect-video">
+              <Image src="/images/arcade-tickets.jpg" alt="Máquina contadora de tickets en el arcade de Bowling Pleno Zenia — Orihuela Costa" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-6 md:p-8 flex-1 flex flex-col">
               <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">{t("ticketsTag")}</p>
@@ -24,8 +25,8 @@ export function Layout384() {
             </div>
           </div>
           <div className="bg-brand-navy text-white border-2 border-brand-navy overflow-hidden flex flex-col lg:col-span-2">
-            <div className="overflow-hidden aspect-video">
-              <img src="/images/arcade-premios.jpg" alt="Premios canjeables por tickets en el arcade de Bowling Pleno Zenia — peluches y regalos" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="relative overflow-hidden aspect-video">
+              <Image src="/images/arcade-premios.jpg" alt="Premios canjeables por tickets en el arcade de Bowling Pleno Zenia — peluches y regalos" fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-6 md:p-8 flex-1 flex flex-col section-dark">
               <p className="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">{t("prizesTag")}</p>
