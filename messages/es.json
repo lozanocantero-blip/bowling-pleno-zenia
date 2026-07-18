@@ -213,7 +213,7 @@
     "pricing": {
       "label": "Tarifas",
       "h2": "¿Cuánto cuesta jugar?",
-      "sub": "Los precios cambian según día de la semana y temporada",
+      "sub": "Los precios cambian según día de la semana y temporada. Y no necesitas calzado especial: se juega con tu propio zapato.",
       "tabLow": "Temporada Baja",
       "tabHigh": "Temporada Alta",
       "perPerson": "por persona · una partida",
