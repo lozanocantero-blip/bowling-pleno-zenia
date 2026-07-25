@@ -36,7 +36,7 @@ export function SchemaOrg() {
           `${SITE_URL}/images/arcade-orihuela-costa-maquinas-recreativas.png`
         ],
         "logo": `${SITE_URL}/logo.png`,
-        "priceRange": "€€",
+        "priceRange": "4,50 € - 6,00 €",
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Cash, Credit Card",
         "aggregateRating": {
