@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -20,11 +21,11 @@ export function Gallery9() {
         </div>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-[2fr_1fr] md:gap-4">
           <div className="row-span-2 overflow-hidden bg-brand-blue-light">
-            <img src={photos[0].src} alt={photos[0].alt} className="size-full object-cover aspect-square hover:scale-105 transition-transform duration-500" />
+            <Image src={photos[0].src} alt={photos[0].alt} width={800} height={800} sizes="(max-width: 768px) 50vw, 66vw" className="size-full object-cover aspect-square hover:scale-105 transition-transform duration-500" />
           </div>
           {photos.slice(1).map((p, i) => (
             <div key={i} className="overflow-hidden bg-brand-blue-light">
-              <img src={p.src} alt={p.alt} className="size-full object-cover aspect-square hover:scale-105 transition-transform duration-500" />
+              <Image src={p.src} alt={p.alt} width={800} height={800} sizes="(max-width: 768px) 50vw, 33vw" className="size-full object-cover aspect-square hover:scale-105 transition-transform duration-500" />
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 
@@ -43,8 +44,10 @@ export function Footer5() {
                para no duplicar la entidad.                                        */}
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <a href="/" className="inline-block" aria-label="Bowling Pleno Zenia — inicio">
-              <img
+              <Image
                 src="/logo-navy.png"
+                width={300}
+                height={320}
                 alt="Bowling Pleno Zenia — Bolera en Orihuela Costa"
                 className="h-16 w-auto object-contain"
               />

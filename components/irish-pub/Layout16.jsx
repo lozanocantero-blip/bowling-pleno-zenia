@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { BiCheck } from "react-icons/bi";
@@ -27,8 +28,8 @@ export function Layout16() {
               <a href="#ambiente" className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-red hover:underline">{t("btn2")} <RxChevronRight className="size-4" /></a>
             </div>
           </div>
-          <div className="overflow-hidden bg-brand-blue-light aspect-square md:aspect-auto md:h-[480px]">
-            <img src="/images/cerveza-heineken-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Cerveza Heineken en mesa Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa" />
+          <div className="relative overflow-hidden bg-brand-blue-light aspect-square md:aspect-auto md:h-[480px]">
+            <Image src="/images/cerveza-heineken-dublin-house-irish-pub-bowling-pleno-zenia-orihuela-costa.jpg" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-105 transition-transform duration-500" alt="Cerveza Heineken en mesa Dublin House Irish Pub Bowling Pleno Zenia Orihuela Costa" />
           </div>
         </div>
       </div>

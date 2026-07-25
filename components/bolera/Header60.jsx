@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export function Header60() {
@@ -7,7 +8,7 @@ export function Header60() {
   return (
     <section className="relative overflow-hidden bg-brand-navy" style={{ minHeight: "92vh", display: "flex", alignItems: "flex-end" }}>
       <div className="absolute inset-0 z-0">
-        <img src="/images/bolera-pistas.jpg" className="size-full object-cover" style={{ objectPosition: "center center" }} alt="Pistas de bowling Orihuela Costa" />
+        <Image src="/images/bolera-pistas.jpg" fill preload sizes="100vw" className="object-cover" style={{ objectPosition: "center center" }} alt="Pistas de bowling Orihuela Costa" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(26,39,68,0.15) 0%, rgba(26,39,68,0.1) 30%, rgba(26,39,68,0.55) 60%, rgba(26,39,68,0.96) 100%)" }} />
       </div>
       <div className="absolute left-0 top-0 bottom-0 z-10 w-1" style={{ background: "linear-gradient(to bottom, transparent, #E82040 30%, #E82040 70%, transparent)" }} />

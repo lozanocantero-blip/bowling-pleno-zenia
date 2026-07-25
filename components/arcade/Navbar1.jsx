@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { useTranslations, useLocale } from "next-intl";
@@ -75,7 +76,7 @@ export function Navbar1() {
         >
           {/* Logo como primer elemento de la pill */}
           <a href="/" className="flex items-center px-2 mr-1">
-            <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" width={300} height={320} alt="Bowling Pleno Zenia" className="h-8 w-auto object-contain" />
           </a>
 
           {/* Divisor */}
@@ -136,7 +137,7 @@ export function Navbar1() {
       >
         <div className="flex flex-col p-4 gap-1 min-w-[200px]">
           <a href="/" className="flex items-center px-4 py-2 mb-1">
-            <img src="/logo.png" alt="Bowling Pleno Zenia" className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" width={300} height={320} alt="Bowling Pleno Zenia" className="h-8 w-auto object-contain" />
           </a>
           <div className="border-t border-[#E2E8F0] mb-1" />
           {services.map((s) => (

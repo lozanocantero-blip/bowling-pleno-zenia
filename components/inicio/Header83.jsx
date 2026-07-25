@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const CROSSFADE_BEFORE_END = 1.2;
@@ -104,8 +105,11 @@ export function Header83() {
       <div className="relative h-full flex flex-col px-[5%]" style={{ zIndex: 10 }}>
 
         <div className="flex-1 flex items-center justify-start">
-          <img
+          <Image
             src="/logo-hero.png"
+            width={597}
+            height={463}
+            preload
             alt="Bowling Pleno Zenia"
             className="w-auto select-none pointer-events-none"
             style={{
