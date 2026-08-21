@@ -16,16 +16,16 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   const locale = toLocale((await params).locale)
   setRequestLocale(locale)
   const titles: Record<string, string> = {
-    es: 'Contacto y cómo llegar — Orihuela Costa',
-    en: 'Contact & how to find us — Orihuela Costa',
-    de: 'Kontakt & Anfahrt — Orihuela Costa',
-    ru: 'Контакты и как добраться — Орихуэла-Коста',
+    es: 'Contacto, Horarios y Cómo Llegar — Orihuela Costa',
+    en: 'Contact, Opening Hours & Directions — Orihuela Costa',
+    de: 'Kontakt, Öffnungszeiten & Anfahrt — Orihuela Costa',
+    ru: 'Контакты, часы работы и как добраться — Орихуэла-Коста',
   }
   const descriptions: Record<string, string> = {
-    es: 'Contacta con Bowling Pleno Zenia en Zenia Boulevard, Orihuela Costa (Calle Jade 2). Escríbenos para grupos, eventos y reservas. Abiertos 365 días.',
-    en: 'Contact Bowling Pleno Zenia at Zenia Boulevard, Orihuela Costa (Calle Jade 2). Get in touch for groups, events and bookings. Open 365 days a year.',
-    de: 'Kontaktiere Bowling Pleno Zenia am Zenia Boulevard, Orihuela Costa (Calle Jade 2). Für Gruppen, Events und Reservierungen. 365 Tage im Jahr geöffnet.',
-    ru: 'Свяжитесь с Bowling Pleno Zenia в Zenia Boulevard, Орихуэла-Коста (Calle Jade 2). Группы, мероприятия и бронирование. Открыто 365 дней в году.',
+    es: 'Bowling Pleno Zenia, en Zenia Boulevard (Calle Jade 2, Orihuela Costa). Abierto 365 días: L-V 14:00-23:30, findes 12:00-00:00, verano 11:00-01:00.',
+    en: 'Bowling Pleno Zenia at Zenia Boulevard (Calle Jade 2, Orihuela Costa). Open 365 days: Mon-Fri 2pm-11:30pm, weekends 12pm-12am, summer 11am-1am.',
+    de: 'Bowling Pleno Zenia im Zenia Boulevard (Calle Jade 2, Orihuela Costa). 365 Tage geöffnet: Mo-Fr 14-23:30, Wochenende 12-24 Uhr, Sommer 11-1 Uhr.',
+    ru: 'Bowling Pleno Zenia в Zenia Boulevard (Calle Jade 2, Орихуэла-Коста). Открыто 365 дней: пн-пт 14:00-23:30, выходные 12:00-00:00, летом 11:00-01:00.',
   }
   return {
     title: titles[locale] ?? titles.es,
